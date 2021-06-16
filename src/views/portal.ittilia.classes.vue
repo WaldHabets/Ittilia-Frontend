@@ -171,7 +171,7 @@ main {
     p {
       box-sizing: border-box;
       width: 100%;
-      max-width: 664px;
+      max-width: 632px;
     }
   }
 }

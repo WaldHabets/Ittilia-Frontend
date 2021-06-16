@@ -1,5 +1,5 @@
 <template>
-  <select class="language-switcher">
+  <select class="header-dropdown">
     <option value="nl-Be">NL</option>
     <option value="en-GB">EN</option>
   </select>
@@ -13,12 +13,5 @@ export default class LanguageSwitcher extends Vue {}
 </script>
 
 <style lang="scss">
-.language-switcher {
-  background: none;
-  border: none;
-
-  color: inherit;
-  font-weight: 600px;
-  font-size: 1rem;
-}
+@import "./header.components.scss";
 </style>

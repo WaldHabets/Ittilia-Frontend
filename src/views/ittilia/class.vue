@@ -1,7 +1,11 @@
 <template>
   <view-root>
     <template v-slot:header>
-      <view-header/>
+      <view-header>
+        <template v-slot:start>
+          <class-switcher/>
+        </template>
+      </view-header>
     </template>
 
     <template v-slot:content>
@@ -14,11 +18,13 @@
 import { Component, Vue } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
+import ClassSwitcher from "@/components/ClassSwitcher.vue";
 
 @Component({
   components: {
     ViewHeader,
     ViewRoot,
+    ClassSwitcher,
   }
 })
 export default class ClassView extends Vue {}

@@ -1,6 +1,7 @@
 <template>
   <header class="view-header">
     <language-switcher id="language-switcher" />
+    <slot name="start"></slot>
   </header>
 </template>
 
