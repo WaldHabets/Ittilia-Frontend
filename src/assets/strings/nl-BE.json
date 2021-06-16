@@ -1,0 +1,15 @@
+{
+    "portal": {
+        "explore": "Ittilia Verkennen",
+        "tools": "Tools"
+    },
+    "portal.ittilia.vue": {
+        "book": "Boek",
+        "map": "Interactieve Kaart"
+    },
+    "portal.tools.vue": {
+        "itemforge": "",
+        "initiative-tracker": "",
+        "player-sheets": ""
+    }
+}

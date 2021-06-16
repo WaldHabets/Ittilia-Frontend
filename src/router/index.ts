@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -8,16 +7,27 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("@/views/portal.vue"),
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/ittilia",
+    name: "Ittilia",
+    component: () => import("@/views/portal.ittilia.vue"),
+  },
+  {
+    path: "/ittilia/classes",
+    name: "Classes",
+    component: () => import("@/views/portal.ittilia.classes.vue"),
+  },
+  {
+    path: "/ittilia/classes/:class",
+    name: "Class",
+    component: () => import("@/views/ittilia/class.vue"),
+  },
+  {
+    path: "/tools",
+    name: "Tools",
+    component: () => import("@/views/portal.tools.vue"),
   },
 ];
 

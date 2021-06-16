@@ -1,0 +1,13 @@
+{
+    "portal": {
+        "explore": "Explore Ittilia",
+        "tools": "Tools"
+    },
+    "portal.ittilia.vue": {
+        "book": "Book",
+        "map": "Interactive Map"
+    },
+    "portal.tools.vue": {
+
+    }
+}
