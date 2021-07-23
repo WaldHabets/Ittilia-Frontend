@@ -1,8 +1,17 @@
 .header-dropdown {
-    background: none;
+  background: none;
   border: none;
 
   color: inherit;
   font-weight: 600px;
   font-size: 1rem;
+}
+
+.header-dropdown-bordered {
+  @extend .header-dropdown;
+
+  border: 1px solid #ababab;
+
+  padding: 4px 8px;
+  border-radius: 4px;
 }

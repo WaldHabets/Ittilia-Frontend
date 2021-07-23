@@ -29,6 +29,11 @@ const routes: Array<RouteConfig> = [
     name: "Tools",
     component: () => import("@/views/portal.tools.vue"),
   },
+  {
+    path: "/tools/initiative-tracker",
+    name: "Initiative Tracker",
+    component: () => import("@/views/tools/InitiativeTracker.vue"),
+  },
 ];
 
 const router = new VueRouter({

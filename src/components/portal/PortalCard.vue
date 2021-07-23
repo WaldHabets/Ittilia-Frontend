@@ -1,6 +1,6 @@
 <template>
   <router-link :to="href" class="portal-card">
-    <img/>
+    <img />
     <h1>{{ text }}</h1>
   </router-link>
 </template>
@@ -52,7 +52,7 @@ export default class PortalCard extends Vue {
   h1 {
     display: block;
     margin: 0px;
-    background-color: #3685B5;
+    background-color: #3685b5;
     color: #061826;
     line-height: $banner-height;
   }

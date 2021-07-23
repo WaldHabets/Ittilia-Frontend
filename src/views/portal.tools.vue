@@ -7,7 +7,10 @@
     <template v-slot:content>
       <portal-root id="portal">
         <portal-card text="Item Forge" href="#" />
-        <portal-card text="Initiative Tracker" href="#" />
+        <portal-card
+          text="Initiative Tracker"
+          href="/tools/initiative-tracker"
+        />
         <portal-card text="Player Sheets" href="#" />
       </portal-root>
     </template>

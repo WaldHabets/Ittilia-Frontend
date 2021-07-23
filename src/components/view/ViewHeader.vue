@@ -1,7 +1,17 @@
 <template>
   <header class="view-header">
-    <language-switcher id="language-switcher" />
-    <slot name="start"></slot>
+    <section class="view-header-section align-start">
+      <language-switcher id="language-switcher" />
+      <slot name="start"></slot>
+    </section>
+
+    <section class="view-header-section align-center">
+      <slot name="center"></slot>
+    </section>
+
+    <section class="view-header-section align-end">
+      <slot name="end"></slot>
+    </section>
   </header>
 </template>
 
@@ -21,10 +31,35 @@ export default class ViewHeader extends Vue {}
   padding: 8px 16px;
 
   display: flex;
-  vertical-align: center;
+  // vertical-align: center;
 
   color: #282828;
 
+  height: 100%;
+
   border-bottom: 1px solid #ababab;
+
+  .view-header-section {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+
+    &.align-start {
+      justify-content: flex-start;
+    }
+    &.align-center {
+      justify-content: center;
+    }
+    &.align-end {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media print {
+  .view-header {
+    display: none;
+  }
 }
 </style>

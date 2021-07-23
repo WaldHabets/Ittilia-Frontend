@@ -1,0 +1,209 @@
+{
+    "name": "Ranger",
+    "homebrew-notes": [
+
+    ],
+    "changelog": [
+
+    ],
+    "subclasses": [
+        { 
+            "value": "beast-master",
+            "text": "Beast Master"
+        },{
+            "value": "fey-wanderer",
+            "text": "Fey Wanderer"
+        },{
+            "value": "gloom-stalker",
+            "text": "Gloom Stalker"
+        },{
+            "value": "horizon-walker",
+            "text": "Horizon Walker"
+        },{
+            "value": "hunter",
+            "text": "Hunter"
+        },{
+            "value": "monster-slayer",
+            "text": "Monster Slayer"
+        },{
+            "value": "swarm-keeper",
+            "text": "Swarm Keeper"
+        }
+    ],
+    "table": [
+        {
+            "name": "Proficiency Bonus",
+            "values": []
+        },
+        {
+            "name": "Maneuvrepunten",
+            "values": ["1", "1", "1", "2", "2", "2", "3", "3", "3", "4", "4", "4", "5", "5", "5", "6", "6", "6", "7", "7"]
+        },
+        {
+            "name": "Rage Damage",
+            "values": []
+        }
+    ],
+    "levels": [
+        {
+            "level": 1,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Favoured Prey",
+                    "homebrew": true,
+                    "description": "__Concentration__: 24 hours\n\nYou focus your attention on a single foe that you can see or hear and designate it as your prey. This creature remains designated as your prey even when its out of sight or hearing, until you loose concentration or choose to designate another creature as your pray using this feature.\n\nYou have advantage on Perception checks to spot your prey and Survival checks made to track you prey.\n\nAdditionally, you deal 1d4 extra damage the first time you hit the creature on each of your turns (including when marking it).\n\nYou can use this feature a number of times equal to your proficiency bonus and regain all uses after a long rest.",
+                    "progression": {
+                        "columns": ["Level", "Damage"],
+                        "values": [
+                            { "level": 1, "value": "1d4" },
+                            { "level": 6, "value": "1d6" },
+                            { "level": 14, "value": "1d8" }
+                        ]
+                    }
+                },
+                {
+                    "name": "Canny",
+                    "description": "Over the years you have honed your skills to help you in your travel and survival. You have expertise in one skill in which you are proficient. Additionally, you speak, read and write two additional languages of your choice.",
+                    "progression": null
+                }
+            ]
+        }, 
+        {
+            "level": 2,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Fighting Style",
+                    "description": "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.\n\n* __Archery__: You gain a +2 bonus to attack rolls you make with ranged weapons.\n* __Blind Fighting__: You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.\n* __Defense__: While you are wearing armor, you gain a +1 bonus to AC.\n* __Dueling__: When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.\n* __Thrown Weapon Fighting__: You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.\n* __Two-Weapon Fighting__: When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.\n",
+                    "progression": null
+                },
+                {
+                    "name": "Spellcasting",
+                    "description": "",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "enhancements": [],
+            "features": [
+                {
+                    "name": "Primal Awareness",
+                    "description": "You can focus you awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don’t already know them, as shown in the Primal Awareness Spell table. These spells don’t count against the number of spells you know.",
+                    "progression": {
+                        "columns": ["Level", "Spell"],
+                        "values": [
+                            { "level": 3, "value": "Speak with Animals" },
+                            { "level": 5, "value": "Beast Sense" },
+                            { "level": 9, "value": "Speak with Plants" },
+                            { "level": 13, "value": "Locate Creature"},
+                            { "level": 17, "value": "Commune with Nature" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Martial Versatility",
+                    "description": "Whenever you leve up, you can replace one fighting style you know with another  fighting style available to rangers. This replacement represents a shift of focus in you martial practice."
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "enhancements": ["Primal Awareness"],
+            "features": [
+                {
+                    "name": "Extra Attack",
+                    "description": "You can attack twice, instead of once, whenever you take the attack action on you turn.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "enhancements": ["Favoured Prey"],
+            "features": [
+                {
+                    "name": "Roving",
+                    "description": "Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.",
+                    "progressoin": null
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "features": [
+                {
+                    "name": "Land's Stride",
+                    "description": "Moving through non-magical difficult terrain costs you no extra movement. You can also pass through non-magical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants magically created or manipulated to impede movements, such those created by the entangle spell.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 9,
+            "enhancements": ["Primal Awareness"],
+            "features": []
+        },
+        {
+            "level": 10,
+            "features": [
+                {
+                    "name": "Stalker",
+                    "description": "You can no longer be tracked by non-magical means, unless you choose to leave a trail.\n\nAdditionally, you can use the Hide action as a bonus actions and can Hide even if you are observed. Your prey now also has disadvantage on Perception checks made to spot you and Insight checks made to scrutinize you.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 13,
+            "enhancements": ["Primal Awareness"],
+            "features": []
+        },
+        {
+            "level": 14,
+            "enhancements": ["Favoured Prey"],
+            "features": [
+                {
+                    "name": "Deadly Hunter",
+                    "description": "Choose a type of favoured enemy: aberrations, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid as favoured enemies.\n\nYou can now mark a creature of your favoured type as prey without it counting towards your maximum number of uses.\n\nAdditionally, you can now designate two creatures as your prey (both use the same concentration).",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 17,
+            "enhancements": ["Primal Awareness"],
+            "features":[]
+        },
+        {
+            "level": 18,
+            "enhancements": [],
+            "features": [
+                {
+                    "name": "Feral Senses",
+                    "description": "You gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, you ability to see it doesn’t impose disadvantage on you attack rolls against it.\n\nYou are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 20,
+            "enhancements": [],
+            "features": [
+                {
+                    "name": "Foe Slayer",
+                    "description": "You become an unparalleled hunter of you enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your preys. You can choose to use this feature before or after the roll, but before any of the effects are applied.",
+                    "progression": null
+                }
+            ]
+        }
+    ]
+}

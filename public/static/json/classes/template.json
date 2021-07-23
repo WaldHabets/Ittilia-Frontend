@@ -1,0 +1,338 @@
+{
+    "name": "",
+    "hasHombrew": false,
+    "subclasses": [
+        { 
+            "value": "",
+            "text": ""
+        }
+    ],
+    "table": [
+        {
+            "name": "",
+            "values": []
+        }
+    ],
+    "levels": [
+        {
+            "level": 1,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "level": 4,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 9,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 10,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 11,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 12,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 13,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 14,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 15,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 16,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 17,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 18,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 19,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 20,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "",
+                    "description": "",
+                    "progression": {
+                        "columns": [],
+                        "values": [
+                            { "level": 1, "value": "" }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
