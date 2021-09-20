@@ -41,11 +41,7 @@
         </svg>
       </button>
     </div>
-    <textarea
-      class="notes text-input"
-      placeholder="Notes"
-      v-model="model.notes"
-    >
+    <textarea class="notes" placeholder="Notes" v-model="model.notes">
     </textarea>
   </div>
 </template>
@@ -62,7 +58,7 @@ export default class InitiativeCard extends Vue {
 
   @Model("change", { type: Object }) readonly model!: CombatEntry;
 
-  get damage() {
+  get damage(): string {
     var ratio = this.model.curent_hp / this.model.maximum_hp;
     if (ratio <= 0.05) {
       return "#760000";
@@ -209,7 +205,8 @@ $boxed-element-height: 36px;
     border: none;
     border-top: 1px solid #ababab;
     padding: 8px;
-    min-height: $boxed-element-height;
+    min-height: 1em;
+    height: 1em;
     font-size: 14px;
     resize: vertical;
     margin: 0px;

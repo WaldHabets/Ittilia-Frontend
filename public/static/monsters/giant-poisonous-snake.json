@@ -1,0 +1,10 @@
+{
+    "name":"Gigantische Giftige Slang",
+    "initiative":"d20+4",
+    "max-hp":"2d8+2",
+    "morale-rating":"2d6",
+    "passive-perception": 12,
+    "armor-class": 14,
+    "allegiance": "enemy",
+    "xp": 50
+}

@@ -1,0 +1,10 @@
+{
+    "name":"Stone Cursed",
+    "initiative":"d20-3",
+    "max-hp":"3d8+4",
+    "morale-rating":"2d6",
+    "passive-perception": 9,
+    "armor-class": 17,
+    "allegiance": "enemy",
+    "xp": 200
+}

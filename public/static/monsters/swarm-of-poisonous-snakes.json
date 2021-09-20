@@ -1,0 +1,10 @@
+{
+    "name":"Zwerm Giftige Slangen",
+    "initiative":"d20+4",
+    "max-hp":"8d8",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 14,
+    "allegiance": "enemy",
+    "xp": 450
+}

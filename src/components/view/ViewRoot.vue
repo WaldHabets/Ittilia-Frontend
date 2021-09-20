@@ -2,57 +2,16 @@
   <div id="view-root">
     <div id="nav-head">
       <button id="nav-toggle" @click="toggleHide">
-        <svg viewBox="0 0 24 24">
+        <svg v-if="hideMenu" viewBox="0 0 24 24">
           <path :d="mdiMenu" />
+        </svg>
+        <svg v-else viewBox="0 0 24 24">
+          <path :d="mdiClose" />
         </svg>
       </button>
     </div>
     <nav id="nav-body" :class="{ hide: hideMenu }">
-      <ul id="root-list">
-        <li><router-link class="nav-link" to="/">Home</router-link></li>
-        <li>
-          <router-link class="nav-link" to="/ittilia"
-            >Explore Ittilia</router-link
-          >
-          <ul>
-            <li>
-              <router-link class="nav-link" to="/ittilia/book"
-                >├ Book</router-link
-              >
-            </li>
-            <li>
-              <router-link class="nav-link" to="/ittilia/map"
-                >├ Map</router-link
-              >
-            </li>
-            <li>
-              <router-link class="nav-link" to="/ittilia/classes"
-                >└ Classes</router-link
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <router-link class="nav-link" to="/tools">Tools</router-link>
-          <ul>
-            <li>
-              <router-link class="nav-link" to="/tools/book"
-                >├ Item Forge</router-link
-              >
-            </li>
-            <li>
-              <router-link class="nav-link" to="/tools/map"
-                >├ Initiative Tracker</router-link
-              >
-            </li>
-            <li>
-              <router-link class="nav-link" to="/tools/classes"
-                >└ Character Sheets</router-link
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <nav-list />
     </nav>
     <div id="view-head">
       <slot name="header"></slot>
@@ -65,11 +24,17 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { mdiMenu } from "@mdi/js";
+import NavList from "@/components/view/NavList.vue";
+import { mdiMenu, mdiClose } from "@mdi/js";
 
-@Component
+@Component({
+  components: {
+    NavList,
+  },
+})
 export default class ViewRoot extends Vue {
   private mdiMenu: string = mdiMenu;
+  private mdiClose: string = mdiClose;
   private hideMenu = true;
 
   toggleHide(): void {
@@ -111,6 +76,9 @@ export default class ViewRoot extends Vue {
     background-color: #080016;
     border-bottom: 1px solid #ababab;
 
+    display: flex;
+    align-items: center;
+
     @media screen and (max-width: $threshold) {
       background: white;
     }
@@ -122,11 +90,15 @@ export default class ViewRoot extends Vue {
 
       padding: 4px;
 
+      border: none;
+      background: none;
+
       display: none;
 
       svg {
         width: 100%;
         height: 100%;
+        fill: #282828;
       }
 
       @media screen and (max-width: $threshold) {
@@ -136,6 +108,9 @@ export default class ViewRoot extends Vue {
   }
 
   #nav-body {
+    position: relative;
+    z-index: 10;
+
     grid-area: nav-body;
     background-color: #080016;
 
@@ -159,31 +134,16 @@ export default class ViewRoot extends Vue {
         display: none;
       }
     }
-
-    ul {
-      list-style-type: none;
-      padding-left: 16px;
-    }
-
-    #root-list {
-      padding: 0px;
-
-      li {
-        text-align: start;
-        padding: 4px 0px;
-
-        .nav-link {
-          text-decoration: none;
-          color: inherit;
-        }
-      }
-    }
   }
 
   #view-body {
+    position: relative;
+    z-index: 0;
+
     grid-area: main;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 

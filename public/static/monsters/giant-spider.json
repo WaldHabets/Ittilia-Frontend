@@ -1,0 +1,10 @@
+{
+    "name":"Reuze Sping",
+    "initiative":"d20+3",
+    "max-hp":"4d10+4",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 14,
+    "allegiance": "enemy",
+    "xp": 200
+}

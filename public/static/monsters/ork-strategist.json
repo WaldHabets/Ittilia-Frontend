@@ -1,0 +1,10 @@
+{
+    "name":"Ork Strategist",
+    "initiative":"d20",
+    "max-hp":"8d8+24",
+    "morale-rating":"2d6",
+    "passive-perception": 13,
+    "armor-class": 18,
+    "allegiance": "enemy",
+    "xp": 1100
+}

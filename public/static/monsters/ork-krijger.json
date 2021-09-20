@@ -1,0 +1,10 @@
+{
+    "name":"Ork Krijger",
+    "initiative":"d20+1",
+    "max-hp":"2d8+2",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 18,
+    "allegiance": "enemy",
+    "xp": 100
+}

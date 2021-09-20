@@ -25,7 +25,7 @@ export default class ClassSwitcher extends Vue {
   private selected: string = this.$route.params.class;
 
   @Watch("selected")
-  onRouteChanged(val: string, oldVal: string): void {
+  onRouteChanged(val: string): void {
     this.$router.replace(`/ittilia/classes/${val}`);
   }
 }

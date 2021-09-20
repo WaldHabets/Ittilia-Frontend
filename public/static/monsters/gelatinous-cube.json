@@ -1,0 +1,10 @@
+{
+    "name":"Gelatineachtige Kubus",
+    "initiative":"d20-4",
+    "max-hp":"8d10+40",
+    "morale-rating":"2d6",
+    "passive-perception": 8,
+    "armor-class": 6,
+    "allegiance": "enemy",
+    "xp": 450
+}

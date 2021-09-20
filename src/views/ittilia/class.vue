@@ -23,7 +23,7 @@
         </option>
       </select>
 
-      <side v-if="classData" id="class-table">
+      <aside v-if="classData" id="class-table">
         <table>
           <thead>
             <tr>
@@ -59,7 +59,7 @@
             </tr>
           </tbody>
         </table>
-      </side>
+      </aside>
 
       <main :id="`${$route.params.class}-main`" v-if="classData">
         <section
@@ -117,7 +117,7 @@ export default class ClassView extends Vue {
   classData: any = null;
 
   @Watch("$route.params.class", { deep: true })
-  onClassChanged(val: string, oldVal: string): void {
+  onClassChanged(val: string): void {
     this.fetchClass(val);
   }
 

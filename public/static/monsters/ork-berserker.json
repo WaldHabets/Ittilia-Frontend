@@ -1,0 +1,10 @@
+{
+    "name":"Ork Berserker",
+    "initiative":"d20+1",
+    "max-hp":"2d8+6",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 13,
+    "allegiance": "enemy",
+    "xp": 100
+}

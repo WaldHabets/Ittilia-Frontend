@@ -1,0 +1,10 @@
+{
+    "name":"Mimic",
+    "initiative":"d20+1",
+    "max-hp":"9d8+18",
+    "morale-rating":"2d6",
+    "passive-perception": 11,
+    "armor-class": 12,
+    "allegiance": "enemy",
+    "xp": 450
+}

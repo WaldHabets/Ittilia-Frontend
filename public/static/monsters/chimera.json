@@ -1,0 +1,10 @@
+{
+    "name":"Chimera",
+    "initiative":"d20",
+    "max-hp":"12d10+48",
+    "morale-rating":"2d6",
+    "passive-perception": 18,
+    "armor-class": 14,
+    "allegiance": "enemy",
+    "xp": 2300
+}

@@ -1,0 +1,10 @@
+{
+    "name":"Vampier",
+    "initiative":"d20+4",
+    "max-hp":"17d8+68",
+    "morale-rating":"2d6",
+    "passive-perception": 17,
+    "armor-class": 16,
+    "allegiance": "enemy",
+    "xp": 10000
+}

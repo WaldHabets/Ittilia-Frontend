@@ -1,0 +1,10 @@
+{
+    "name":"Phase Spider",
+    "initiative":"d20+2",
+    "max-hp":"5d10+5",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 13,
+    "allegiance": "enemy",
+    "xp": 700
+}

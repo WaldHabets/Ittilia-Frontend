@@ -1,0 +1,10 @@
+{
+    "name":"Ork Shaman",
+    "initiative":"d20+2",
+    "max-hp":"6d8+18",
+    "morale-rating":"2d6",
+    "passive-perception": 12,
+    "armor-class": 14,
+    "allegiance": "enemy",
+    "xp": 450
+}

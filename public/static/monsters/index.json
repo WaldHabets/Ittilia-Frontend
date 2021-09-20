@@ -1,0 +1,95 @@
+[
+    {
+        "name-en":"Basilisk",
+        "name-nl":"Basilisk",
+        "template":"basilisk"
+    },{
+        "name-en":"Chimera",
+        "name-nl":"Chimaera",
+        "template":"chimera"
+    },{
+        "name-en":"Gelatinous Cube",
+        "name-nl":"Gelatineachtige Kubus",
+        "template":"gelatinous-cube"
+    },{
+        "name-en":"Gargoyle",
+        "name-nl":"Gargouille",
+        "template":"gargoyle"
+    },{
+        "name-en":"Giant Poisonous Snake",
+        "name-nl":"Gigantische Giftige Slang",
+        "template":"giant-poisonous-snake"
+    },{
+        "name-en":"Giant Spider",
+        "name-nl":"Gigantische Spin",
+        "template":"giant-spider"
+    },{
+        "name-en":"Mimic",
+        "name-nl":"Mimic",
+        "template":"mimic"
+    },{
+        "name-en":"Orc Berserker",
+        "name-nl":"Ork Berserker",
+        "template": "ork-berserker"
+    },{
+        "name-en":"Orc Warior",
+        "name-nl":"Ork Krijger",
+        "template":"ork-krijger"
+    },{
+        "name-en":"Orc Battlemage",
+        "name-nl":"Ork Strijdmagiër",
+        "template":"ork-strijdmagier"
+    },{
+        "name-en":"Orc Shaman",
+        "name-nl":"Ork Shaman",
+        "template":"ork-shaman"
+    },{
+        "name-en":"Orc Shadowmaster",
+        "name-nl":"Ork Schaduwmeester",
+        "template":"ork-schaduwmeester"
+    },{
+        "name-en":"Orc Warlord",
+        "name-nl":"Ork Krijgsheer",
+        "template":"ork-krijgsheer"
+    },{
+        "name-en":"Orc Strategist",
+        "name-nl":"Ork Strateeg",
+        "template":"ork-strategist"
+    },{
+        "name-en":"Phase Spider",
+        "name-nl":"Fasespin",
+        "template":"phase-spider"
+    },{
+        "name-en":"Poisonous Snake",
+        "name-nl":"Giftige Slang",
+        "template":"poisonous-snake"
+    },{
+        "name-en":"Quasit",
+        "name-nl":"Quasit",
+        "template":"quasit"
+    },{
+        "name-en":"Skelleton",
+        "name-nl":"Skelet",
+        "template":"skeleton"
+    },{
+        "name-en":"Stone Cursed",
+        "name-nl":"Versteneling",
+        "template":"stone-cursed"
+    },{
+        "name-en":"Swarm of Insects",
+        "name-nl":"Zwerm van Insecten",
+        "template":"swarm-of-insects"
+    },{
+        "name-en":"Swarm of Poisonous Snakes",
+        "name-nl":"Zwerm Giftige Slangen",
+        "template":"swarm-of-poisonous-snakes"
+    },{
+        "name-en":"Vampire",
+        "name-nl":"Vampier",
+        "template":"vampire"
+    },{
+        "name-en":"Vargouille",
+        "name-nl":"Vargouille",
+        "template":"vargouille"
+    }
+]

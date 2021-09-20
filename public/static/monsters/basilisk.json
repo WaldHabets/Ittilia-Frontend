@@ -1,0 +1,10 @@
+{
+    "name":"Basilisk",
+    "initiative":"d20-1",
+    "max-hp":"8d8+16",
+    "morale-rating":"2d6",
+    "passive-perception": 9,
+    "armor-class": 15,
+    "allegiance": "enemy",
+    "xp": 700
+}

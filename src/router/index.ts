@@ -30,9 +30,19 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/portal.tools.vue"),
   },
   {
+    path: "/tools/item-forge",
+    name: "Item Forge",
+    component: () => import("@/views/tools/ItemForge.vue"),
+  },
+  {
     path: "/tools/initiative-tracker",
     name: "Initiative Tracker",
     component: () => import("@/views/tools/InitiativeTracker.vue"),
+  },
+  {
+    path: "/tools/party-manager",
+    name: "Party Manager",
+    component: () => import("@/views/tools/PartyManager.vue"),
   },
 ];
 

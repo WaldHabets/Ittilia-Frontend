@@ -1,0 +1,146 @@
+{
+    "name": {
+        "en": "Name",
+        "nl": "Naam"
+    },
+    "initiative": {
+        "en": "Initiative",
+        "nl": "Initiatief"
+    },
+    "max-hp": {
+        "en": "Max Hit Points",
+        "nl": "Max Levenspunten"
+    },
+    "stat-hp": {
+        "en": "Hit Points",
+        "nl": "Levenspunten"
+    },
+    "stat-mr": {
+        "en": "Morale Rating",
+        "nl": "Moraal"
+    },
+    "stat-pp": {
+        "en": "Perception",
+        "nl": "Perceptie"
+    },
+    "stat-ac": {
+        "en": "Armor Class",
+        "nl": "Pantserrang"
+    },
+    "stat-lvl": {
+        "en": "Level",
+        "nl": "Rang"
+    },
+    "stat-spd": {
+        "en": "Speed",
+        "nl": "Snelheid"
+    },
+    "enemy": {
+        "en": "Enemy",
+        "nl": "Vijand"
+    },
+    "ally": {
+        "en": "Ally",
+        "nl": "Bondgenoot"
+    },
+    "player": {
+        "en": "Player",
+        "nl": "Speler"
+    },
+    "action-add": {
+        "en": "Add",
+        "nl": "Voeg Toe"
+    },
+    "action-import": {
+        "en": "Import",
+        "nl": "Importeren"
+    },
+    "action-save": {
+        "en": "Save",
+        "nl": "Opslaan"
+    },
+    "groupname": {
+        "en": "Group Name",
+        "nl": "Groepsnaam"
+    },
+    "filename": {
+        "en": "Filename",
+        "nl": "Bestandsnaam"
+    },
+    "description": {
+        "en": "Description",
+        "nl": "Beschrijving"
+    },
+    "item-name": {
+        "en": "Item Name",
+        "nl": "Item Naam"
+    },
+    "req-attune": {
+        "en": "Requires Attunement",
+        "nl": "Vereist Binding"
+    },
+    "round": {
+        "en": "Round",
+        "nl": "Ronde"
+    },
+    "turn": {
+        "en": "Turn",
+        "nl": "Beurt"
+    },
+    "action-sort": {
+        "en": "Sort",
+        "nl": "Sorteer"
+    },
+    "action-reset": {
+        "en": "Reset",
+        "nl": "Reset"
+    },
+    "monster-xp": {
+        "en": "Total XP",
+        "nl": "Totale XP"
+    },
+    "difficulty": {
+        "en": "Difficulty",
+        "nl": "Moeilijkheid"
+    },
+    "easy": {
+        "en": "Easy",
+        "nl": "Makkelijk"
+    },
+    "medium": {
+        "en": "Medium",
+        "nl": "Gemiddeld"
+    },
+    "hard": {
+        "en": "Hard",
+        "nl": "Moeilijk"
+    },
+    "deadly": {
+        "en": "Deadly",
+        "nl": "Dodelijk"
+    },
+    "ability-str": {
+        "en": "Strenght",
+        "nl": "Kracht"
+    },
+    "ability-dex": {
+        "en": "Dexterity",
+        "nl": "Finesse"
+    },
+    "ability-con": {
+        "en": "Constitution",
+        "nl": "Vitaliteit"
+    },
+    "ability-int": {
+        "en": "Intelligence",
+        "nl": "Intelligentie"
+    },
+    "ability-wis": {
+        "en": "Wisdom",
+        "nl": "Wijsheid"
+    },
+    "ability-cha": {
+        "en": "Charisma",
+        "nl": "Charisma"
+    }
+}

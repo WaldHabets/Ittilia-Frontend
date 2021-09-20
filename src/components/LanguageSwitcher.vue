@@ -1,7 +1,7 @@
 <template>
-  <select class="header-dropdown">
-    <option value="nl-Be">NL</option>
-    <option value="en-GB">EN</option>
+  <select class="header-dropdown" v-model="language">
+    <option value="nl">NL</option>
+    <option value="en">EN</option>
   </select>
 </template>
 
@@ -9,7 +9,15 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class LanguageSwitcher extends Vue {}
+export default class LanguageSwitcher extends Vue {
+  get language(): string {
+    return this.$store.state.language;
+  }
+
+  set language(value: string) {
+    this.$store.dispatch("setLanguage", value);
+  }
+}
 </script>
 
 <style lang="scss">

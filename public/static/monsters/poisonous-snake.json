@@ -1,0 +1,10 @@
+{
+    "name":"Giftige Slang",
+    "initiative":"d20+3",
+    "max-hp":"1d4",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 13,
+    "allegiance": "enemy",
+    "xp": 25
+}

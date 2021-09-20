@@ -11,15 +11,18 @@
     "@mdi/js": "^5.9.55",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "dom-to-image": "^2.6.0",
     "dompurify": "^2.2.9",
     "marked": "^2.1.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
+    "vue-multiselect": "^2.1.6",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@types/dom-to-image": "^2.6.3",
     "@types/dompurify": "^2.2.2",
     "@types/marked": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^4.18.0",

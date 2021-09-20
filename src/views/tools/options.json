@@ -1,0 +1,177 @@
+{
+    "Accessoire": {
+        "image": "/static/img/items/accessory.jpeg",
+        "subtypes": {
+            "grouped": false,
+            "items": [
+                { "subtype": "Armband", "massa": "-" },
+                { "subtype": "Oorbel", "massa": "-" },
+                { "subtype": "Ketting", "massa": "-" },
+                { "subtype": "Ring", "massa": "-" }
+            ]
+        },
+        "color": "#00876d"
+    },
+    "Kleding": {
+        "image": "/static/img/items/apparel.jpeg",
+        "subtypes": {
+            "grouped": false,
+            "items": [
+                { "subtype": "Gewaad", "massa": "L" },
+                { "subtype": "Mantel", "massa": "L" },
+                { "subtype": "Outfit", "massa": "L" }
+            ]
+        },
+        "color": "#623574"
+    },
+    "Bescherming": {
+        "image": "/static/img/items/armor.jpeg",
+        "subtypes": {
+            "grouped": true,
+            "items": [
+                {
+                    "text": "Light Armor",
+                    "options": [
+                        { "subtype": "Padded", "massa": "L" },
+                        { "subtype": "Leer", "massa": "1" },
+                        { "subtype": "Studded Leather", "massa": "1" }
+                    ]
+                },
+                {
+                    "text": "Medium Armor",
+                    "options": [
+                        { "subtype": "Hide", "massa": "2" },
+                        { "subtype": "Chain Shirt", "massa": "1" },
+                        { "subtype": "Scale Mail", "massa": "2" },
+                        { "subtype": "Breastplate", "massa": "2" },
+                        { "subtype": "Half Plate", "massa": "3" }
+                    ]
+                },
+                {
+                    "text": "Heavy Armor",
+                    "options": [
+                        { "subtype": "Ring Mail", "massa": "2" },
+                        { "subtype": "Chain Mail", "massa": "2" },
+                        { "subtype": "Splint", "massa": "3" },
+                        { "subtype": "Plate", "massa": "4" }
+                    ]
+                },
+                {
+                    "text": "Shields",
+                    "options": [
+                        { "subtype": "Shield", "massa": "1" }
+                    ]
+                }
+            ]
+        },
+        "color": "#97be8d"
+    },
+    "Boek": {
+        "image": "/static/img/items/book.jpeg",
+        "subtypes": null,
+        "color": "#daa6ab",
+        "massa": "L"
+    },
+    "Toverdrank": {
+        "image": "/static/img/items/potion.jpeg",
+        "subtypes": null,
+        "color": "#69ad9e",
+        "massa": "L"
+    },
+    "Scepter": {
+        "image": "/static/img/items/rod.jpeg",
+        "subtypes": null,
+        "color": "#8e8ee2",
+        "massa": "1"
+    },
+    "Boekrol": {
+        "image": "/static/img/items/scroll.jpeg",
+        "subtypes": null,
+        "color": "#009d7c",
+        "massa": "L"
+    },
+    "Staf": {
+        "image": "/static/img/items/staff.jpeg",
+        "subtypes": null,
+        "color": "#00975d",
+        "massa": "1"
+    },
+    "Toverstok": {
+        "image": "/static/img/items/wand.jpeg",
+        "subtypes": null,
+        "color": "#8f4a51",
+        "massa": "L"
+    },
+    "Wapen": {
+        "image": "/static/img/items/weapon.jpeg",
+        "subtypes": {
+            "grouped": true,
+            "items": [
+                {
+                    "text": "Simple Melee Weapon",
+                    "options": [
+                        { "subtype": "Club", "massa": "L" },
+                        { "subtype": "Dagger", "massa": "L" },
+                        { "subtype": "Greatclub", "massa": "2" },
+                        { "subtype": "Handaxe", "massa": "L" },
+                        { "subtype": "Javelin", "massa": "L" },
+                        { "subtype": "Light Hammer", "massa": "L" },
+                        { "subtype": "Mace", "massa": "1" },
+                        { "subtype": "Quarterstaff", "massa": "1" },
+                        { "subtype": "Sickle", "massa": "L" },
+                        { "subtype": "Spear", "massa": "1" }
+                    ]
+                },
+                {
+                    "text": "Simple Ranged Weapons",
+                    "options": [
+                        { "subtype": "Light Crossbow", "massa": "1" },
+                        { "subtype": "Dart", "massa": "L" },
+                        { "subtype": "Shortbow", "massa": "1" },
+                        { "subtype":  "Sling", "massa": "L" }
+                    ]
+                },
+                {
+                    "text": "Martial Melee Weapons",
+                    "options": [
+                        { "subtype": "Battleaxe", "massa": "1" },
+                        { "subtype": "Flail", "massa": "1" },
+                        { "subtype": "Glaive", "massa": "2" },
+                        { "subtype": "Greataxe", "massa": "2" },
+                        { "subtype": "Greatsword", "massa": "2" },
+                        { "subtype": "Halberd", "massa": "2" },
+                        { "subtype": "Lance", "massa": "2" },
+                        { "subtype": "Longsword", "massa": "1" },
+                        { "subtype": "Maul", "massa": "2" },
+                        { "subtype": "Morningstar", "massa": "1" },
+                        { "subtype": "Pike", "massa": "2" },
+                        { "subtype": "Rapier", "massa": "1" },
+                        { "subtype": "Scimitar", "massa": "L" },
+                        { "subtype": "Shortsword", "massa": "L" },
+                        { "subtype": "Trident", "massa": "1" },
+                        { "subtype": "War Pick", "massa": "1" },
+                        { "subtype": "Warhammer", "massa": "1" },
+                        { "subtype": "Whip", "massa": "1" }
+                    ]
+                },
+                {
+                    "text": "Martial Ranged Weapons",
+                    "options": [
+                        { "subtype": "Blowgun", "massa": "L" },
+                        { "subtype": "Hand Crossbow", "massa": "L" },
+                        { "subtype": "Heavy Crossbow", "massa": "2" },
+                        { "subtype": "Longbow", "massa": "2" },
+                        { "subtype": "Net", "massa": "1" }
+                    ]
+                }
+            ]
+        },
+        "color": "#9fa0ca"
+    },
+    "Merkwaardigheid": {
+        "image": "/static/img/items/wondrous.jpeg",
+        "subtypes": null,
+        "color": "#86f6a6",
+        "massa": ""
+    }
+}

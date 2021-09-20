@@ -11,7 +11,7 @@ import DOMpurify from "dompurify";
 export default class Markdown extends Vue {
   @Prop() private readonly src!: string;
 
-  get html() {
+  get html(): string {
     let dirty = marked(this.src);
     return DOMpurify.sanitize(dirty);
   }
