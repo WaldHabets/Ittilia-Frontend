@@ -291,8 +291,8 @@ export default class InitiativeTracker extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
-@import "../../scss/inputs.css";
+@import "../../assets/scss/buttons.css";
+@import "../../assets/scss/inputs.css";
 
 @import "./InitiativeTracker.styles/description-view.scss";
 

@@ -80,7 +80,7 @@ export default class InitiativeCard extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
+@import "../../assets/scss/buttons.css";
 
 $color-player: #4cc552; // Kelly Green
 $color-enemy: #f70d1a; // Ferrari Red

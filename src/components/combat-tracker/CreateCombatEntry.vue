@@ -263,8 +263,8 @@ export default class CreateCombatEntry extends Vue {
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
-@import "../../scss/inputs.css";
+@import "../../assets/scss/buttons.css";
+@import "../../assets/scss/inputs.css";
 
 .combat-entry-form {
   padding: 8px;

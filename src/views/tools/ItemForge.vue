@@ -267,8 +267,8 @@ export default class ItemForge extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
-@import "../../scss/inputs.css";
+@import "../../assets/scss/buttons.css";
+@import "../../assets/scss/inputs.css";
 .spell {
   color: #68a1e6;
   font-weight: bold;

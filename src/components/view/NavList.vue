@@ -71,7 +71,7 @@ export default class NavList extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
+@import "../../assets/scss/buttons.css";
 
 ul {
   list-style-type: none;

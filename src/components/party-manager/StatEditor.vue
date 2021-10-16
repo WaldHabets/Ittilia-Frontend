@@ -32,7 +32,7 @@ export default class AbilityEditor extends Vue {
 
 <style lang="scss">
 @use "sass:math";
-@import "../../scss/inputs.css";
+@import "../../assets/scss/inputs.css";
 .stat {
   $circle-dim: 48px;
   $icon-dim: 24px;

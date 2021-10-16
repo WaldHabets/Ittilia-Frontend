@@ -31,7 +31,7 @@ export default class AbilityEditor extends Vue {
 
 <style lang="scss">
 @use "sass:math";
-@import "../../scss/inputs.css";
+@import "../../assets/scss/inputs.css";
 .ability {
   $circle-dim: 42px;
   text-align: start;

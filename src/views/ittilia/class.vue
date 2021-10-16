@@ -144,8 +144,8 @@ export default class ClassView extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
-@import "../../scss/colours.scss";
+@import "../../assets/scss/buttons.css";
+@import "../../assets/scss/colours.scss";
 
 #subclass-switcher {
   width: 100%;

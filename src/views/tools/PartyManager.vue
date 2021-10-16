@@ -119,8 +119,8 @@ export default class PartyManager extends Vue {
 </script>
 
 <style lang="scss">
-@import "../../scss/buttons.css";
-@import "../../scss/file.css";
+@import "../../assets/scss/buttons.css";
+@import "../../assets/scss/file.css";
 
 #meta-groupname {
   margin-right: 8px;
