@@ -1,0 +1,10 @@
+{
+    "name":"Modder Mephit",
+    "initiative":"d20+1",
+    "max-hp":"6d6+6",
+    "morale-rating":"2d6",
+    "passive-perception": 10,
+    "armor-class": 11,
+    "allegiance": "enemy",
+    "xp": 50
+}

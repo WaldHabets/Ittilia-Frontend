@@ -1,0 +1,10 @@
+{
+    "name":"Gorgon",
+    "initiative":"d20+2",
+    "max-hp":"17d8+51",
+    "morale-rating":"2d6",
+    "passive-perception": 14,
+    "armor-class": 15,
+    "allegiance": "enemy",
+    "xp": 2300
+}

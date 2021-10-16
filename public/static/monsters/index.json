@@ -24,6 +24,14 @@
         "name-nl":"Gigantische Spin",
         "template":"giant-spider"
     },{
+        "name-en":"Gorgon",
+        "name-nl":"Gorgo",
+        "template":"gorgon"
+    },{
+        "name-en":"Mephit (Mud)",
+        "name-nl":"Mephit (Modder)",
+        "template":"mephit-mud"
+    },{
         "name-en":"Mimic",
         "name-nl":"Mimic",
         "template":"mimic"

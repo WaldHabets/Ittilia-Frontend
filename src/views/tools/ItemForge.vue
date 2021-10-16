@@ -92,7 +92,7 @@
               :placeholder="strings.get('filename')"
             />
             <button v-on:click="save" class="button">
-              <string tag="action-save" />
+              {{ strings.get("action-save") }}
             </button>
           </div>
         </div>
@@ -148,7 +148,6 @@ import { Component, Vue } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
 import Markdown from "@/components/Markdown.vue";
-import String from "@/components/String.vue";
 import Strings from "@/helpers/Strings.ts";
 import domtoimage from "dom-to-image";
 
@@ -159,7 +158,6 @@ import { mdiWeight } from "@mdi/js";
     ViewHeader,
     ViewRoot,
     Markdown,
-    String,
   },
 })
 export default class ItemForge extends Vue {
@@ -200,26 +198,29 @@ export default class ItemForge extends Vue {
 
     const node = document.getElementById("icg-card");
     // const scale = 534 / node.offsetWidth
-    const scale = 2;
 
-    domtoimage
-      .toPng(node, {
-        quality: 1.0,
-        height: node.offsetHeight * scale,
-        width: node.offsetWidth * scale,
-        style: {
-          transform: "scale(" + scale + ")",
-          transformOrigin: "top left",
-          // width: node.offsetWidth + 'px',
-          // height: node.offsetHeight + 'px'
-        },
-      })
-      .then(function (dataurl) {
-        var link = document.createElement("a");
-        link.download = filename;
-        link.href = dataurl;
-        link.click();
-      });
+    if (node != null) {
+      const scale = 2;
+
+      domtoimage
+        .toPng(node, {
+          quality: 1.0,
+          height: node.offsetHeight * scale,
+          width: node.offsetWidth * scale,
+          style: {
+            transform: "scale(" + scale + ")",
+            transformOrigin: "top left",
+            // width: node.offsetWidth + 'px',
+            // height: node.offsetHeight + 'px'
+          },
+        })
+        .then(function (dataurl) {
+          var link = document.createElement("a");
+          link.download = filename;
+          link.href = dataurl;
+          link.click();
+        });
+    }
   }
 
   onItemTypeUpdate(): void {

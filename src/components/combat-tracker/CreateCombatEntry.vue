@@ -14,7 +14,7 @@
       <tbody>
         <tr>
           <td class="tag">
-            <label for="fname"><string tag="name" /></label>
+            <label for="fname">{{ strings.get("name") }}</label>
           </td>
           <td class="value">
             <input
@@ -28,7 +28,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="finit"><string tag="initiative" /></label>
+            <label for="finit">{{ strings.get("initiative") }}</label>
           </td>
           <td class="value">
             <input
@@ -42,7 +42,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="fhp"><string tag="max-hp" /></label>
+            <label for="fhp">{{ strings.get("max-hp") }}<label>
           </td>
           <td class="value">
             <input
@@ -56,7 +56,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="fmr"><string tag="stat-mr" /></label>
+            <label for="fmr">{{ strings.get("stat-mr") }}</label>
           </td>
           <td class="value">
             <input
@@ -70,7 +70,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="form-pp"><string tag="stat-pp" /></label>
+            <label for="form-pp">{{ strings.get("stat-pp") }}</label>
           </td>
           <td class="value">
             <input
@@ -84,7 +84,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="fac"><string tag="stat-ac" /></label>
+            <label for="fac">{{ strings.get("stat-ac") }}</label>
           </td>
           <td class="value">
             <input
@@ -107,7 +107,7 @@
             />
           </td>
           <td class="value">
-            <label for="allegiance-enemy"><string tag="enemy" /></label>
+            <label for="allegiance-enemy">{{ strings.get("enemy") }}</label>
           </td>
         </tr>
         <tr>
@@ -121,7 +121,7 @@
             />
           </td>
           <td class="value">
-            <label for="allegiance-ally"><string tag="ally" /></label>
+            <label for="allegiance-ally">{{ strings.get("ally") }}</label>
           </td>
         </tr>
         <tr>
@@ -135,7 +135,7 @@
             />
           </td>
           <td class="value">
-            <label for="allegiance-player"><string tag="player" /></label>
+            <label for="allegiance-player">{{ strings.get("player") }}</label>
           </td>
         </tr>
         <tr>
@@ -171,16 +171,17 @@ import { Component, Vue } from "vue-property-decorator";
 import Multiselect from "vue-multiselect";
 import DiceHelper from "@/helpers/DiceHelper";
 import CombatEntry from "@/models/CombatEntry";
-import String from "@/components/String.vue";
+import Strings from "@/helpers/Strings.ts";
 import axios from "axios";
 
 @Component({
   components: {
     Multiselect,
-    String,
   },
 })
 export default class CreateCombatEntry extends Vue {
+  private strings: Strings = new Strings();
+
   private name = "";
   private initiative = "d20";
   private hp = "";
@@ -209,7 +210,7 @@ export default class CreateCombatEntry extends Vue {
       });
   }
 
-  loadMonster(monster: Record<string, unknown>, id: string): void {
+  loadMonster(monster: Record<string, string>, id: string): void {
     console.log(monster);
     console.log(id);
     axios
