@@ -42,7 +42,7 @@
         </tr>
         <tr>
           <td class="tag">
-            <label for="fhp">{{ strings.get("max-hp") }}<label>
+            <label for="fhp">{{ strings.get("max-hp") }}</label>
           </td>
           <td class="value">
             <input
@@ -157,7 +157,7 @@
         <tr>
           <td colspan="2">
             <button class="button" @click="add">
-              <string tag="action-add" />
+              {{ strings.get("action-add") }}
             </button>
           </td>
         </tr>
