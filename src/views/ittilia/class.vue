@@ -143,7 +143,7 @@ export default class ClassView extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../assets/scss/buttons.css";
 @import "../../assets/scss/colours.scss";
 

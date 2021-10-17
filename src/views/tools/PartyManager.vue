@@ -118,9 +118,10 @@ export default class PartyManager extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../assets/scss/buttons.css";
 @import "../../assets/scss/file.css";
+
 
 #meta-groupname {
   margin-right: 8px;
@@ -130,6 +131,7 @@ export default class PartyManager extends Vue {
   width: 41px;
   height: 41px;
 }
+
 
 #players-grid {
   display: grid;
