@@ -17,13 +17,13 @@
       </router-link>
       <ul>
         <li>
-          <router-link class="nav-link" to="/ittilia/book">Book</router-link>
+          <router-link class="nav-link sub-link" to="/ittilia/book">Book</router-link>
         </li>
         <li>
-          <router-link class="nav-link" to="/ittilia/map">Map</router-link>
+          <router-link class="nav-link sub-link" to="/ittilia/map">Map</router-link>
         </li>
         <li>
-          <router-link class="nav-link" to="/ittilia/classes"
+          <router-link class="nav-link sub-link" to="/ittilia/classes"
             >Classes</router-link
           >
         </li>
@@ -38,17 +38,17 @@
       </router-link>
       <ul>
         <li>
-          <router-link class="nav-link" to="/tools/item-forge"
+          <router-link class="nav-link sub-link" to="/tools/item-forge"
             >Item Forge</router-link
           >
         </li>
         <li>
-          <router-link class="nav-link" to="/tools/initiative-tracker"
+          <router-link class="nav-link sub-link" to="/tools/initiative-tracker"
             >Initiative Tracker</router-link
           >
         </li>
         <li>
-          <router-link class="nav-link" to="/tools/party-manager"
+          <router-link class="nav-link sub-link" to="/tools/party-manager"
             >Character Sheets</router-link
           >
         </li>
@@ -72,6 +72,7 @@ export default class NavList extends Vue {
 
 <style lang="scss">
 @import "../../assets/scss/buttons.css";
+@import "../../assets/scss/colours.scss";
 
 ul {
   list-style-type: none;
@@ -96,40 +97,28 @@ li {
     fill: currentColor;
   }
 
-  li {
-    text-align: start;
-    ul {
-      li {
-        padding-left: 32px;
-      }
-    }
-  }
-
-  .section-link {
-    background-color: #af9e8c;
-    background: linear-gradient(0deg, #978069 35%, #af9e8c 100%);
-    border-radius: 16px;
-  }
-
   .nav-link {
-    box-sizing: border-box;
     text-decoration: none;
     color: inherit;
 
-    margin: 4px 0px;
+    padding: 8px;
+    margin: 0px;
 
-    width: 100%;
     height: $element-height;
-
     line-height: $element-height;
 
     display: flex;
+    text-align: start;
     align-items: middle;
 
-    &.router-link-exact-active:not(.section-link) {
-      &::before {
-        content: "❖";
-      }
+    &.sub-link {
+      padding-left: 40px;
+    }
+
+    &.router-link-exact-active, &:hover {
+      font-weight: bold;
+      background-color: white;
+      color: $view-nav-background;
     }
   }
 }

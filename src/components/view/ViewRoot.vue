@@ -116,7 +116,7 @@ export default class ViewRoot extends Vue {
 
     color: white;
 
-    padding: 16px;
+    padding: 16px 0px;
 
     box-sizing: border-box;
 
