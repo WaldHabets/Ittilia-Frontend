@@ -53,6 +53,20 @@ export default class ClassFeature extends Vue {
     "title title"
     "value table";
 
+  @media screen and (max-width: 512px) {
+    & {
+      grid-template:
+        "title"
+        "value"
+        "table";
+
+      .progression-wrapper {
+        margin-bottom: 8px;
+        font-size: small;
+      }
+    }
+  }
+
   column-gap: 16px;
 
   h1 {

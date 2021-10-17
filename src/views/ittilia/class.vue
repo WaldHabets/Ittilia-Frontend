@@ -24,41 +24,7 @@
       </select>
 
       <aside v-if="classData" id="class-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Level</th>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              <th>4</th>
-              <th>5</th>
-              <th>6</th>
-              <th>7</th>
-              <th>8</th>
-              <th>9</th>
-              <th>10</th>
-              <th>11</th>
-              <th>12</th>
-              <th>13</th>
-              <th>14</th>
-              <th>15</th>
-              <th>16</th>
-              <th>17</th>
-              <th>18</th>
-              <th>19</th>
-              <th>20</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(row, tableKey) in classData.table" :key="tableKey">
-              <td>{{ row.name }}</td>
-              <td v-for="(value, rowKey) in row.values" :key="rowKey">
-                {{ value }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <class-table :table="classData.table"/>
       </aside>
 
       <main :id="`${$route.params.class}-main`" v-if="classData">
@@ -102,6 +68,7 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
 import ClassSwitcher from "@/components/ClassSwitcher.vue";
 import ClassFeature from "@/components/class/Feature.vue";
 import Markdown from "@/components/Markdown.vue";
+import ClassTable from "@/components/class/ClassTable.vue";
 import axios from "axios";
 
 @Component({
@@ -111,6 +78,7 @@ import axios from "axios";
     ClassSwitcher,
     ClassFeature,
     Markdown,
+    ClassTable,
   },
 })
 export default class ClassView extends Vue {
@@ -147,16 +115,22 @@ export default class ClassView extends Vue {
 @import "../../assets/scss/buttons.css";
 @import "../../assets/scss/colours.scss";
 
-#subclass-switcher {
-  width: 100%;
-  max-width: 796px;
+$max-width: 796px;
+
+@mixin meta-block() {
+  width: calc(100% - 32px);
+  max-width: $max-width;
 
   margin: 16px auto 0px auto;
 
-  padding: 8px 12px;
-
   border-radius: 4px;
   border: 1px solid #ababab;
+}
+
+#subclass-switcher {
+  @include meta-block();
+
+  padding: 8px 12px;
 
   &:after {
     content: "ab";
@@ -164,19 +138,8 @@ export default class ClassView extends Vue {
 }
 
 #class-table {
+  @include meta-block();
   display: block;
-
-  margin: 16px auto 0px auto;
-  max-width: 796px;
-
-  border-radius: 4px;
-  border: 1px solid #ababab;
-
-  text-align: right;
-
-  table {
-    width: 100%;
-  }
 }
 
 @mixin main($color) {
@@ -188,7 +151,7 @@ export default class ClassView extends Vue {
 
   box-sizing: border-box;
   width: 100%;
-  max-width: 796px;
+  max-width: $max-width;
 
   .level-group {
     display: flex;
@@ -234,6 +197,12 @@ export default class ClassView extends Vue {
           margin-right: 4px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $max-width) {
+    & {
+      border: none;
     }
   }
 }
