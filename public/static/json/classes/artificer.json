@@ -1,0 +1,164 @@
+{
+    "name": "Artificer",
+    "hasHombrew": false,
+    "subclasses": [
+        { 
+            "value": "alchemist",
+            "text": "Alchemist"
+        },{ 
+            "value": "armorer",
+            "text": "Armorer"
+        },{ 
+            "value": "artillerist",
+            "text": "Artillerist"
+        },{ 
+            "value": "battle-smith",
+            "text": "Battle Smith"
+        }
+    ],
+    "hit-points": {
+        "hit-dice": "1d8",
+        "first-level": "8",
+        "higher-level": ""
+    },
+    "proficiencies": {
+        "armor": [""],
+        "weapons": [""],
+        "tools": [],
+        "saving-throws": ["Constitution", "Intelligence"],
+        "skills": {
+            "number": "2",
+            "from": ["Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight of Hand"]
+        }
+    },
+    "table": {
+        "headers": ["Proficiency Bonus", "Infusions Known", "Cantrips Known", "Cantrips Known"],
+        "data": [
+            ["+2","-", "-", 2],
+            ["+2",4,2,2],
+            ["+2",4,2,2],
+            ["+2",4,2,2],
+            ["+3",4,2,2],
+            ["+3",6,3,2],
+            ["+3",6,3,2],
+            ["+3",6,3,2],
+            ["+4",6,3,2],
+            ["+4",8,4,3],
+            ["+4",8,4,3],
+            ["+4",8,4,3],
+            ["+5",8,4,3],
+            ["+5",10,5,4],
+            ["+5",10,5,4],
+            ["+5",10,5,4],
+            ["+6",10,5,4],
+            ["+6",12,6,4],
+            ["+6",12,6,4],
+            ["+6",12,6,4]
+        ],
+        "spellsPerLevel":{
+            "max": 5,
+            "data": [
+                [2,0,0,0,0],
+                [2,0,0,0,0],
+                [3,0,0,0,0],
+                [3,0,0,0,0],
+                [4,2,0,0,0],
+                [4,2,0,0,0],
+                [4,3,0,0,0],
+                [4,3,0,0,0],
+                [4,3,2,0,0],
+                [4,3,2,0,0],
+                [4,3,3,0,0],
+                [4,3,3,0,0],
+                [4,3,3,1,0],
+                [4,3,3,1,0],
+                [4,3,3,2,0],
+                [4,3,3,2,0],
+                [4,3,3,3,1],
+                [4,3,3,3,1],
+                [4,3,3,3,2],
+                [4,3,3,3,2]
+            ]
+        } 
+    },
+    "levels": [
+        {
+            "level": 1,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Magical Tinkering",
+                    "class": "base",
+                    "description": "At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:\n\n - The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.\n - Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.\n - The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.\n - A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like.\n\nThe chosen property lasts indefinitely. As an action, you can touch the object and end the property early.\n\nYou can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies.",
+                    "progression": null
+                },
+                {
+                    "name": "Spellcasting",
+                    "class":"base",
+                    "description":"",
+                    "progression":null
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Infuse Item",
+                    "class": "base",
+                    "description": "You gain the ability to imbue mundane items with certain magical infusions. The magic items you create with this feature are effectively prototypes of permanent items.\n\n__Infusions Known.__\n\nWhen you gain this feature, pick four artificer infusions to learn, choosing from the 'Artificer Infusions' section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.\n\nWhenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one.\n\n__Artificer Infusions.__\n\nArtificers have invented numerous magical infusions, extraordinary processes that rapidly create magic items. To many, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete. In truth, infusions come with their own limitations, and are easily reconised when people determine the magical properties of an item.\n\nThe description of each of the following infusions details the type of item that can receive it, along with whether the resulting magic item requires attunement.\n\nSome infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.\n\nUnless an infusion's description says otherwise, you can't learn an infusion more than once.\n\n__Infusing an Item.__\n\nWhenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement.\n\nYour infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.\n\nYou can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies.\n\nIf an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "enhancements": null,
+            "features":[
+                {
+                    "name": "The Right Tool for the Job",
+                    "class":"base",
+                    "description":"you learn how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",
+                    "progression":null
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "enhancements": null,
+            "features":[
+                {
+                    "name":"Tool Expertise",
+                    "class":"base",
+                    "description":"Your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.",
+                    "progression":null
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "enhancements":null,
+            "features":[
+                {
+                    "name":"Flash of Genius",
+                    "class":"base",
+                    "description":"You gain the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.\n\nYou can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest.",
+                    "progression":null
+                }
+            ]
+        },
+        {
+            "level": 10,
+            "enhancements":null,
+            "features":[
+                {
+                    "name":"Magic Item Adept",
+                    "class":"base",
+                    "description":"When you reach 10th level, you achieve a profound understanding of how to use and make magic items:\n\n - You can attune to up to four magic items at once.\n\n - If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold.",
+                    "progression":null
+                }
+            ]
+        }
+    ]
+}

@@ -12,8 +12,8 @@
     </template>
 
     <template v-slot:content>
-      <select id="subclass-switcher" v-if="classData">
-        <option :value="null">No Subclass</option>
+      <select id="subclass-switcher" v-if="classData" v-model="subclass">
+        <option value="">No Subclass</option>
         <option
           v-for="(subclass, key) in classData.subclasses"
           :key="key"
@@ -40,17 +40,17 @@
           <div class="features-wrapper">
             <div class="enhancements-wrapper" v-if="level.enhancements">
               <a
-                v-for="(item, itemKey) in level.enhancements"
+                v-for="(item, itemKey) in enhancements(level.enhancements)"
                 v-bind:key="itemKey"
                 class="enhancement"
-                :href="`#${item}`"
+                :href="`#${item.value}`"
               >
-                {{ item }}
+                {{ item.value }}
               </a>
             </div>
 
             <class-feature
-              v-for="(feature, featureKey) in level.features"
+              v-for="(feature, featureKey) in features(level.features)"
               v-bind:key="featureKey"
               :feature="feature"
             ></class-feature>
@@ -83,10 +83,23 @@ import axios from "axios";
 })
 export default class ClassView extends Vue {
   classData: any = null;
+  subclass = "";
 
   @Watch("$route.params.class", { deep: true })
   onClassChanged(val: string): void {
     this.fetchClass(val);
+  }
+
+  enhancements(unfiltered: []): [] {
+    return unfiltered.filter((enhancement, index, array) => {
+      return enhancement.class == "base" || enhancement.class == this.subclass;
+    });
+  }
+
+  features(unfiltered: []): [] {
+    return unfiltered.filter((feature, index, array) => {
+      return feature.class == "base" || feature.class == this.subclass;
+    });
   }
 
   mounted(): void {
@@ -205,6 +218,10 @@ $max-width: 796px;
       border: none;
     }
   }
+}
+
+#artificer-main {
+  @include main($class01);
 }
 
 #barbarian-main {

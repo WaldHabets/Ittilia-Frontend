@@ -15,6 +15,11 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/portal.ittilia.vue"),
   },
   {
+    path: "/ittilia/map",
+    name: "Map",
+    component: () => import("@/views/map/map.vue"),
+  },
+  {
     path: "/ittilia/classes",
     name: "Classes",
     component: () => import("@/views/portal.ittilia.classes.vue"),
