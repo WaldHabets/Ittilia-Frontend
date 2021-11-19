@@ -1,0 +1,58 @@
+{
+    "title": "Steden",
+    "groups": [
+        {
+            "title": "B",
+            "entries": [
+                {
+                    "name": "Brisnaque",
+                    "href": "brisnaque"
+                }
+            ]
+        },
+        {
+            "title": "D",
+            "entries": [
+                {
+                    "name": "Dalwater",
+                    "href": "dalwater"
+                },
+                {
+                    "name": "Dûne",
+                    "href": "dune"
+                }
+            ]
+        },
+        {
+            "title": "K",
+            "entries": [
+                {
+                    "name":"Kapelstede",
+                    "href":"kapelstede"
+                },
+                {
+                    "name":"Kerst",
+                    "href":"kerst"
+                }
+            ]
+        },
+        {
+            "title": "N",
+            "entries": [
+                {
+                    "name": "Nûhldale",
+                    "href": "nuhldale"
+                }
+            ]
+        },
+        {
+            "title": "V",
+            "entries": [
+                {
+                    "name": "Veerpoort",
+                    "href": "veerpoort"
+                }
+            ]
+        }
+    ]
+}

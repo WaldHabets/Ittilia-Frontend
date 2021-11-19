@@ -1,0 +1,37 @@
+{
+    "title": "Gilden en Organisaties",
+    "groups": [
+        {
+            "title": "Soorten Gilden",
+            "entries": [
+                {
+                    "name": "Ambachtsgilden",
+                    "href": "ambachtsgilden"
+                },
+                {
+                    "name": "Huurlingengilden",
+                    "href": "huurlingengilden"
+                },
+                {
+                    "name": "Karavaangilden",
+                    "href": "karavaangilden"
+                }
+            ]
+        },
+        {
+            "title": "Huurlingengilden",
+            "entries": [
+                {
+                    "name": "Ijzeren Wacht",
+                    "href": "ijzeren-wacht"
+                }
+            ]
+        },
+        {
+            "title": "Ambachtsgilden",
+            "entries": [
+
+            ]
+        }
+    ]
+}

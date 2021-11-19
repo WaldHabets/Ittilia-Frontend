@@ -1,0 +1,34 @@
+{
+    "title": "Geopolitiek",
+    "groups": [
+        {
+            "title": "Landen",
+            "entries": [
+                {
+                    "name": "Annóríen",
+                    "href": "annorien"
+                },
+                {
+                    "name":"Dol'Zalamasj",
+                    "href":"dol-zalamasj"
+                },
+                {
+                    "name":"Heidelfjer",
+                    "href":"heidelfjer"
+                },
+                {
+                    "name": "Het Hertogdom Kûmasj",
+                    "href": "hertogdom-kumasj"
+                },
+                {
+                    "name": "Koninkrijk van Tír",
+                    "href": "koninkrijk-van-tir"
+                },
+                {
+                    "name": "Wehltir",
+                    "href": "wehltir"
+                }
+            ]
+        }
+    ]
+}
