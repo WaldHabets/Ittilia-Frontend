@@ -1,4 +1,20 @@
 {
+    "explore-ittilia": {
+        "en": "Explore Ittilia",
+        "nl": "Ontdek Ittilia"
+    },
+    "page-wiki": {
+        "en": "Wiki",
+        "nl": "Wiki"
+    },
+    "page-map": {
+        "en": "Map",
+        "nl": "Kaart"
+    },
+    "page-classes": {
+        "en": "Classes",
+        "nl": "Rollen"
+    },
     "name": {
         "en": "Name",
         "nl": "Naam"
@@ -58,6 +74,10 @@
     "action-save": {
         "en": "Save",
         "nl": "Opslaan"
+    },
+    "action-back": {
+        "en": "Back",
+        "nl": "Terug"
     },
     "groupname": {
         "en": "Group Name",
