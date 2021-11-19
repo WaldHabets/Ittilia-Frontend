@@ -5,15 +5,18 @@
       <th>{{ s.get("initiative") }}</th>
     </thead>
     <tbody>
-      <tr
-        v-for="(entry, index) in entries"
-        v-bind:key="index"
-      >
+      <tr v-for="(entry, index) in entries" v-bind:key="index">
         <td v-bind:key="`col-label-${index}`">
           <label>{{ entry.name }}</label>
         </td>
         <td v-bind:key="`col-input-${index}`">
-          <input type="number" min="0" onClick="this.select()" v-model="entry.initiative" class="text-input-c" />
+          <input
+            type="number"
+            min="0"
+            onClick="this.select()"
+            v-model="entry.initiative"
+            class="text-input-c"
+          />
         </td>
       </tr>
       <tr>
@@ -55,7 +58,7 @@ export default class PartyList extends Vue {
       template.initiative = 10;
 
       entries.push(template);
-    })
+    });
     return entries;
   }
 
