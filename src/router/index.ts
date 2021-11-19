@@ -15,6 +15,21 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/portal.ittilia.vue"),
   },
   {
+    path: "/wiki",
+    name: "Wiki",
+    component: () => import("@/views/ittilia/wiki.vue"),
+  },
+  {
+    path: "/wiki/:category",
+    name: "Wiki",
+    component: () => import("@/views/ittilia/wiki.vue"),
+  },
+  {
+    path: "/wiki/:category/:topic",
+    name: "Wiki",
+    component: () => import("@/views/ittilia/wikipage.vue"),
+  },
+  {
     path: "/ittilia/map",
     name: "Map",
     component: () => import("@/views/map/map.vue"),
@@ -48,6 +63,11 @@ const routes: Array<RouteConfig> = [
     path: "/tools/party-manager",
     name: "Party Manager",
     component: () => import("@/views/tools/PartyManager.vue"),
+  },
+  {
+    path: "/tools/box",
+    name: "Toolbox",
+    component: () => import("@/views/tools/Toolbox.vue"),
   },
 ];
 
