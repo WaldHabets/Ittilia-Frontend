@@ -6,12 +6,21 @@
 
     <template v-slot:content>
       <portal-root id="portal">
-        <portal-card text="Item Forge" href="#" />
+        <portal-card
+          text="Item Forge"
+          href="/tools/party-manager"
+          background="/static/img/placeholder.png"
+        />
         <portal-card
           text="Initiative Tracker"
           href="/tools/initiative-tracker"
+          background="/static/img/placeholder.png"
         />
-        <portal-card text="Player Sheets" href="#" />
+        <portal-card
+          text="Player Sheets"
+          href="/tools/party-manager"
+          background="/static/img/placeholder.png"
+        />
       </portal-root>
     </template>
   </view-root>
@@ -35,8 +44,4 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
 export default class PortalTools extends Vue {}
 </script>
 
-<style lang="scss">
-#portal {
-  height: 100%;
-}
-</style>
+<style lang="scss"></style>

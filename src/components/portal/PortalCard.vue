@@ -1,6 +1,6 @@
 <template>
   <router-link :to="href" class="portal-card">
-    <img />
+    <img :src="background" :alt="text" />
     <h1>{{ text }}</h1>
   </router-link>
 </template>
@@ -12,31 +12,36 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class PortalCard extends Vue {
   @Prop(String) private readonly text!: string;
   @Prop(String) private readonly href!: string;
-  @Prop(String) private background: string | undefined;
+  @Prop(String) private readonly background!: string;
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use "sass:math";
 @import "portal-constants.scss";
 
+$box-height: 256px;
+$box-width: 340px;
+
+@mixin box-part() {
+  display: block;
+  width: 100%;
+  height: math.div($box-height, 2);
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
 .portal-card {
-  $height: 300px;
-  $banner-height: 48px;
-
-  display: grid;
-  grid-template-rows: $height - $banner-height $banner-height;
-
-  width: $portal-card-width;
-  height: $height;
+  display: inline-block;
+  width: $box-width;
+  height: $box-height;
+  margin: 8px;
 
   border: 1px solid #ababab;
   border-radius: 4px;
 
   box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
-
-  // line-height: $height;
-  text-align: center;
-  vertical-align: middle;
 
   text-decoration: none;
 
@@ -46,15 +51,29 @@ export default class PortalCard extends Vue {
   background-color: #061826;
 
   img {
-    width: 100%;
-    display: block;
+    @include box-part();
   }
   h1 {
-    display: block;
-    margin: 0px;
-    background-color: #3685b5;
+    @include box-part();
+
+    //background-color: #3685b5;
+    background-color: white;
     color: #061826;
-    line-height: $banner-height;
+    line-height: math.div($box-height, 4);
+  }
+  @media screen and (max-width: $box-width * 2 + 48px) {
+    & {
+      display: flex;
+      width: calc(100% - 16px);
+      height: math.div($box-height, 2);
+    }
+    img {
+      display: inline-block;
+      width: math.div($box-height, 2);
+    }
+    h1 {
+      display: inline-block;
+    }
   }
 }
 </style>

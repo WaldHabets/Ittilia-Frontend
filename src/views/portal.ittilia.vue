@@ -6,9 +6,21 @@
 
     <template v-slot:content>
       <portal-root id="portal">
-        <portal-card text="Book" href="#" />
-        <portal-card text="Map" href="#" />
-        <portal-card text="Classes" href="/ittilia/classes" />
+        <portal-card
+          :text="$store.getters.text('page-wiki')"
+          href="/wiki"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          :text="$store.getters.text('page-map')"
+          href="/ittilia/map"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          :text="$store.getters.text('page-classes')"
+          href="/ittilia/classes"
+          background="/static/img/placeholder.png"
+        />
       </portal-root>
     </template>
   </view-root>
@@ -32,8 +44,4 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
 export default class PortalIttilia extends Vue {}
 </script>
 
-<style lang="scss">
-#portal {
-  height: 100%;
-}
-</style>
+<style lang="scss"></style>

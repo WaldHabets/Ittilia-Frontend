@@ -18,11 +18,14 @@ export default class PortalRoot extends Vue {}
   $grid-gap: 16px;
 
   margin: 0px;
-  display: grid;
-  grid-gap: $grid-gap;
-  grid-template-columns: auto auto auto;
-  justify-content: center;
-  align-content: center;
+  width: 100%;
+
+  //display: grid;
+
+  //grid-gap: $grid-gap;
+  //grid-template-columns: auto auto auto;
+  //justify-content: center;
+  //align-content: center;
   //height: 100%;
 
   @media (max-width: 3 * $portal-card-width + 4 * $grid-gap) {

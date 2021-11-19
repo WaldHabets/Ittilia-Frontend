@@ -6,8 +6,16 @@
 
     <template v-slot:content>
       <portal-root id="nav-section">
-        <portal-card text="Explore Ittilia" href="/ittilia" />
-        <portal-card text="Tools" href="/tools" />
+        <portal-card
+          text="Ontdek Ittilia"
+          href="/ittilia"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          text="Tools"
+          href="/tools"
+          background="/static/img/placeholder.png"
+        />
       </portal-root>
     </template>
   </view-root>
@@ -31,8 +39,4 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
 export default class Portal extends Vue {}
 </script>
 
-<style lang="scss">
-#nav-section {
-  height: 100%;
-}
-</style>
+<style lang="scss"></style>
