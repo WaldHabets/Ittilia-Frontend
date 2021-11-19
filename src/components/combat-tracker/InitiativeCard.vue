@@ -1,5 +1,13 @@
 <template>
   <div class="initiative-card">
+    <div class="status">
+      <svg v-if="model.dead" viewBox="0 0 24 24">
+        <path :d="mdiSkull" />
+      </svg>
+      <svg v-else-if="model.isFleeing" viewBox="0 0 24 24">
+        <path :d="mdiRunFast" />
+      </svg>
+    </div>
     <div class="general">
       <h1 v-bind:class="[model.dead ? 'dead' : model.allegiance]">
         {{ model.name }}
@@ -48,13 +56,14 @@
 
 <script lang="ts">
 import { Component, Vue, Model } from "vue-property-decorator";
-import { mdiDelete, mdiSkull } from "@mdi/js";
+import { mdiDelete, mdiSkull, mdiRunFast } from "@mdi/js";
 import CombatEntry from "@/models/CombatEntry";
 
 @Component
 export default class InitiativeCard extends Vue {
-  private mdiDelete: string = mdiDelete;
-  private mdiSkull: string = mdiSkull;
+  private readonly mdiDelete: string = mdiDelete;
+  private readonly mdiSkull: string = mdiSkull;
+  private readonly mdiRunFast: string = mdiRunFast;
 
   @Model("change", { type: Object }) readonly model!: CombatEntry;
 
@@ -119,11 +128,15 @@ $boxed-element-height: 36px;
 
   display: grid;
   grid-template:
-    "number general health actions"
-    "number notes notes notes"
+    "status general health actions"
+    "status notes notes notes"
     / 52px auto 176px 96px;
 
   align-items: center;
+
+  .status {
+    grid-area: status;
+  }
 
   .general {
     grid-area: general;
