@@ -8,7 +8,7 @@
       <portal-root id="portal">
         <portal-card
           text="Item Forge"
-          href="/tools/party-manager"
+          href="/tools/item-forge"
           background="/static/img/placeholder.png"
         />
         <portal-card
