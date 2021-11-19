@@ -66,7 +66,7 @@ export default class DiceHelper {
         sides = +dice[1];
       }
       for (let i = 0; i < count; i++) {
-        result += this.roll(sides);
+        result += DiceHelper.roll(sides);
       }
     }
     return result;
@@ -77,7 +77,19 @@ export default class DiceHelper {
    * @param max The sides of the dice
    * @returns The result of the roll
    */
-  roll(sides: number): number {
+  static roll(sides: number): number {
     return Math.floor(Math.random() * sides + 1);
+  }
+
+  /**
+   * Rolls multiple dice with the same amount of sides
+   * @param sides The sides of the dice
+   * @param numberOfDice How many dice should be rolled
+   * @returns The result of the roll
+   */
+  static rollMultiple(sides: number, numberOfDice: number): number {
+    const max = sides * numberOfDice;
+    const min = numberOfDice;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
