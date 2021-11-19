@@ -299,14 +299,109 @@ select {
 #preview {
   display: flex;
   background: #242527ab;
-  justify-content: center;
-  background-image: url("/static/images/background.svg");
-  background-position: center;
-  background-size: cover;
   align-items: center;
   margin: 16px 0px 8px 0px;
-  padding: 64px;
+  padding: 64px 0px;
   color: black;
+  overflow-x: scroll;
+  #icg-card {
+    border: 1px solid #242527;
+    width: 600px;
+    min-width: 600px;
+    min-height: 150px;
+    font-size: 12.5px;
+    background: white;
+    text-align: start;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+
+    color: #242527;
+
+    .icg-side {
+      // display: inline-block;
+      box-sizing: border-box;
+      width: 50%;
+      height: 100%;
+      padding: 16px;
+    }
+
+    #icg-front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+      #icg-icon {
+        width: 128px;
+        height: 128px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+      }
+      .icg-tags {
+        font-style: italic;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+      .icg-extra {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        #icg-massa {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    #icg-back {
+      h1 {
+        font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+        font-weight: 800;
+        font-size: large;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        margin-bottom: 8px;
+      }
+      p {
+        text-align: justify;
+        margin-top: 8px;
+      }
+    }
+
+    #icg-item-description {
+      line-height: 1.3em;
+      p:not(:first-of-type) {
+        margin-top: 14px;
+      }
+    }
+    .icg-h-line {
+      height: 2px;
+      //background-color: #7ba0a9;
+      width: 100%;
+      margin: 4px 0px;
+    }
+    .icg-spell {
+      color: #68a1e6;
+      font-weight: bold;
+    }
+    .icg-spell-homebrew {
+      color: #6d67e5;
+      font-weight: bold;
+    }
+    #icg-homebrew {
+      height: 0.8em;
+      width: 0.8em;
+    }
+  }
 }
 #creator {
   padding: 16px;
@@ -319,9 +414,10 @@ select {
     margin-bottom: 8px;
     display: flex;
     align-items: start;
+    flex-wrap: wrap;
   }
   #dropdown-wrapper {
-    .c-spinner:not(:last-of-type) {
+    select:not(:last-of-type) {
       margin-right: 8px;
     }
   }
@@ -345,102 +441,6 @@ select {
       width: 100%;
       margin-right: 8px;
     }
-  }
-}
-#icg-card {
-  border: 1px solid #242527;
-  width: 600px;
-  min-height: 150px;
-  font-size: 12.5px;
-  background: white;
-  text-align: start;
-
-  display: flex;
-  flex-direction: row;
-
-  color: #242527;
-
-  .icg-side {
-    // display: inline-block;
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    padding: 16px;
-  }
-
-  #icg-front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
-    #icg-icon {
-      width: 128px;
-      height: 128px;
-    }
-    h1 {
-      text-align: center;
-      font-size: 21px;
-      font-weight: bold;
-      margin-top: 4px;
-      margin-bottom: 0px;
-    }
-    .icg-tags {
-      font-style: italic;
-      font-size: 14px;
-      margin-top: 4px;
-    }
-    .icg-extra {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      font-size: 18px;
-      #icg-massa {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  }
-
-  #icg-back {
-    h1 {
-      font-family: "Roboto Condensed", Roboto, Helvetica, sans-serif;
-      font-weight: 800;
-      font-size: large;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      margin-bottom: 8px;
-    }
-    p {
-      text-align: justify;
-      margin-top: 8px;
-    }
-  }
-
-  #icg-item-description {
-    line-height: 1.3em;
-    p:not(:first-of-type) {
-      margin-top: 14px;
-    }
-  }
-  .icg-h-line {
-    height: 2px;
-    //background-color: #7ba0a9;
-    width: 100%;
-    margin: 4px 0px;
-  }
-  .icg-spell {
-    color: #68a1e6;
-    font-weight: bold;
-  }
-  .icg-spell-homebrew {
-    color: #6d67e5;
-    font-weight: bold;
-  }
-  #icg-homebrew {
-    height: 0.8em;
-    width: 0.8em;
   }
 }
 </style>

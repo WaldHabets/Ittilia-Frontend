@@ -3,15 +3,7 @@
     <template v-slot:header>
       <view-header>
         <template v-slot:start>
-          <label for="file-open" class="button">{{
-            s.get("action-import")
-          }}</label>
-          <input
-            id="file-open"
-            type="file"
-            v-on:change="open"
-            style="display: none"
-          />
+          <import-button @change="open" />
         </template>
         <template v-slot:end>
           <input
@@ -58,12 +50,14 @@ import Player from "@/models/Player.ts";
 import PlayerWrapper from "@/models/PlayerWrapper.ts";
 import Strings from "@/helpers/Strings.ts";
 import { mdiPlus, mdiContentSave } from "@mdi/js";
+import ImportButton from "@/components/controls/ImportButton.vue";
 
 @Component({
   components: {
     ViewRoot,
     ViewHeader,
     PlayerEditor,
+    ImportButton,
   },
 })
 export default class PartyManager extends Vue {
@@ -122,7 +116,6 @@ export default class PartyManager extends Vue {
 @import "../../assets/scss/buttons.css";
 @import "../../assets/scss/file.css";
 
-
 #meta-groupname {
   margin-right: 8px;
 }
@@ -131,7 +124,6 @@ export default class PartyManager extends Vue {
   width: 41px;
   height: 41px;
 }
-
 
 #players-grid {
   display: grid;

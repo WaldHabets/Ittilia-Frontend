@@ -3,15 +3,7 @@
     <template v-slot:header>
       <view-header>
         <template v-slot:start>
-          <label for="file-open" class="button">{{
-            s.get("action-import")
-          }}</label>
-          <input
-            id="file-open"
-            type="file"
-            v-on:change="open"
-            style="display: none"
-          />
+          <import-button @change="open" />
         </template>
         <template v-slot:end>
           <input
@@ -21,7 +13,7 @@
             :placeholder="s.get('groupname')"
             class="text-input"
           />
-          <button id="meta-save" class="button" @click="save">
+          <button id="meta-save" class="button" title="Opslaan" @click="save">
             <svg viewBox="0 0 24 24" fill="white">
               <path :d="mdiContentSave" />
             </svg>
@@ -32,12 +24,21 @@
     <template v-slot:content>
       <main>
         <div id="controls" class="card">
-          <button class="button" @click="sort">
+          <button class="button" title="Sorteer" @click="sort">
             <svg viewBox="0 0 24 24">
               <path :d="mdiSortDescending" />
             </svg>
           </button>
-          <button class="button" @click="prevTurn">
+          <button
+            class="button"
+            title="Check Moraal"
+            @click="checkMoraleForEnemies"
+          >
+            <svg viewBox="0 0 24 24">
+              <path :d="mdiAlert" />
+            </svg>
+          </button>
+          <button class="button" title="Vorige Beurt" @click="prevTurn">
             <svg viewBox="0 0 24 24">
               <path :d="mdiArrowPrev" />
             </svg>
@@ -50,7 +51,7 @@
             <div class="control-indicator-label">{{ s.get("turn") }}</div>
             <div class="control-indicator-value">{{ model.turn }}</div>
           </div>
-          <button class="button" @click="nextTurn">
+          <button class="button" title="Volgende Beurt" @click="nextTurn">
             <svg viewBox="0 0 24 24">
               <path :d="mdiArrowNext" />
             </svg>
@@ -126,6 +127,7 @@ import {
   mdiArrowLeftBold,
   mdiSortDescending,
   mdiContentSave,
+  mdiAlert,
 } from "@mdi/js";
 
 import InitiativeCard from "@/components/combat-tracker/InitiativeCard.vue";
@@ -134,6 +136,9 @@ import PartyList from "@/components/combat-tracker/PartyList.vue";
 
 import CombatEntry from "@/models/CombatEntry";
 import Strings from "@/helpers/Strings.ts";
+import DiceHelper from "@/helpers/DiceHelper.ts";
+
+import ImportButton from "@/components/controls/ImportButton.vue";
 
 class Model {
   name = "";
@@ -141,6 +146,12 @@ class Model {
   entries: CombatEntry[] = [];
   round = 0;
   turn = 0;
+}
+
+function checkMorale(entry: CombatEntry): boolean {
+  let roll = DiceHelper.rollMultiple(6, 2);
+  console.log(`${roll} vs ${entry.mr}`);
+  return roll <= entry.mr;
 }
 
 @Component({
@@ -151,10 +162,12 @@ class Model {
     CreateCombatEntry,
     Side,
     PartyList,
+    ImportButton,
   },
 })
 export default class InitiativeTracker extends Vue {
   private readonly s: Strings = new Strings();
+  private readonly mdiAlert: string = mdiAlert;
   private readonly mdiArrowPrev: string = mdiArrowLeftBold;
   private readonly mdiArrowNext: string = mdiArrowRightBold;
   private readonly mdiSortDescending: string = mdiSortDescending;
@@ -285,6 +298,15 @@ export default class InitiativeTracker extends Vue {
   sort(): void {
     this.model.entries.sort(function (a: CombatEntry, b: CombatEntry) {
       return b.initiative - a.initiative;
+    });
+  }
+
+  checkMoraleForEnemies(): void {
+    this.model.entries.forEach((entry: CombatEntry) => {
+      if (!checkMorale(entry)) {
+        entry.isFleeing = true;
+      }
+      console.log(entry.isFleeing);
     });
   }
 }
