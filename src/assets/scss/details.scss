@@ -12,13 +12,24 @@
         border-bottom: 1px solid #ababab;
         padding: $tiny $small;
 
+        border-radius: 4px 4px 4px 4px;
+
         &:hover {
             cursor: pointer;
         }
     }
 
     border: 1px solid #ababab;
+    border-bottom: none;
     border-radius: 4px;
+
+    &[open] {
+        border-bottom: 1px solid #ababab;
+
+        summary {
+            border-radius: 4px 4px 0px 0px;
+        }
+    }
 
     &:not(:last-child) {
         margin-bottom: $small;

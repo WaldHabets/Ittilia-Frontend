@@ -89,6 +89,7 @@ export default class WikiPage extends Vue {
 
 <style lang="scss" scoped>
 @import "../../assets/scss/colours.scss";
+@import "../../assets/scss/details.scss";
 @import "../../assets/scss/dims.scss";
 
 h1 {
@@ -113,32 +114,12 @@ h1 {
   margin: auto;
 
   details {
-    text-align: start;
-
-    summary {
-      font-size: $font-size-h3;
-      font-weight: bold;
-      color: $view-nav-background;
-      background-color: #f7f7f7;
-      border-bottom: 1px solid #ababab;
-      padding: $tiny $small;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    @include details-base();
 
     ul {
       padding: $tiny $small;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    border: 1px solid #ababab;
-    border-radius: 4px;
-
-    &:not(:last-child) {
-      margin-bottom: $small;
     }
   }
 }
