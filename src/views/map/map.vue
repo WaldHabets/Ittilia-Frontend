@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:content>
-        <leaflet/>
+      <leaflet />
     </template>
   </view-root>
 </template>
@@ -26,6 +26,4 @@ import Leaflet from "@/components/map/Leaflet.vue";
 export default class Portal extends Vue {}
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
