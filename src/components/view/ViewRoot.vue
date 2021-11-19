@@ -162,6 +162,7 @@ export default class ViewRoot extends Vue {
 
     #view-body {
       overflow-y: visible;
+      height: max-content;
     }
   }
 }
