@@ -5,83 +5,117 @@
     </template>
     <template v-slot:content>
       <main>
-        <portal-root id="wrapper">
-          <details>
-            <summary class="main-group">Scholen van Magie</summary>
-            <p>
-              Iedereen in Ittilia wordt geboren met een band met het arcane. Als
-              beoefenaar van een magische school ben je volledig toegewijd aan
-              oefening en studie om het maximale uit deze magie te halen.
-            </p>
-          </details>
+        <details>
+          <summary class="main-group">Magiërs</summary>
+          <p>
+            Iedereen in de Yxon, wel bijna iedereen, wordt geboren met de
+            inherente vaardigheid om magie te beoefenen. De meeste personen
+            kennen dan ook een truk of twee
+          </p>
+        </details>
 
-          <details>
-            <summary class="sub-group">Arcanist</summary>
-            <p>Een</p>
-          </details>
+        <details>
+          <summary class="sub-group">Arcanisten</summary>
           <portal-class-card
-            text="Arcanist: Artificer"
+            text="Artificer"
             href="/ittilia/classes/artificer"
             background="/static/img/classes/bg/class01.jpg"
           />
           <portal-class-card
-            text="Arcanist: Wizard"
+            text="Wizard"
             href="/ittilia/classes/wizard"
             background="/static/img/classes/bg/class02.jpg"
           />
-
-          <details>
-            <summary class="sub-group">Magiër</summary>
-            <p>
-              In Ittilia is er geen concept van Bard, Cleric of Sorcerer. Dit
-              alles is gewoon een magiër. De klassen zijn behouden puur voor
-              mechanise redenen.
-            </p>
-            <p>
-              Een magiër verschilt in werkelijkheid niet veel van een arcanist.
-              Ze moeten nog altijd studeren en oefenen om nieuwe spreuken te
-              leren.
-            </p>
-          </details>
           <portal-class-card
-            text="Magiër: Bard"
+            text="Bard"
             href="/ittilia/classes/bard"
             background="/static/img/classes/bg/class07.jpg"
           />
           <portal-class-card
-            text="Magiër: Cleric"
-            href="/ittilia/classes/cleric"
-            background="/static/img/classes/bg/class04.jpg"
-          />
-          <portal-class-card
-            text="Magiër: Sorcerer"
+            text="Sorcerer"
             href="/ittilia/classes/sorcerer"
             background="/static/img/classes/bg/class06.jpg"
           />
 
-          <details>
-            <summary class="main-group">Scholen van Religie</summary>
-            <p>
-              Men kan niet studeren om een Druïde of Shaman te worden. Je moet
-              hiermee geboren zijn. Als je lid bent van een school van religie
-              dan heb je een speciale gave en link met de Yxon.
-            </p>
-          </details>
+          <p>
+            Arcanisten in Ittilia zijn zij die hun tijn ten volle toewijden aan
+            het bestuderen en beoefenen van magie; als er namelijk één waarheid
+            is doorheen de Yxon, dan is het dat magie gelijk staat aan macht. De
+            studie van magie is de meest directe route naar macht. Ongeacht de
+            manier waarop men gebruik wilt maken van magie, men kan niet om het
+            feit dat men met hun neus in de boeken zal moeten zitten.
+          </p>
+          <p>
+            Hoewel 5e verscheidene magische rollen aanbiedt, kent men deze
+            verschillen niet in Ittilia. Een arcanist is een arcanist, ongeacht
+            of de achterliggende rol artificer, wizard, bard of sorcerer is.
+            Iedereen wordt geboren met de vaardigheid om magie te gebruiken.
+            Allen zullen moeten leren en oefenen om dit goed te doen. Het komt
+            niet natuurlijker tot een sorcerer als dat het tot een tovernaar zou
+            komen. Het verschil ligt eerder in waar men tijdens de studie op
+            focust.
+          </p>
+          <p>
+            Een tovenaar (wizard) hongert naar kennis: om zo veel en zo krachtig
+            mogelijke spreuken te leren. Ze proberen steeds om nieuwe spreuken
+            te vinden en te ontwikkelen. Voor een tovenaar is meer beter. Een
+            sorcerer legt zijn focus op het dieper begrijpen van de magie, om er
+            absolute controle over te hebben en om het te buigen naar hun wil,
+            meer dan een andere arcanist dat zou kunnen. De bard daarintegen is
+            minder gierig. Dit zijn arcanisten die de schoonheid in magie zien,
+            en ze daarom proberen te verzoenen met andere aspecten van het
+            leven. Meestal in kunstvormen. Hun focus is naar buiten gericht, om
+            magie toe te passen om andere levens gelukkiger te maken. Een
+            artificer is het hier in zekere zin mee eens: hun studie is niet
+            zozeer gericht op de magie zelf, maar de vereniging ervan met andere
+            objecten. Hoewel iedere arcanist in staat is op magische items te
+            ontwikkelen, kan men moeilijk evenaren met de kennis die een
+            artificer heeft in dit onderwerp. Hun onderzoek is niet enkel
+            gefocust op de magie, maar ook op hoe men objecten en apparatus van
+            de grond af aan kan ontwikkelen met het doel ze te binden met magie.
+          </p>
+        </details>
+
+        <details>
+          <summary class="main-group">Druïden</summary>
           <portal-class-card
             text="Religie: Druid"
             href="/ittilia/classes/druid"
             background="/static/img/classes/bg/class09.jpg"
           />
           <portal-class-card
-            text="Religie: Shaman"
-            href="/ittilia/classes/shaman"
-            background="/static/img/classes/bg/class03.jpg"
+            text="Magiër: Cleric"
+            href="/ittilia/classes/cleric"
+            background="/static/img/classes/bg/class04.jpg"
           />
 
-          <details>
-            <summary class="main-group">Scholen van Oorlog</summary>
-            <p>TODO</p>
-          </details>
+          <p>
+            Druïden in Ittilia vervullen velen belangrijke rollen, meestal
+            religieus. In tegenstelling tot elke andere rol, kan men er niet
+            voor kiezen om een druïde te worden. Een druïde is iemand die
+            geboren wordt met een zeer diepe en zuivere connectie met de wereld
+            rondom hun, in dezelfde manier waarop de Yxothri gelinked zijn met
+            de wereld.
+          </p>
+          <p>
+            Druïdencirkels zijn altijd opzoek naar nieuwgeborene met een
+            druïdische link. Ze zetten hun oracles in om te voorspellen waar en
+            kind geboren wordt, om het, zodra het geboren is, weg te halen bij
+            hun ouders en op te voeden in de druïdische tempels. Het is niet
+            ongewoon dat verschillende tempels een kind proberen op te eisen,
+            wat nu en dat tot conflicten kan leiden.
+          </p>
+          <p>
+            De diepe link met de natuur en de cosmos stelt druïden in staat
+            verschillende rollen te vervullen, en duwt ze gewoonlijk in een
+            religieuse positie. Gewoonlijk vind men minstens één druïde per
+            dorp, die de balseming doet, als heler werkt, bescherming dient te
+            bieden tegen ondoden of onnatuurlijke en vele andere zaken.
+          </p>
+        </details>
+
+        <details>
+          <summary class="main-group">Scholen van Oorlog</summary>
           <portal-class-card
             text="Barbarian"
             href="/ittilia/classes/barbarian"
@@ -97,11 +131,11 @@
             href="/ittilia/classes/paladin"
             background="/static/img/classes/bg/class14.jpg"
           />
+          <p>TODO</p>
+        </details>
 
-          <details>
-            <summary class="main-group">Overige</summary>
-            <p>TODO</p>
-          </details>
+        <details>
+          <summary class="main-group">Overige</summary>
           <portal-class-card
             text="Monk"
             href="/ittilia/classes/monk"
@@ -122,7 +156,8 @@
             href="/ittilia/classes/warlock"
             background="/static/img/classes/bg/class12.jpg"
           />
-        </portal-root>
+          <p>TODO</p>
+        </details>
       </main>
     </template>
   </view-root>
@@ -131,14 +166,12 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import PortalClassCard from "@/components/portal/PortalClassCard.vue";
-import PortalRoot from "@/components/portal/PortalRoot.vue";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
 
 @Component({
   components: {
     PortalClassCard,
-    PortalRoot,
     ViewHeader,
     ViewRoot,
   },
@@ -146,33 +179,18 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
 export default class PortalClasses extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "../assets/scss/details.scss";
+
 main {
   box-sizing: border-box;
   padding: 16px;
 
   details {
-    grid-column: 1/-1;
-    color: #282828;
-    width: 100%;
-    max-width: 664px;
-    margin: auto;
-
-    summary.main-group {
-      box-sizing: border-box;
-      padding: 8px;
-      font-size: 24px;
-      font-weight: 900;
-      color: #282828;
-      border-bottom: 1px solid white;
-      width: 100%;
-      text-align: start;
-    }
+    @include details-base;
 
     p {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: 632px;
+      margin: 16px 8px;
     }
   }
 }

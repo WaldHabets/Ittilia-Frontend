@@ -1,9 +1,5 @@
 <template>
-  <router-link
-    :to="href"
-    class="portal-class-card"
-    :style="`background: url(${background});`"
-  >
+  <router-link :to="href" class="portal-class-card">
     <span>
       {{ text }}
     </span>
@@ -21,42 +17,31 @@ export default class PortalClassCard extends Vue {
 }
 </script>
 
-<style lang="scss">
-@import "portal-constants.scss";
+<style lang="scss" scoped>
+@import "../../assets/scss/buttons.scss";
 
 .portal-class-card {
-  $height: 100px;
+  @include button(#7f2aff);
+  $height: 24px;
 
   display: inline-block;
 
-  width: $portal-card-width;
   height: $height;
-
-  border: 1px solid #282828;
-  border-radius: 4px;
-
-  box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
-
   line-height: $height;
-  text-align: center;
-  vertical-align: middle;
 
-  text-decoration: none;
+  margin: 4px;
 
-  font-size: 18px;
-  font-weight: 800;
-
-  background-color: white;
+  color: white;
 
   span {
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 4px 8px;
-    width: 100%;
-    height: 16px;
-    border-radius: 4px;
-    box-shadow: inset 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
-    color: #4a4a4a;
+    // box-sizing: border-box;
+    // background: rgba(255, 255, 255, 0.7);
+    // padding: 4px 8px;
+    // width: 100%;
+    // height: 16px;
+    // border-radius: 4px;
+    // box-shadow: inset 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+    // color: #4a4a4a;
   }
 }
 </style>
