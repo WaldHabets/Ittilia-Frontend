@@ -6,7 +6,6 @@
     <option value="cleric">Cleric</option>
     <option value="sorcerer">Sorcerer</option>
     <option value="druid">Druid</option>
-    <option value="shaman">Shaman</option>
     <option value="barbarian">Barbarian</option>
     <option value="fighter">Fighter</option>
     <option value="paladin">Paladin</option>
