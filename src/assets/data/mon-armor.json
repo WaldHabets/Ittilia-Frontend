@@ -1,0 +1,118 @@
+[
+    {
+        "armor": "Geen",
+        "base": 10,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },
+    {
+        "armor": "Natuurlijk (Dun)",
+        "base": 10,
+        "dex": true,
+        "con": true,
+        "bonus": 1,
+        "limit": 0
+    },
+    {
+        "armor": "Natuurlijk (Dik)",
+        "base": 10,
+        "dex": true,
+        "con": true,
+        "bonus": 2,
+        "limit": 0
+    },
+    {
+        "armor": "Natuurlijk (Legendarisch",
+        "base": 10,
+        "dex": true,
+        "con": true,
+        "bonus": 3,
+        "limit": 0
+    },{
+        "armor": "Padded",
+        "base": 11,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Leather",
+        "base": 11,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Studded Leather",
+        "base": 12,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Hide",
+        "base": 12,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 14
+    },{
+        "armor": "Chain Shirt",
+        "base": 13,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 15
+    },{
+        "armor": "Scale Mail",
+        "base": 14,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 16
+    },{
+        "armor": "Breastplate",
+        "base": 14,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 16
+    },{
+        "armor": "Half Plate",
+        "base": 15,
+        "dex": true,
+        "con": false,
+        "bonus": 0,
+        "limit": 17
+    },{
+        "armor": "Ring Mail",
+        "base": 14,
+        "dex": false,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Chain Mail",
+        "base": 16,
+        "dex": false,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Splint",
+        "base": 17,
+        "dex": false,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    },{
+        "armor": "Plate",
+        "base": 18,
+        "dex": false,
+        "con": false,
+        "bonus": 0,
+        "limit": 0
+    }
+]

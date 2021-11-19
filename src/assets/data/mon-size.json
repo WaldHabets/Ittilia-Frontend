@@ -1,0 +1,27 @@
+[
+    {
+        "size": "Tiny",
+        "hitDice": 4,
+        "damageDice": 1
+    },{
+        "size": "Small",
+        "hitDice": 6,
+        "damageDice": 4
+    },{
+        "size": "Medium",
+        "hitDice": 8,
+        "damageDice": 6
+    },{
+        "size": "Large",
+        "hitDice": 10,
+        "damageDice": 8
+    },{
+        "size": "Huge",
+        "hitDice": 12,
+        "damageDice": 10
+    },{
+        "size": "Guargantuan",
+        "hitDice": 20,
+        "damageDice": 12
+    }
+]

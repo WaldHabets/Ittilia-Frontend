@@ -1,0 +1,43 @@
+[
+    {
+        "value": 1,
+        "text": "Zeer laag",
+        "minimum": 0
+    }, {
+        "value": 2,
+        "text": "Laag",
+        "minimum": 4
+    }, {
+        "value": 3,
+        "text": "Gemiddeld",
+        "minimum": 8
+    }, {
+        "value": 4,
+        "text": "Goed",
+        "minimum": 12
+    }, {
+        "value": 5,
+        "text": "Hoog",
+        "minimum": 16
+    }, {
+        "value": 6,
+        "text": "Zeer hoog",
+        "minimum": 20
+    }, {
+        "value": 7,
+        "text": "Bovennatuurlijk",
+        "minimum": 24
+    }, {
+        "value": 8,
+        "text": "",
+        "minimum": 28
+    }, {
+        "value": 9,
+        "text": "Legendaries",
+        "minimum": 32
+    }, {
+        "value": 10,
+        "text": "Godelijk",
+        "minimum": 36
+    }
+]

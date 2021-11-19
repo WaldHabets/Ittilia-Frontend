@@ -1,0 +1,267 @@
+[
+    {
+        "challengeRating": 0,
+        "proficiencyBonus": 2,
+        "attackDice": 1,
+        "maxStat": 3,
+        "maxTotal": 17
+    },{
+        "challengeRating": 0.125,
+        "proficiencyBonus": 2,
+        "attackDice": 1,
+        "maxStat": 4,
+        "maxTotal": 17
+    },{
+        "challengeRating": 0.25,
+        "proficiencyBonus": 2,
+        "attackDice": 1,
+        "maxStat": 4,
+        "maxTotal": 18
+    },{
+        "challengeRating": 0.5,
+        "proficiencyBonus": 2,
+        "attackDice": 2,
+        "maxStat":4,
+        "maxTotal": 18
+    },{
+        "challengeRating": 1,
+        "proficiencyBonus": 2,
+        "attackDice": 2,
+        "maxStat":4,
+        "maxTotal": 19
+    },{
+        "challengeRating": 2,
+        "proficiencyBonus": 2,
+        "attackDice": 2,
+        "maxStat":5,
+        "maxTotal": 19
+    },{
+        "challengeRating": 3,
+        "proficiencyBonus": 2,
+        "attackDice": 3,
+        "maxStat":5,
+        "maxTotal": 20
+    },{
+        "challengeRating": 4,
+        "proficiencyBonus": 2,
+        "attackDice": 3,
+        "maxStat":5,
+        "maxTotal": 20
+    },{
+        "challengeRating": 5,
+        "proficiencyBonus": 3,
+        "attackDice": 3,
+        "maxStat":5,
+        "maxTotal": 21
+    },{
+        "challengeRating": 6,
+        "proficiencyBonus": 3,
+        "attackDice": 4,
+        "maxStat":5,
+        "maxTotal": 21
+    },{
+        "challengeRating": 7,
+        "proficiencyBonus": 3,
+        "attackDice": 4,
+        "maxStat":5,
+        "maxTotal": 22
+    },{
+        "challengeRating": 8,
+        "proficiencyBonus": 3,
+        "attackDice": 4,
+        "maxStat":6,
+        "maxTotal": 22
+    },{
+        "challengeRating": 9,
+        "proficiencyBonus": 4,
+        "attackDice": 5,
+        "maxStat":6,
+        "maxTotal": 23
+    },{
+        "challengeRating": 10,
+        "proficiencyBonus": 4,
+        "attackDice": 5,
+        "maxStat":6,
+        "maxTotal": 23
+    },{
+        "challengeRating": 11,
+        "proficiencyBonus": 4,
+        "attackDice": 5,
+        "maxStat":6,
+        "maxTotal": 24
+    },{
+        "challengeRating": 12,
+        "proficiencyBonus": 4,
+        "attackDice": 6,
+        "maxStat":6,
+        "maxTotal": 24
+    },{
+        "challengeRating": 13,
+        "proficiencyBonus": 5,
+        "attackDice": 6,
+        "maxStat":6,
+        "maxTotal": 25
+    },{
+        "challengeRating": 14,
+        "proficiencyBonus": 5,
+        "attackDice": 6,
+        "maxStat":6,
+        "maxTotal": 25
+    },{
+        "challengeRating": 15,
+        "proficiencyBonus": 5,
+        "attackDice": 7,
+        "maxStat":6,
+        "maxTotal": 26
+    },{
+        "challengeRating": 16,
+        "proficiencyBonus": 5,
+        "attackDice": 7,
+        "maxStat":6,
+        "maxTotal": 26
+    },{
+        "challengeRating": 17,
+        "proficiencyBonus": 6,
+        "attackDice": 7,
+        "maxStat":6,
+        "maxTotal": 27
+    },{
+        "challengeRating": 18,
+        "proficiencyBonus": 6,
+        "attackDice": 8,
+        "maxStat":6,
+        "maxTotal": 27
+    },{
+        "challengeRating": 19,
+        "proficiencyBonus": 6,
+        "attackDice": 8,
+        "maxStat":6,
+        "maxTotal": 28
+    },{
+        "challengeRating": 20,
+        "proficiencyBonus": 6,
+        "attackDice": 8,
+        "maxStat":6,
+        "maxTotal": 28
+    },{
+        "challengeRating": 21,
+        "proficiencyBonus": 7,
+        "attackDice": 9,
+        "maxStat":6,
+        "maxTotal": 29
+    },{
+        "challengeRating": 22,
+        "proficiencyBonus": 7,
+        "attackDice": 9,
+        "maxStat":7,
+        "maxTotal": 29
+    },{
+        "challengeRating": 23,
+        "proficiencyBonus": 7,
+        "attackDice": 9,
+        "maxStat":7,
+        "maxTotal": 30
+    },{
+        "challengeRating": 24,
+        "proficiencyBonus": 7,
+        "attackDice": 10,
+        "maxStat":7,
+        "maxTotal": 30
+    },{
+        "challengeRating": 25,
+        "proficiencyBonus": 8,
+        "attackDice": 10,
+        "maxStat":7,
+        "maxTotal": 31
+    },{
+        "challengeRating": 26,
+        "proficiencyBonus": 8,
+        "attackDice": 10,
+        "maxStat":8,
+        "maxTotal": 31
+    },{
+        "challengeRating": 27,
+        "proficiencyBonus": 8,
+        "attackDice": 11,
+        "maxStat":8,
+        "maxTotal": 32
+    },{
+        "challengeRating": 28,
+        "proficiencyBonus": 8,
+        "attackDice": 11,
+        "maxStat":8,
+        "maxTotal": 32
+    },{
+        "challengeRating": 29,
+        "proficiencyBonus": 9,
+        "attackDice": 11,
+        "maxStat":8,
+        "maxTotal": 33
+    },{
+        "challengeRating": 30,
+        "proficiencyBonus": 9,
+        "attackDice": 12,
+        "maxStat":8,
+        "maxTotal": 33
+    },{
+        "challengeRating": 31,
+        "proficiencyBonus": 9,
+        "attackDice": 12,
+        "maxStat":8,
+        "maxTotal": 34
+    },{
+        "challengeRating": 32,
+        "proficiencyBonus": 9,
+        "attackDice": 12,
+        "maxStat":9,
+        "maxTotal": 34
+    },{
+        "challengeRating": 33,
+        "proficiencyBonus": 10,
+        "attackDice": 13,
+        "maxStat":9,
+        "maxTotal": 36
+    },{
+        "challengeRating": 34,
+        "proficiencyBonus": 10,
+        "attackDice": 13,
+        "maxStat":9,
+        "maxTotal": 38
+    },{
+        "challengeRating": 35,
+        "proficiencyBonus": 10,
+        "attackDice": 13,
+        "maxStat":9,
+        "maxTotal": 40
+    },{
+        "challengeRating": 36,
+        "proficiencyBonus": 10,
+        "attackDice": 14,
+        "maxStat":9,
+        "maxTotal": 42
+    },{
+        "challengeRating": 37,
+        "proficiencyBonus": 11,
+        "attackDice": 14,
+        "maxStat":10,
+        "maxTotal": 44
+    },{
+        "challengeRating": 38,
+        "proficiencyBonus": 11,
+        "attackDice": 14,
+        "maxStat":10,
+        "maxTotal": 46
+    },{
+        "challengeRating": 39,
+        "proficiencyBonus": 11,
+        "attackDice": 15,
+        "maxStat":10,
+        "maxTotal": 48
+    },{
+        "challengeRating": 40,
+        "proficiencyBonus": 11,
+        "attackDice": 15,
+        "maxStat":10,
+        "maxTotal": 50
+    }
+]
