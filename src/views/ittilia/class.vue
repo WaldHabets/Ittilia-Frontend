@@ -24,10 +24,10 @@
       </select>
 
       <aside v-if="classData" id="class-table">
-        <class-table :table="classData.table"/>
+        <class-table :table="classData.table" />
       </aside>
 
-      <main :id="`${$route.params.class}-main`" v-if="classData">
+      <main id="main" v-if="classData">
         <section
           class="level-group"
           v-for="(level, levelKey) in classData.levels"
@@ -71,6 +71,8 @@ import Markdown from "@/components/Markdown.vue";
 import ClassTable from "@/components/class/ClassTable.vue";
 import axios from "axios";
 
+import { CFeature, CEnhancement } from "@/models/ClassData.ts";
+
 @Component({
   components: {
     ViewHeader,
@@ -90,14 +92,14 @@ export default class ClassView extends Vue {
     this.fetchClass(val);
   }
 
-  enhancements(unfiltered: []): [] {
-    return unfiltered.filter((enhancement, index, array) => {
+  enhancements(unfiltered: []): CEnhancement[] {
+    return unfiltered.filter((enhancement: CEnhancement, index, array) => {
       return enhancement.class == "base" || enhancement.class == this.subclass;
     });
   }
 
-  features(unfiltered: []): [] {
-    return unfiltered.filter((feature, index, array) => {
+  features(unfiltered: []): CFeature[] {
+    return unfiltered.filter((feature: CFeature, index, array) => {
       return feature.class == "base" || feature.class == this.subclass;
     });
   }
@@ -155,7 +157,7 @@ $max-width: 796px;
   display: block;
 }
 
-@mixin main($color) {
+#main {
   margin: 16px auto;
   padding: 16px;
 
@@ -173,7 +175,7 @@ $max-width: 796px;
     padding: 16px 0px;
 
     &:not(:last-child) {
-      border-bottom: 2px solid $color;
+      border-bottom: 2px solid $accent;
     }
 
     .level-wrapper {
@@ -191,8 +193,10 @@ $max-width: 796px;
         width: 40px;
 
         border-radius: 4px;
+        font-weight: bold;
 
-        background-color: $color;
+        color: white;
+        background-color: $accent;
       }
     }
     .features-wrapper {
@@ -218,26 +222,6 @@ $max-width: 796px;
       border: none;
     }
   }
-}
-
-#artificer-main {
-  @include main($class01);
-}
-
-#barbarian-main {
-  @include main($class06);
-}
-
-#fighter-main {
-  @include main($class05);
-}
-
-#bard-main {
-  @include main($class07);
-}
-
-#ranger-main {
-  @include main($class08);
 }
 
 .header-button {
