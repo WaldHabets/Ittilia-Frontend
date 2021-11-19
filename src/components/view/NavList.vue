@@ -13,19 +13,23 @@
         <svg viewBox="0 0 24 24">
           <path :d="iconExplore" />
         </svg>
-        Explore Ittilia
+        {{ $store.getters.text("explore-ittilia") }}
       </router-link>
       <ul>
         <li>
-          <router-link class="nav-link sub-link" to="/ittilia/book">Book</router-link>
-        </li>
-        <li>
-          <router-link class="nav-link sub-link" to="/ittilia/map">Map</router-link>
-        </li>
-        <li>
-          <router-link class="nav-link sub-link" to="/ittilia/classes"
-            >Classes</router-link
+          <router-link class="nav-link sub-link" to="/wiki">
+            {{ $store.getters.text("page-wiki") }}</router-link
           >
+        </li>
+        <li>
+          <router-link class="nav-link sub-link" to="/ittilia/map">{{
+            $store.getters.text("page-map")
+          }}</router-link>
+        </li>
+        <li>
+          <router-link class="nav-link sub-link" to="/ittilia/classes">{{
+            $store.getters.text("page-classes")
+          }}</router-link>
         </li>
       </ul>
     </li>
@@ -115,7 +119,8 @@ li {
       padding-left: 40px;
     }
 
-    &.router-link-exact-active, &:hover {
+    &.router-link-exact-active,
+    &:hover {
       font-weight: bold;
       background-color: white;
       color: $view-nav-background;
