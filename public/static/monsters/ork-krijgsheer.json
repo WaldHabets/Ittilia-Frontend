@@ -2,7 +2,7 @@
     "name":"Ork Krijgsheer",
     "initiative":"d20+1",
     "max-hp":"11d8+4",
-    "morale-rating":"2d6",
+    "morale-rating":"12",
     "passive-perception": 10,
     "armor-class": 16,
     "allegiance": "enemy",
