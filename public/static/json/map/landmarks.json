@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Dûne",
+        "latlng": [2861904.974700253, -5509398.0310196895],
+        "type": "city",
+        "wiki": "/wiki/cities/dune"
+    },
+    {
+        "name": "Brisnaque",
+        "latlng": [3187390.001099989, -5748731.575184248 ],
+        "type": "city",
+        "wiki":"/wiki/cities/brisnaque"
+    },
+    {
+        "name":"Onderheide",
+        "latlng":[3210592.8940710593, -5771719.626553735],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Dalwater",
+        "latlng":[2166033.027169728, -5514769.071059289],
+        "type": "city",
+        "wiki":"/wiki/cities/dalwater"
+    },
+    {
+        "name":"Veerpoort",
+        "latlng":[2877588.411615884, -5515843.279067209],
+        "type": "city",
+        "wiki":"/wiki/cities/veerpoort"
+    },
+    {
+        "name":"Skulft",
+        "latlng":[2876514.203607964, -5488128.712462875],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Steenwacht",
+        "latlng":[ 2713664.269607304, -5704044.522054779 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Demaril",
+        "latlng":[ 2298590.2953470466, -4834580.560444396 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Kapelstede",
+        "latlng":[ 3184167.377076229, -5887089.566604334 ],
+        "type": "city",
+        "wiki":"/wiki/cities/kapelstede"
+    },
+    {
+        "name":"Nûhldale",
+        "latlng":[ 3276549.2657573423, -5771075.101748982 ],
+        "type": "city",
+        "wiki":"/wiki/cities/nuhldale"
+    },
+    {
+        "name":"Amorn",
+        "latlng":[ 3314791.0708392914, -5592112.047629524 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Lareaux",
+        "latlng":[ 3247975.3327466724, -5600705.711692883 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Dommeldijk",
+        "latlng":[ 3336490.072599274, -5456332.155428446 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Kobaque",
+        "latlng":[ 3218756.8749312507, -5509612.872621274 ],
+        "type": "city",
+        "wiki":""
+    },
+    {
+        "name":"Otar Hillion",
+        "latlng":[ 2683801.28698713, -5673966.697833022 ],
+        "type":"landmark",
+        "wiki":""
+    },
+    {
+        "name":"Zuidwalle",
+        "latlng":[ 3157956.7016829834, -5407348.2702672975 ],
+        "type":"city",
+        "wiki":""
+    },
+    {
+        "name":"Lambeau",
+        "latlng":[ 3121218.787812122, -5601779.919700803 ],
+        "type":"city",
+        "wiki":""
+    },
+    {
+        "name":"Poort van Gorgon",
+        "latlng":[ 2883174.2932570674, -5489202.920470796 ],
+        "type":"landmark",
+        "wiki":""
+    }
+]
