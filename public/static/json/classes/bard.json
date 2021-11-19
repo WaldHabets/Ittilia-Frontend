@@ -14,24 +14,33 @@
         },{ 
             "value": "lore",
             "text": "Lore"
+        },{
+            "value":"spirits",
+            "text":"Spirits"
+        },{
+            "value":"swords",
+            "text":"Swords"
+        },{
+            "value":"valor",
+            "text":"Valor"
         },{ 
             "value": "whispers",
             "text": "Whispers"
         }
     ],
-    "hit-points": {
-        "hit-dice": "1d8",
-        "first-level": "8",
-        "higher-level": ""
+    "hitPoints": {
+        "hitDdice": "1d8",
+        "firstLevel": "8",
+        "higherLevel": "1d8"
     },
     "proficiencies": {
-        "armor": [""],
-        "weapons": [""],
-        "tools": [],
-        "saving-throws": ["Strength", "Constitution"],
+        "armor": ["light armor"],
+        "weapons": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+        "tools": ["three musical instruments of your choice"],
+        "savingThrows": ["Dexterity", "Charisma"],
         "skills": {
-            "number": "2",
-            "from": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
+            "number": "3",
+            "from": ["any"]
         }
     },
     "table": {

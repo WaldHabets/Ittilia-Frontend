@@ -1,50 +1,74 @@
 {
-    "name": "Barbarian",
+    "name": "Bard",
+    "hasHombrew": false,
     "subclasses": [
         { 
-            "value": "ancenstral-guardian",
+            "value": "ancestral-guardian",
             "text": "Ancestral Guardian"
         },{
-            "value": "battlerager",
-            "text": "Battlerager"
+            "value":"battlerager",
+            "text":"Battlerager"
         },{
-            "value": "beast",
-            "text": "Beast"
+            "value":"beasts",
+            "text":"Beasts"
         },{
-            "value": "berserker",
-            "text": "Berserker"
+            "value":"berserker",
+            "text":"Berserker"
         },{
-            "value": "storm-herald",
-            "text": "Storm Heral"
+            "value":"storm-herald",
+            "text":"Storm Herald"
         },{
-            "value": "totem-warrior",
-            "text": "Totem Warrior"
+            "value":"totem-warrior",
+            "text":"Totem Warrior"
         },{
-            "value": "wild-magic",
-            "text": "Wild Magic"
+            "value":"wild-magic",
+            "text":"Wild Magic"
         },{
-            "value": "zealot",
-            "text": "Zealot"
+            "value":"zealot",
+            "text":"Zealot"
         }
     ],
-    "table": [
-        {
-            "name": "Proficiency Bonus",
-            "values": []
-        },
-        {
-            "name": "Maneuvrepunten",
-            "values": ["2", "2", "2", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
-        },
-        {
-            "name": "Rages",
-            "values": ["2", "2", "3", "3", "3", "4", "4", "4", "4", "4", "4", "5", "5", "5", "5", "6", "6", "6", "unlimited"]
-        },
-        {
-            "name": "Rage Damage",
-            "values": []
+    "hitPoints": {
+        "hitDdice": "1d12",
+        "firstLevel": "12",
+        "higherLevel": "1d12"
+    },
+    "proficiencies": {
+        "armor": ["light armor", "medium armor", "shields"],
+        "weapons": ["simple weapons", "martial weapons"],
+        "tools": [],
+        "savingThrows": ["Strength", "Constitution"],
+        "skills": {
+            "number": "2",
+            "from": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
         }
-    ],
+    },
+    "table": {
+        "headers": ["Proficiency Bonus", "Rages", "Rage Damage"],
+        "data": [
+            ["+2","2","+2"],
+            ["+2","2","+2"],
+            ["+2","3","+2"],
+            ["+2","3","+2"],
+            ["+3","3","+2"],
+            ["+3","4","+2"],
+            ["+3","4","+2"],
+            ["+3","4","+2"],
+            ["+4","4","+3"],
+            ["+4","4","+3"],
+            ["+4","4","+3"],
+            ["+4","5","+3"],
+            ["+5","5","+3"],
+            ["+5","5","+3"],
+            ["+5","5","+3"],
+            ["+5","5","+4"],
+            ["+6","6","+4"],
+            ["+6","6","+4"],
+            ["+6","6","+4"],
+            ["+6","&infin;","+4"]
+        ],
+        "spellsPerLevel":null
+    },
     "levels": [
         {
             "level": 1,

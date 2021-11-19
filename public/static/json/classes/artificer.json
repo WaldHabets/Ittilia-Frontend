@@ -19,12 +19,12 @@
     "hit-points": {
         "hit-dice": "1d8",
         "first-level": "8",
-        "higher-level": ""
+        "higher-level": "1d8"
     },
     "proficiencies": {
-        "armor": [""],
-        "weapons": [""],
-        "tools": [],
+        "armor": ["light armor", "medium armor", "shields"],
+        "weapons": ["simple weapons"],
+        "tools": ["thieves' tools", "tinker's tools", "one type of artisan's tools of your choice"],
         "saving-throws": ["Constitution", "Intelligence"],
         "skills": {
             "number": "2",

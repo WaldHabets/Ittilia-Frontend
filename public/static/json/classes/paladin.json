@@ -1,0 +1,297 @@
+{
+    "name": "Bard",
+    "hasHombrew": false,
+    "subclasses": [
+        { 
+            "value": "ancients",
+            "text": "Ancients"
+        },{
+            "value":"conquest",
+            "text":"Conquest"
+        },{
+            "value":"crown",
+            "text":"Crown"
+        },{
+            "value":"devotion",
+            "text":"Devotion"
+        },{
+            "value":"glory",
+            "text":"Glory"
+        },{
+            "value":"oathbreaker",
+            "text":"Oathbreaker"
+        },{
+            "value":"redemption",
+            "text":"Redemption"
+        },{
+            "value":"vengeance",
+            "text":"Vengeance"
+        },{
+            "value":"watcher",
+            "text":"Watcher"
+        }
+    ],
+    "hitPoints": {
+        "hitDdice": "1d10",
+        "firstLevel": "10",
+        "higherLevel": "1d10"
+    },
+    "proficiencies": {
+        "armor": ["light armor", "medium armor", "heavy armor", "shields"],
+        "weapons": ["simple weapons", "martial weapons"],
+        "tools": [],
+        "savingThrows": ["Wisdom", "Charisma"],
+        "skills": {
+            "number": "2",
+            "from": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]
+        }
+    },
+    "table": {
+        "headers": ["Proficiency Bonus"],
+        "data": [
+            ["+2"],
+            ["+2"],
+            ["+2"],
+            ["+2"],
+            ["+3"],
+            ["+3"],
+            ["+3"],
+            ["+3"],
+            ["+4"],
+            ["+4"],
+            ["+4"],
+            ["+4"],
+            ["+5"],
+            ["+5"],
+            ["+5"],
+            ["+5"],
+            ["+6"],
+            ["+6"],
+            ["+6"],
+            ["+6"]
+        ],
+        "spellsPerLevel":{
+            "max": 5,
+            "data": [
+                [2,0,0,0,0],
+                [2,0,0,0,0],
+                [3,0,0,0,0],
+                [3,0,0,0,0],
+                [4,2,0,0,0],
+                [4,2,0,0,0],
+                [4,3,0,0,0],
+                [4,3,0,0,0],
+                [4,3,2,0,0],
+                [4,3,2,0,0],
+                [4,3,3,0,0],
+                [4,3,3,0,0],
+                [4,3,3,1,0],
+                [4,3,3,1,0],
+                [4,3,3,2,0],
+                [4,3,3,2,0],
+                [4,3,3,3,1],
+                [4,3,3,3,1],
+                [4,3,3,3,2],
+                [4,3,3,3,2]
+            ]
+        } 
+    },
+    "levels": [
+        {
+            "level": 1,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Bardic Inspiration",
+                    "class": "base",
+                    "description": "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.\n\nOnce within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.\n\nYou can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.",
+                    "progression": {
+                        "columns": ["Level", "Die Size"],
+                        "values": [
+                            { "level": 1, "value": "d6" },
+                            { "level": 5, "value": "d8" },
+                            { "level": 10, "value": "d10" },
+                            { "level": 15, "value": "d12" }
+                        ]
+                    }
+                },
+                {
+                    "name": "Spellcasting",
+                    "class": "base",
+                    "description": "__Spell Swapping__. When you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots.\n\n__Spellcasting Ability__. Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.\n\n__Spell save DC__. 8 + your proficiency bonus + your Charisma modifier\n\n__Spell attack modifier__. your proficiency bonus + your Charisma modifier\n\n__Spellcasting Focus__. You can use a musical instrument as a spellcasting focus for your bard spells.\n\n__Ritual Casting__. You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Jack of All Trades",
+                    "class": "base",
+                    "description": "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+                    "progression": null
+                },
+                {
+                    "name": "Song of Rest",
+                    "class": "base",
+                    "description": "You can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points by spending Hit Dice at the end of the short rest, each of those creatures regains an extra 1d6 hit points.",
+                    "progression": {
+                        "columns": ["Level", "Hit Points"],
+                        "values": [
+                            { "level": 2, "value": "1d6" },
+                            { "level": 9, "value": "1d8" },
+                            { "level": 13, "value": "1d10" },
+                            { "level": 17, "value": "1d12" }
+                        ]
+                    }
+                },
+                {
+                    "name": "Magical Inspiration",
+                    "class": "base",
+                    "description": "If a creature has a Bardic Inspiration die from you and casts a spell that restores hit points or deals damage, the creature can roll that die and choose a target affected by the spell. Add the number rolled as a bonus to the hit points regained or the damage dealt. The Bardic Inspiration die is then lost.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Expertise",
+                    "class": "base",
+                    "description": "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+                    "progression": {
+                        "columns": ["Level", "Expertise"],
+                        "values": [
+                            { "level": 3, "value": "2 Skills" },
+                            { "level": 10, "value": "4 Skills" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Bardic Inspiration"
+                }
+            ],
+            "features": [
+                {
+                    "name": "Font of Inspiration",
+                    "class": "base",
+                    "description": "You regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Countercharm",
+                    "class": "base",
+                    "description": "you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
+                    "progression": null
+                }
+            ]
+        },
+        {
+            "level": 9,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Song of Rest"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 10,
+            "enhancements": ["Bardic Inspiration", "Expertise"],
+            "features": [
+                {
+                    "name": "Magical Secrets",
+                    "class": "base",
+                    "description": "you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table.",
+                    "progression": {
+                        "columns": ["Level", "Additional Spells"],
+                        "values": [
+                            { "level": 10, "value": "+2 Spells" },
+                            { "level": 14, "value": "+2 Spells" },
+                            { "level": 18, "value": "+2 Spells" }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "level": 13,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Song of Rest"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 14,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Magical Secrets"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 15,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Bardic Inspiration"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 17,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Song of Rest"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 18,
+            "enhancements": [
+                {
+                    "class":"base",
+                    "value":"Magical Secrets"
+                }
+            ],
+            "features": []
+        },
+        {
+            "level": 20,
+            "enhancements": null,
+            "features": [
+                {
+                    "name": "Superior Inspiration",
+                    "class": "base",
+                    "description": "When you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+                    "progression": null
+                }
+            ]
+        }
+    ]
+}
