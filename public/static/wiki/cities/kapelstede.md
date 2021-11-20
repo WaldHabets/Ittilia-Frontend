@@ -6,4 +6,6 @@ cristal: Ja
 authors: Wald Habets
 ---
 
+⚒ Hier wordt nog aan gewerkt ⚒
+
 Kapelstede is de hoofdstad van [Wehltir](/wiki/geopolitics/wehltir).

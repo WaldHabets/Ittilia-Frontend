@@ -6,5 +6,7 @@ cristal: Ja
 authors: Wald Habets
 ---
 
-![Kaart van Brisnaque](/static/img/wiki/nuhldale.png)
+⚒ Hier wordt nog aan gewerkt ⚒
+
+![Kaart van Nûhldale](/static/img/wiki/nuhldale.png)
 

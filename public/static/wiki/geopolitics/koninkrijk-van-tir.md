@@ -1,5 +1,5 @@
 ---
-name: Wehltir
+name: Koninkrijk van Tír
 population: -
 banner: 
 authors: Wald Habets

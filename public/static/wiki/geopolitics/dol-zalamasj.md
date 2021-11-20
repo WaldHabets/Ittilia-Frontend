@@ -5,6 +5,8 @@ banner: banner_dol_zalamasj.png
 authors: Wald Habets
 ---
 
+⚒ Hier wordt nog aan gewerkt ⚒
+
 Dol'Zalamasj is één van de grootste, oudste en machtigste koninkrijken in Ittilia.
 
 ## De Heilige Oorlog
