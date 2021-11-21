@@ -23,69 +23,72 @@
     </template>
     <template v-slot:content>
       <main>
-        <div id="controls" class="card">
-          <button class="button" title="Sorteer" @click="sort">
-            <svg viewBox="0 0 24 24">
-              <path :d="mdiSortDescending" />
-            </svg>
-          </button>
-          <button
-            class="button"
-            title="Check Moraal"
-            @click="checkMoraleForEnemies"
-          >
-            <svg viewBox="0 0 24 24">
-              <path :d="mdiAlert" />
-            </svg>
-          </button>
-          <button class="button" title="Vorige Beurt" @click="prevTurn">
-            <svg viewBox="0 0 24 24">
-              <path :d="mdiArrowPrev" />
-            </svg>
-          </button>
-          <div class="control-indicator">
-            <div class="control-indicator-label">{{ s.get("round") }}</div>
-            <div class="control-indicator-value">{{ model.round }}</div>
-          </div>
-          <div class="control-indicator">
-            <div class="control-indicator-label">{{ s.get("turn") }}</div>
-            <div class="control-indicator-value">{{ model.turn }}</div>
-          </div>
-          <button class="button" title="Volgende Beurt" @click="nextTurn">
-            <svg viewBox="0 0 24 24">
-              <path :d="mdiArrowNext" />
-            </svg>
-          </button>
-          <div id="meta" class="card">
-            <div id="meta-xp">
-              <span>{{ s.get("monster-xp") }}: </span
-              ><span>{{ monsterxp }}</span>
+        <header>
+          <div id="controls" class="card">
+            <button class="button" title="Sorteer" @click="sort">
+              <svg viewBox="0 0 24 24">
+                <path :d="mdiSortDescending" />
+              </svg>
+            </button>
+            <button
+              class="button"
+              title="Check Moraal"
+              @click="checkMoraleForEnemies"
+            >
+              <svg viewBox="0 0 24 24">
+                <path :d="mdiAlert" />
+              </svg>
+            </button>
+            <button class="button" title="Vorige Beurt" @click="prevTurn">
+              <svg viewBox="0 0 24 24">
+                <path :d="mdiArrowPrev" />
+              </svg>
+            </button>
+            <div class="control-indicator">
+              <div class="control-indicator-label">{{ s.get("round") }}</div>
+              <div class="control-indicator-value">{{ model.round }}</div>
             </div>
-            <div id="meta-difficulty">
-              <span>{{ s.get("difficulty") }}: </span>
-              <span
-                v-if="difficulty === 0"
-                style="font-weight: 600; color: #5a9216"
-                >{{ s.get("easy") }}</span
-              >
-              <span
-                v-if="difficulty === 1"
-                style="font-weight: 600; color: #45baef"
-                >{{ s.get("medium") }}</span
-              >
-              <span
-                v-if="difficulty === 2"
-                style="font-weight: 600; color: #f9a825"
-                >{{ s.get("hard") }}</span
-              >
-              <span
-                v-if="difficulty === 3"
-                style="font-weight: 600; color: #760000"
-                >{{ s.get("deadly") }}</span
-              >
+            <div class="control-indicator">
+              <div class="control-indicator-label">{{ s.get("turn") }}</div>
+              <div class="control-indicator-value">{{ model.turn }}</div>
+            </div>
+            <button class="button" title="Volgende Beurt" @click="nextTurn">
+              <svg viewBox="0 0 24 24">
+                <path :d="mdiArrowNext" />
+              </svg>
+            </button>
+            <div id="meta" class="card">
+              <div id="meta-xp">
+                <span>{{ s.get("monster-xp") }}: </span
+                ><span>{{ monsterxp }}</span>
+              </div>
+              <div id="meta-difficulty">
+                <span>{{ s.get("difficulty") }}: </span>
+                <span
+                  v-if="difficulty === 0"
+                  style="font-weight: 600; color: #5a9216"
+                  >{{ s.get("easy") }}</span
+                >
+                <span
+                  v-if="difficulty === 1"
+                  style="font-weight: 600; color: #45baef"
+                  >{{ s.get("medium") }}</span
+                >
+                <span
+                  v-if="difficulty === 2"
+                  style="font-weight: 600; color: #f9a825"
+                  >{{ s.get("hard") }}</span
+                >
+                <span
+                  v-if="difficulty === 3"
+                  style="font-weight: 600; color: #760000"
+                  >{{ s.get("deadly") }}</span
+                >
+              </div>
             </div>
           </div>
-        </div>
+          <progress id="hp-balance" :max="totalEntriesHP" :value="friendlyEntriesHP"></progress>
+        </header>
         <div id="initiative-view">
           <div id="initiative-card-wrapper">
             <InitiativeCard
@@ -117,7 +120,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
 import Side from "@/components/view/Side.vue";
@@ -150,7 +153,6 @@ class Model {
 
 function checkMorale(entry: CombatEntry): boolean {
   let roll = DiceHelper.rollMultiple(6, 2);
-  console.log(`${roll} vs ${entry.mr}`);
   return roll <= entry.mr;
 }
 
@@ -175,6 +177,23 @@ export default class InitiativeTracker extends Vue {
 
   private model: Model = new Model();
   private thresholds = require("@/assets/data/thresholds.json");
+
+  private totalEntriesHP = 0;
+  private friendlyEntriesHP = 0;
+
+  @Watch("model.entries", {immediate: true, deep: true})
+  recalculateEntriesHP(newEntries: CombatEntry[], oldEntries: CombatEntry[]): void {
+    let sumTotal = 0;
+    let sumFriendly = 0
+    this.model.entries.forEach((entry: CombatEntry) => {
+      sumTotal += entry.curent_hp;
+      sumFriendly += (entry.allegiance == "enemy") ? 0 : entry.curent_hp;
+    });
+    this.totalEntriesHP = sumTotal;
+    this.friendlyEntriesHP = sumFriendly;
+    console.log(sumTotal);
+    console.log(sumFriendly);
+  }
 
   get monsterxp(): number {
     let enemies = 0;
@@ -206,14 +225,9 @@ export default class InitiativeTracker extends Vue {
     var thres = this.calcThresholds();
     var xp = this.monsterxp;
 
-    console.log(thres);
-    console.log(xp);
-
     const closest = thres.reduce((a, b) => {
       return Math.abs(b - xp) < Math.abs(a - xp) ? b : a;
     });
-
-    console.log(closest);
 
     return thres.indexOf(closest);
   }
@@ -275,7 +289,6 @@ export default class InitiativeTracker extends Vue {
   }
 
   deleteEntry(index: number): void {
-    console.log(index);
     this.model.entries.splice(index, 1);
   }
 
@@ -306,7 +319,6 @@ export default class InitiativeTracker extends Vue {
       if (!checkMorale(entry)) {
         entry.isFleeing = true;
       }
-      console.log(entry.isFleeing);
     });
   }
 }
@@ -334,50 +346,69 @@ main {
   height: 100%;
   max-height: 100%;
 
-  #controls {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    box-sizing: border-box;
-    height: $height-controls;
-
+  header {
     margin: auto;
     max-width: 700px;
-
     box-shadow: 0px 12px 16px -16px rgba(0, 0, 0, 0.7);
+    #controls {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-    button {
-      height: 48px;
-      width: 48px;
-      margin: 0px 8px;
-      font-weight: 700;
-      vertical-align: middle;
+      box-sizing: border-box;
+      height: $height-controls;
 
-      svg {
-        fill: currentColor;
+      button {
+        height: 48px;
+        width: 48px;
+        margin: 0px 8px;
+        font-weight: 700;
+        vertical-align: middle;
+
+        svg {
+          fill: currentColor;
+        }
+      }
+      .control-indicator {
+        display: inline-flex;
+        flex-direction: column;
+        height: 48px;
+        width: 48px;
+        margin: 0px 8px;
+        text-align: center;
+        justify-content: center;
+        text-transform: uppercase;
+        .control-indicator-value {
+          font-size: x-large;
+        }
+      }
+
+      #meta {
+        text-align: start;
+        #meta-xp,
+        #meta-difficulty {
+          height: inherit;
+          box-sizing: border-box;
+        }
       }
     }
-    .control-indicator {
-      display: inline-flex;
-      flex-direction: column;
-      height: 48px;
-      width: 48px;
-      margin: 0px 8px;
-      text-align: center;
-      justify-content: center;
-      text-transform: uppercase;
-      .control-indicator-value {
-        font-size: x-large;
+    #hp-balance {
+      display: block;
+      appearance: none;
+      color: green;
+      background-color: red;
+      width: 100%;
+      height: 10px;
+      border: none;
+      margin: 0px;
+      &[value]::-webkit-progress-bar {
+        background-color: green;
       }
-    }
-
-    #meta {
-      text-align: start;
-      #meta-xp,
-      #meta-difficulty {
-        height: inherit;
-        box-sizing: border-box;
+      &[value]::-webkit-progress-value {
+        background-color: green;
+      }
+      &[value]::-moz-progress-bar {
+        background-color: green;
       }
     }
   }
@@ -387,7 +418,7 @@ main {
 
     box-sizing: border-box;
     height: 100%;
-    max-height: calc(100% - #{$height-controls});
+    max-height: calc(100% - #{$height-controls} - 10px);
     overflow-y: scroll;
     #initiative-card-wrapper {
       margin: auto;

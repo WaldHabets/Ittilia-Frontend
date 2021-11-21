@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="health" v-bind:style="{ color: damage }">
-      <input class="health-box" v-model="model.curent_hp" />
+      <input class="health-box" v-model.number="model.curent_hp" />
       <span class="health-box">{{ model.maximum_hp }}</span>
     </div>
     <div class="actions">
