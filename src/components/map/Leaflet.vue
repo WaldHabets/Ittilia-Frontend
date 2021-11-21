@@ -44,14 +44,14 @@ let customCRS = L.extend({}, L.CRS.Simple, {
 
 @Component
 export default class Leaflet extends Vue {
-  private dimensionInMeters = 13749866.4935;
-  private zoom = 0;
-  private center = L.latLng(
+  private readonly dimensionInMeters = 13749866.4935;
+  private readonly zoom = 0;
+  private readonly center = L.latLng(
     this.dimensionInMeters / 2,
     this.dimensionInMeters / 2
   );
-  private url = "/static/img/tiles/base/{z}/{x}_{y}.png";
-  private attribution =
+  private readonly url = "/static/img/tiles/base/{z}/{x}_{y}.png";
+  private readonly attribution =
     "&copy; <a href='https://waldhabets.eu'>Wald Habets</a>";
 
   private _map!: L.Map;
@@ -155,7 +155,7 @@ export default class Leaflet extends Vue {
 
     L.tileLayer(this.url, {
       minZoom: 0,
-      maxZoom: 7,
+      maxZoom: 8,
       //bounds: bounds,
       attribution: this.attribution,
       tileSize: 500,
