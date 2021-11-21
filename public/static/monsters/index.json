@@ -4,6 +4,18 @@
         "name-nl":"Basilisk",
         "template":"basilisk"
     },{
+        "name-en":"Angry Christmas Tree",
+        "name-nl":"Boze Kerstboom",
+        "template":"boze-kerstboom"
+    },{
+        "name-en":"Angry Snowman (Large)",
+        "name-nl":"Boze Sneeuwman (Groot)",
+        "template":"boze-sneeuwman-groot"
+    },{
+        "name-en":"Angry Snowman (Small)",
+        "name-nl":"Boze Sneeuwman, (Klein)",
+        "template":"boze-sneeuwman-klein"
+    },{
         "name-en":"Chimera",
         "name-nl":"Chimaera",
         "template":"chimera"

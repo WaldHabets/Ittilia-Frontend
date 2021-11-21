@@ -1,0 +1,10 @@
+{
+    "name":"Kleine Boze Sneeuwman",
+    "initiative":"d20-3",
+    "max-hp":"3d8+9",
+    "morale-rating":"2d6",
+    "passive-perception": 11,
+    "armor-class": 7,
+    "allegiance": "enemy",
+    "xp": 200
+}

@@ -1,0 +1,10 @@
+{
+    "name":"Grote Boze Sneeuwman",
+    "initiative":"d20-3",
+    "max-hp":"6d10+30",
+    "morale-rating":"2d6",
+    "passive-perception": 11,
+    "armor-class": 7,
+    "allegiance": "enemy",
+    "xp": 1100
+}
