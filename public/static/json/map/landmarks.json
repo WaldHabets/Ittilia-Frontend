@@ -19,7 +19,7 @@
     },
     {
         "name":"Dalwater",
-        "latlng":[2166033.027169728, -5514769.071059289],
+        "latlng":[2147126.9662303375, -5533030.607193928],
         "type": "city",
         "wiki":"/wiki/cities/dalwater"
     },
@@ -105,6 +105,24 @@
         "name":"Poort van Gorgon",
         "latlng":[ 2883174.2932570674, -5489202.920470796 ],
         "type":"landmark",
+        "wiki":""
+    },
+    {
+        "name":"Kerst",
+        "latlng":[1969667.803321967, -6528606.5889341105],
+        "type":"city",
+        "wiki":"/wiki/cities/kerst"
+    },
+    {
+        "name":"Kûmasj",
+        "latlng":[2459291.8133318666, -4808584.726652734],
+        "type":"city",
+        "wiki":""
+    },
+    {
+        "name":"Khíandra",
+        "latlng":[2718390.7848421517, -4769913.238367616],
+        "type":"city",
         "wiki":""
     }
 ]
