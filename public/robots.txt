@@ -1,0 +1,9 @@
+Sitemap: https://ittilia.eu/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /icons/
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
+Disallow: /static/
