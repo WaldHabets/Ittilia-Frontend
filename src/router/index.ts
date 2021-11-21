@@ -26,21 +26,21 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/wiki/:category/:topic",
-    name: "Wiki",
+    name: "Wiki Article",
     component: () => import("@/views/ittilia/wikipage.vue"),
   },
   {
-    path: "/ittilia/map",
+    path: "/map",
     name: "Map",
     component: () => import("@/views/map/map.vue"),
   },
   {
-    path: "/ittilia/classes",
+    path: "/classes",
     name: "Classes",
     component: () => import("@/views/portal.ittilia.classes.vue"),
   },
   {
-    path: "/ittilia/classes/:class",
+    path: "/classes/:class",
     name: "Class",
     component: () => import("@/views/ittilia/class.vue"),
   },

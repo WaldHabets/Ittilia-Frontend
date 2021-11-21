@@ -13,12 +13,12 @@
         />
         <portal-card
           :text="$store.getters.text('page-map')"
-          href="/ittilia/map"
+          href="/map"
           background="/static/img/placeholder.png"
         />
         <portal-card
           :text="$store.getters.text('page-classes')"
-          href="/ittilia/classes"
+          href="/classes"
           background="/static/img/placeholder.png"
         />
       </portal-root>

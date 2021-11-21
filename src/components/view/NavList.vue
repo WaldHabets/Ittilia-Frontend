@@ -22,12 +22,12 @@
           >
         </li>
         <li>
-          <router-link class="nav-link sub-link" to="/ittilia/map">{{
+          <router-link class="nav-link sub-link" to="/map">{{
             $store.getters.text("page-map")
           }}</router-link>
         </li>
         <li>
-          <router-link class="nav-link sub-link" to="/ittilia/classes">{{
+          <router-link class="nav-link sub-link" to="/classes">{{
             $store.getters.text("page-classes")
           }}</router-link>
         </li>

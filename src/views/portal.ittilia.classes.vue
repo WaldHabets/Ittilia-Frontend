@@ -18,22 +18,22 @@
           <summary class="sub-group">Arcanisten</summary>
           <portal-class-card
             text="Artificer"
-            href="/ittilia/classes/artificer"
+            href="/classes/artificer"
             background="/static/img/classes/bg/class01.jpg"
           />
           <portal-class-card
             text="Wizard"
-            href="/ittilia/classes/wizard"
+            href="/classes/wizard"
             background="/static/img/classes/bg/class02.jpg"
           />
           <portal-class-card
             text="Bard"
-            href="/ittilia/classes/bard"
+            href="/classes/bard"
             background="/static/img/classes/bg/class07.jpg"
           />
           <portal-class-card
             text="Sorcerer"
-            href="/ittilia/classes/sorcerer"
+            href="/classes/sorcerer"
             background="/static/img/classes/bg/class06.jpg"
           />
 
@@ -79,13 +79,13 @@
         <details>
           <summary class="main-group">Druïden</summary>
           <portal-class-card
-            text="Religie: Druid"
-            href="/ittilia/classes/druid"
+            text="Druid"
+            href="/classes/druid"
             background="/static/img/classes/bg/class09.jpg"
           />
           <portal-class-card
-            text="Magiër: Cleric"
-            href="/ittilia/classes/cleric"
+            text="Cleric"
+            href="/classes/cleric"
             background="/static/img/classes/bg/class04.jpg"
           />
 
@@ -118,17 +118,17 @@
           <summary class="main-group">Scholen van Oorlog</summary>
           <portal-class-card
             text="Barbarian"
-            href="/ittilia/classes/barbarian"
+            href="/classes/barbarian"
             background="/static/img/classes/bg/class13.jpg"
           />
           <portal-class-card
             text="Fighter"
-            href="/ittilia/classes/fighter"
+            href="/classes/fighter"
             background="/static/img/classes/bg/class05.jpg"
           />
           <portal-class-card
             text="Paladin"
-            href="/ittilia/classes/paladin"
+            href="/classes/paladin"
             background="/static/img/classes/bg/class14.jpg"
           />
           <p>TODO</p>
@@ -138,22 +138,22 @@
           <summary class="main-group">Overige</summary>
           <portal-class-card
             text="Monk"
-            href="/ittilia/classes/monk"
+            href="/classes/monk"
             background="/static/img/classes/bg/class11.jpg"
           />
           <portal-class-card
             text="Ranger"
-            href="/ittilia/classes/ranger"
+            href="/classes/ranger"
             background="/static/img/classes/bg/class08.jpg"
           />
           <portal-class-card
             text="Rogue"
-            href="/ittilia/classes/rogue"
+            href="/classes/rogue"
             background="/static/img/classes/bg/class10.jpg"
           />
           <portal-class-card
             text="Warlock"
-            href="/ittilia/classes/warlock"
+            href="/classes/warlock"
             background="/static/img/classes/bg/class12.jpg"
           />
           <p>TODO</p>
