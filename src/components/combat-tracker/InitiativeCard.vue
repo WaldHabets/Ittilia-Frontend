@@ -38,7 +38,7 @@
       <span class="health-box">{{ model.maximum_hp }}</span>
     </div>
     <div class="actions">
-      <button class="flat-button" @click="model.dead = !model.dead">
+      <button class="flat-button" @click="toggleDead">
         <svg viewBox="0 0 24 24">
           <path :d="mdiSkull" />
         </svg>
@@ -84,6 +84,15 @@ export default class InitiativeCard extends Vue {
 
   deleteThis(): void {
     this.$emit("delete");
+  }
+
+  toggleDead() {
+    this.model.dead = !this.model.dead;
+    if (this.model.dead) {
+      this.model.curent_hp = 0;
+    } else {
+      this.model.curent_hp = 1;
+    }
   }
 }
 </script>
