@@ -316,7 +316,7 @@ export default class InitiativeTracker extends Vue {
 
   checkMoraleForEnemies(): void {
     this.model.entries.forEach((entry: CombatEntry) => {
-      if (!checkMorale(entry)) {
+      if (entry.allegiance == "enemy" && !checkMorale(entry)) {
         entry.isFleeing = true;
       }
     });
