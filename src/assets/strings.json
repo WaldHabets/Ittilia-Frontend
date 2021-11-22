@@ -79,6 +79,14 @@
         "en": "Back",
         "nl": "Terug"
     },
+    "action-show-menu": {
+        "en": "Show Menu",
+        "nl": "Toon Menu"
+    },
+    "action-hide-menu": {
+        "en": "Hide Menu",
+        "nl": "Verberg Menu"
+    },
     "groupname": {
         "en": "Group Name",
         "nl": "Groepsnaam"

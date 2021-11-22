@@ -15,7 +15,7 @@
           />
         </template>
 
-        <markdown :src="wikiContent" />
+        <main v-html="wikiContent"></main>
 
         <footer v-if="wikiMeta != null">
           <span>{{ wikiMeta.authors }}</span>
@@ -29,10 +29,12 @@
 import { Component, Vue, Watch } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
-import Markdown from "@/components/Markdown.vue";
 import axios from "axios";
 import WikiMetadata from "@/models/WikiMetadata.ts";
 import WikiArticleNav from "@/components/wiki/WikiArticleNav.vue";
+
+import marked from "marked";
+import DOMpurify from "dompurify";
 
 import CityHeader from "@/components/wiki/CityHeader.vue";
 import GeopoliticsHeader from "@/components/wiki/GeopoliticsHeader.vue";
@@ -45,7 +47,6 @@ type Map = {
   components: {
     ViewHeader,
     ViewRoot,
-    Markdown,
     CityHeader,
     GeopoliticsHeader,
     WikiArticleNav,
@@ -97,12 +98,15 @@ export default class WikiPage extends Vue {
     axios
       .get(`/static/wiki/${routeParams.category}/${routeParams.topic}.md`)
       .then((response) => {
-        let parsed = this.__parse(response.data);
+        let result = this.__parse(response.data);
 
-        if (parsed == null) return;
+        if (result == null) return;
 
-        this.wikiMeta = parsed.metadata as unknown as WikiMetadata;
-        this.wikiContent = parsed.content;
+        this.wikiMeta = result.metadata as unknown as WikiMetadata;
+
+        const dirty = marked(result.content);
+        this.wikiContent = DOMpurify.sanitize(dirty);
+
         console.log(this.wikiMeta);
       })
       .catch((error) => {
@@ -146,7 +150,7 @@ article::v-deep {
     font-size: 20px;
   }
 
-  section {
+  main {
     strong {
       color: #7b2a20;
     }

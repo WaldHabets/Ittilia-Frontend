@@ -1,8 +1,8 @@
 <template>
   <div id="view-root">
-    <div id="nav-head">
-      <button id="nav-toggle" @click="toggleHide">
-        <svg v-if="hideMenu" viewBox="0 0 24 24">
+    <div id="view-nav-head">
+      <button id="view-nav-toggle" @click="toggleHide" aria-controls="view-nav-body" :title="viewNavToggleTitle">
+        <svg v-if="isHidden" viewBox="0 0 24 24">
           <path :d="mdiMenu" />
         </svg>
         <svg v-else viewBox="0 0 24 24">
@@ -10,20 +10,20 @@
         </svg>
       </button>
     </div>
-    <nav id="nav-body" :class="{ hide: hideMenu }">
+    <nav id="view-nav-body" :class="{ hide: isHidden }" aria-label="website" :aria-expanded="!isHidden">
       <nav-list />
     </nav>
-    <div id="view-head">
+    <div id="view-content-head">
       <slot name="header"></slot>
     </div>
-    <div id="view-body">
+    <div id="view-content-body">
       <slot name="content"></slot>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import NavList from "@/components/view/NavList.vue";
 import { mdiMenu, mdiClose } from "@mdi/js";
 
@@ -35,10 +35,18 @@ import { mdiMenu, mdiClose } from "@mdi/js";
 export default class ViewRoot extends Vue {
   private mdiMenu: string = mdiMenu;
   private mdiClose: string = mdiClose;
-  private hideMenu = true;
+  private isHidden = true;
+
+  get viewNavToggleTitle() : string {
+    if (this.isHidden) {
+      return this.$store.getters.text("action-show-menu");
+    } else {
+      return this.$store.getters.text("action-hide-menu");
+    }
+  }
 
   toggleHide(): void {
-    this.hideMenu = !this.hideMenu;
+    this.isHidden = !this.isHidden;
   }
 }
 </script>
@@ -53,26 +61,26 @@ export default class ViewRoot extends Vue {
 
   display: grid;
   grid-template-areas:
-    "nav-head header"
-    "nav-body main";
+    "view-nav-head header"
+    "view-nav-body main";
   grid-template-rows: $head-height auto;
   grid-template-columns: $nav-width auto;
 
   @media screen and (max-width: $threshold) {
     grid-template-areas:
-      "nav-head header"
-      //"nav-body nav-body"
+      "view-nav-head header"
+      //"view-nav-body view-nav-body"
       "main main";
     grid-template-rows: $head-height auto;
     grid-template-columns: $head-height auto;
   }
 
-  #view-head {
+  #view-content-head {
     width: 100%;
   }
 
-  #nav-head {
-    grid-area: nav-head;
+  #view-nav-head {
+    grid-area: view-nav-head;
     background-color: #080016;
     border-bottom: 1px solid #ababab;
 
@@ -83,7 +91,7 @@ export default class ViewRoot extends Vue {
       background: white;
     }
 
-    #nav-toggle {
+    #view-nav-toggle {
       box-sizing: border-box;
       width: 48px;
       height: 48px;
@@ -94,6 +102,8 @@ export default class ViewRoot extends Vue {
       background: none;
 
       display: none;
+
+      cursor: pointer;
 
       svg {
         width: 100%;
@@ -107,11 +117,11 @@ export default class ViewRoot extends Vue {
     }
   }
 
-  #nav-body {
+  #view-nav-body {
     position: relative;
     z-index: 10;
 
-    grid-area: nav-body;
+    grid-area: view-nav-body;
     background-color: #080016;
 
     color: white;
@@ -126,6 +136,8 @@ export default class ViewRoot extends Vue {
       position: fixed;
       top: $head-height;
       width: 100%;
+      height: calc(100% - #{$head-height});
+      overflow-y: scroll;
 
       &.hide {
         height: 0px;
@@ -136,7 +148,7 @@ export default class ViewRoot extends Vue {
     }
   }
 
-  #view-body {
+  #view-content-body {
     position: relative;
     z-index: 0;
 
@@ -155,12 +167,12 @@ export default class ViewRoot extends Vue {
     grid-template-rows: auto;
     grid-template-columns: auto;
 
-    #nav-head,
-    #nav-body {
+    #view-nav-head,
+    #view-nav-body {
       display: none;
     }
 
-    #view-body {
+    #view-content-body {
       overflow-y: visible;
       height: max-content;
     }
