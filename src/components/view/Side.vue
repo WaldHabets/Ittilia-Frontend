@@ -1,7 +1,7 @@
 <template>
-  <div id="side-view" v-bind:class="{ hidden: hidden }">
-    <button id="side-view-button" @click="hide">
-      <svg v-if="hidden" viewBox="0 0 24 24">
+  <div id="side-view" v-bind:class="{ hidden: isHidden }" :aria-expanded="!isHidden">
+    <button id="side-view-button" @click="hide" aria-controls="side-view" :title="sideViewButtonTitle">
+      <svg v-if="isHidden" viewBox="0 0 24 24">
         <path :d="iconArrowExpandLeft" />
       </svg>
       <svg v-else viewBox="0 0 24 24">
@@ -20,12 +20,20 @@ import { mdiArrowExpandLeft, mdiClose } from "@mdi/js";
 
 @Component
 export default class Side extends Vue {
-  private hidden = true;
+  private isHidden = true;
   private iconArrowExpandLeft = mdiArrowExpandLeft;
   private iconClose = mdiClose;
 
+  get sideViewButtonTitle() : string {
+    if (this.isHidden) {
+      return this.$store.getters.text("action-show-menu");
+    } else {
+      return this.$store.getters.text("action-hide-menu");
+    }
+  }
+
   hide(): void {
-    this.hidden = !this.hidden;
+    this.isHidden = !this.isHidden;
   }
 }
 </script>
@@ -85,6 +93,8 @@ export default class Side extends Vue {
     padding: 8px;
     font-weight: 700;
     vertical-align: middle;
+
+    cursor: pointer;
 
     svg {
       fill: #282828;
