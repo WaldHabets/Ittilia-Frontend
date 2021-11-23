@@ -17,6 +17,40 @@
           background="/static/img/placeholder.png"
         />
       </portal-root>
+      <portal-root id="ittilia-portal">
+        <portal-card
+          :text="$store.getters.text('page-wiki')"
+          href="/wiki"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          :text="$store.getters.text('page-map')"
+          href="/map"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          :text="$store.getters.text('page-classes')"
+          href="/classes"
+          background="/static/img/placeholder.png"
+        />
+      </portal-root>
+      <portal-root id="tools-portal">
+        <portal-card
+          text="Item Forge"
+          href="/tools/item-forge"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          text="Initiative Tracker"
+          href="/tools/initiative-tracker"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
+          text="Player Sheets"
+          href="/tools/party-manager"
+          background="/static/img/placeholder.png"
+        />
+      </portal-root>
     </template>
   </view-root>
 </template>

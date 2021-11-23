@@ -20,13 +20,15 @@ export default class PortalCard extends Vue {
 @use "sass:math";
 @import "portal-constants.scss";
 
-$box-height: 256px;
+$image-height: 128px;
+$text-block-height: math.div($image-height, 2);
+
+$box-height: 128px;
 $box-width: 340px;
 
 @mixin box-part() {
   display: block;
   width: 100%;
-  height: math.div($box-height, 2);
   margin: 0;
   padding: 0;
   border: none;
@@ -34,6 +36,7 @@ $box-width: 340px;
 
 .portal-card {
   display: inline-block;
+  position: relative;
   width: $box-width;
   height: $box-height;
   margin: 8px;
@@ -49,31 +52,36 @@ $box-width: 340px;
 
   background-color: #061826;
 
+  overflow: hidden;
+
   img {
     @include box-part();
     object-fit: cover;
     object-position: 50%;
+    height: $box-height;
+
+    transition: transform ease-in-out 300ms;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   h1 {
     @include box-part();
+    position: absolute;
+    bottom: 0;
 
+    pointer-events: none;
+
+    height: math.div($box-height, 3);
     //background-color: #3685b5;
-    background-color: white;
-    color: #061826;
-    line-height: math.div($box-height, 4);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    line-height: math.div($box-height, 3);
   }
-  @media screen and (max-width: $box-width * 2 + 48px) {
+  @media screen and (max-width: $box-width + 16px) {
     & {
-      display: flex;
       width: calc(100% - 16px);
-      height: math.div($box-height, 2);
-    }
-    img {
-      display: inline-block;
-      width: math.div($box-height, 2);
-    }
-    h1 {
-      display: inline-block;
     }
   }
 }
