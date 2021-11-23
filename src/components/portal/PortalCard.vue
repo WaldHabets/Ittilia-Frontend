@@ -27,8 +27,8 @@ $box-width: 340px;
   display: block;
   width: 100%;
   height: math.div($box-height, 2);
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -39,9 +39,8 @@ $box-width: 340px;
   margin: 8px;
 
   border: 1px solid #ababab;
-  border-radius: 4px;
 
-  box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.7);
 
   text-decoration: none;
 
@@ -52,6 +51,8 @@ $box-width: 340px;
 
   img {
     @include box-part();
+    object-fit: cover;
+    object-position: 50%;
   }
   h1 {
     @include box-part();
