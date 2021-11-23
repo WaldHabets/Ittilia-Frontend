@@ -13,7 +13,7 @@
             :placeholder="strings.get('item-name')"
           />
           <div id="dropdown-wrapper" class="form-wrapper">
-            <select id="item-type" v-model="itemtype" @input="onItemTypeUpdate">
+            <select id="item-type" v-model="itemtype" @change="onItemTypeUpdate">
               <option
                 v-bind:key="key"
                 v-for="(entry, key) in options"
@@ -25,7 +25,7 @@
             <select
               id="item-subtype"
               v-model="itemsubtype"
-              @input="onItemSubtypeUpdate"
+              @change="onItemSubtypeUpdate"
               v-if="listSubtypes != null"
             >
               <template v-if="listSubtypes.grouped">
@@ -187,7 +187,6 @@ export default class ItemForge extends Vue {
 
   set itemtype(value: string) {
     this.m_itemtype = value;
-    this.onItemTypeUpdate();
   }
 
   save(): void {

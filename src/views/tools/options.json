@@ -72,11 +72,16 @@
         "color": "#daa6ab",
         "massa": "L"
     },
-    "Toverdrank": {
+    "Brouwsel": {
         "image": "/static/img/items/potion.jpeg",
-        "subtypes": null,
-        "color": "#69ad9e",
-        "massa": "L"
+        "subtypes": {
+            "grouped": false,
+            "items": [
+                { "subtype": "Ampul", "massa": "-" },
+                { "subtype": "Flesje", "massa": "L" }
+            ]
+        },
+        "color": "#69ad9e"
     },
     "Scepter": {
         "image": "/static/img/items/rod.jpeg",
