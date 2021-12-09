@@ -1,4 +1,32 @@
 {
     "title": "Personen",
-    "groups": []
+    "groups": [
+        {
+            "title": "H",
+            "entries": [
+                {
+                    "name": "Hemera Alderwitch",
+                    "href": "hemera-alderwitch"
+                }
+            ]
+        },
+        {
+            "title": "K",
+            "entries": [
+                {
+                    "name": "Khzarathan",
+                    "href": "khzarathan"
+                }
+            ]
+        },
+        {
+            "title": "L",
+            "entries": [
+                {
+                    "name": "Lashiel Ivûren",
+                    "href": "lashiel-ivuren"
+                }
+            ]
+        }
+    ]
 }

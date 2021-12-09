@@ -1,5 +1,5 @@
 {
-    "title": "Gilden en Organisaties",
+    "title": "Algemene iNFORMATIE",
     "groups": [
         {
             "title": "Soorten Gilden",
@@ -19,18 +19,12 @@
             ]
         },
         {
-            "title": "Huurlingengilden",
+            "title": "Overige",
             "entries": [
                 {
-                    "name": "Ijzeren Wacht",
-                    "href": "ijzeren-wacht"
+                    "name": "Een typische stad in Ittilia",
+                    "href": "een-typische-stad-in-ittilia"
                 }
-            ]
-        },
-        {
-            "title": "Ambachtsgilden",
-            "entries": [
-
             ]
         }
     ]

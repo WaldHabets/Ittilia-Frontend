@@ -2,6 +2,35 @@
     "title": "Geopolitiek",
     "groups": [
         {
+            "title": "Continenten & Grote Regio's",
+            "entries": [
+                {
+                    "name": "De Avondlanden",
+                    "href": "avondlanden"
+                },
+                {
+                    "name": "De Centrale Hartlanden",
+                    "href": "centrale-hartlanden"
+                },
+                {
+                    "name": "Het Hoge Noorden",
+                    "href": "hoge-noorden"
+                },
+                {
+                    "name": "Ijsvlakte van Thoreon",
+                    "href": "ijsvlakte-van-thoreon"
+                },
+                {
+                    "name": "De Wilderlanden",
+                    "href": "wilderlanden"
+                },
+                {
+                    "name": "Zalamasj",
+                    "href": "zalamasj"
+                }
+            ]
+        },
+        {
             "title": "Landen",
             "entries": [
                 {
@@ -27,6 +56,32 @@
                 {
                     "name": "Wehltir",
                     "href": "wehltir"
+                }
+            ]
+        },
+        {
+            "title": "Organisaties",
+            "entries": [
+                {
+                    "name": "Quintra Syndicaat",
+                    "href": "quintra-syndicaat"
+                }
+            ]
+        },
+        {
+            "title": "Regio's",
+            "entries": [
+                {
+                    "name": "De Zwarte Duinen",
+                    "href": "zwarte-duinen"
+                },
+                {
+                    "name": "Stenen Dodenland",
+                    "href": "stenen-dodenland"
+                },
+                {
+                    "name": "De Stormvalij Woestenij",
+                    "href": "stormvalij-woestenij"
                 }
             ]
         }

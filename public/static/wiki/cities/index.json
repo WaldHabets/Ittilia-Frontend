@@ -1,5 +1,5 @@
 {
-    "title": "Steden",
+    "title": "Steden & Plaatsen",
     "groups": [
         {
             "title": "B",
@@ -7,6 +7,10 @@
                 {
                     "name": "Brisnaque",
                     "href": "brisnaque"
+                },
+                {
+                    "name": "Bibliotheek van de Drie Koppige Raaf",
+                    "href": "bibliotheek-van-de-drie-koppige-raaf"
                 }
             ]
         },
@@ -42,6 +46,15 @@
                 {
                     "name": "Nûhldale",
                     "href": "nuhldale"
+                }
+            ]
+        },
+        {
+            "title": "P",
+            "entries": [
+                {
+                    "name": "Paleis der Doods",
+                    "href": "paleis-der-doods"
                 }
             ]
         },
