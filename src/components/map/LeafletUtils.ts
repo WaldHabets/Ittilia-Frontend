@@ -1,12 +1,32 @@
 import L from "leaflet";
 import Landmark from "@/models/Landmark";
 
+function createIcon(iconUrl: string) {
+  return L.icon({
+    iconUrl: iconUrl,
+    shadowUrl: "/static/img/marker-shadow.png",
+    iconSize: [30, 50],
+    shadowSize: [50, 50],
+    iconAnchor: [15, 50],
+    shadowAnchor: [15, 50],
+    popupAnchor: [0, -50],
+  });
+}
+
 export function createLocationMarker(landmark: Landmark): L.Marker {
-  const marker = L.marker(L.latLng(landmark.latlng[0], landmark.latlng[1]));
+  const latLng = L.latLng(landmark.latlng[0], landmark.latlng[1]);
 
   let markerHtml = "";
-  if (landmark.wiki == "") markerHtml = `<b>${landmark.name}</b>`;
-  else markerHtml = `<a href="${landmark.wiki}"><b>${landmark.name}</b></a>`;
+  let icon: L.Icon;
+  if (landmark.wiki == "") {
+    markerHtml = `<b>${landmark.name}</b>`;
+    icon = createIcon("/static/img/marker-icon-grey.png");
+  } else {
+    markerHtml = `<a href="${landmark.wiki}"><b>${landmark.name}</b></a>`;
+    icon = createIcon("/static/img/marker-icon-blue.png");
+  }
+
+  const marker = L.marker(latLng, { icon: icon });
 
   marker.bindPopup(markerHtml).openPopup();
 

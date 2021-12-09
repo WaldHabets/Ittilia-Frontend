@@ -124,5 +124,20 @@
         "latlng":[2718390.7848421517, -4769913.238367616],
         "type":"city",
         "wiki":""
+    },
+    {
+        "name": "Quintra",
+        "latlng": [
+            2049374.0375096248,
+            -6087429.360081399
+        ],
+        "type": "city",
+        "wiki": ""
+    },
+    {
+        "name": "Paleis der Doods",
+        "latlng": [3452289.6958530415, -7773613.670113299],
+        "type": "landmark",
+        "wiki": "/wiki/cities/paleis-der-doods"
     }
 ]
