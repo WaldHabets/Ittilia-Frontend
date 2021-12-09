@@ -217,8 +217,10 @@ export default class MonGen extends Vue {
     this.result.wis = this.wis.minimum + DiceHelper.roll(4);
     this.result.cha = this.cha.minimum + DiceHelper.roll(4);
 
-    let numHitDice: number =
-      Math.floor(this.result.cr + DiceHelper.roll(this.result.pb)) +
+    const logOfCr = Math.log(this.result.cr) / Math.log(4);
+    const baseDice = logOfCr <= 0 ? 0 : Math.floor(logOfCr * 10);
+    const numHitDice: number =
+      Math.floor(baseDice + DiceHelper.roll(this.result.pb)) +
       this.bonusHitDice;
     let hpBonus: number = numHitDice * this.result.conMod;
 
