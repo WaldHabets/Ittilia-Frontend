@@ -12,6 +12,18 @@
         "wiki":"/wiki/cities/brisnaque"
     },
     {
+        "name": "Brissenwoud",
+        "latlng": [3169665.5689693103, -5769571.210537895],
+        "type": "forest",
+        "wiki": ""
+    },
+    {
+        "name": "Schervenmeer",
+        "latlng": [3179548.2826421736, -5726173.20701793],
+        "type": "lake",
+        "wiki": ""
+    },
+    {
         "name":"Onderheide",
         "latlng":[3210592.8940710593, -5771719.626553735],
         "type": "city",
@@ -139,5 +151,41 @@
         "latlng": [3452289.6958530415, -7773613.670113299],
         "type": "landmark",
         "wiki": "/wiki/cities/paleis-der-doods"
+    },
+    {
+        "name": "Inlandse Zee",
+        "latlng": [2078699.9161258389, -6014168.37394126],
+        "type": "lake",
+        "wiki": ""
+    },
+    {
+        "name": "Roth Eldar",
+        "latlng": [2394194.8080519196, -5548069.519304807],
+        "type": "mountains",
+        "wiki": ""
+    },
+    {
+        "name": "Roth Faldir",
+        "latlng": [ 2716027.527224728, -7210084.1491585085 ],
+        "type": "mountains",
+        "wiki": ""
+    },
+    {
+        "name": "Roth Tengwa",
+        "latlng": [2480131.4486855133, -4904404.080959191],
+        "type": "mountains",
+        "wiki": ""
+    },
+    {
+        "name": "De Stormvalij Woestenij",
+        "latlng": [2204704.5154548455, -6559543.779562204],
+        "type": "waypoint",
+        "wiki": ""
+    },
+    {
+        "name": "Velorameer",
+        "latlng": [2154753.843086569, -5519173.323891761],
+        "type": "lake",
+        "wiki": ""
     }
 ]

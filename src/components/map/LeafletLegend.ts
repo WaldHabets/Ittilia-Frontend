@@ -1,21 +1,20 @@
 import L, { DomUtil } from "leaflet";
 import { mdiMapLegend } from "@mdi/js";
 
-const path: string = mdiMapLegend;
 const domCollapse =
   '<svg viewBox="0 0 24 24">' + `<path d="${mdiMapLegend}" />` + "</svg>";
 
 const domExpanded =
   "<h4>Legende</h4>" +
-  '<div style="background: #697d4f"><span>Oerwoud</span></div>' +
-  '<div style="background: #b2c29d"><span style="color: black;">Bossen en struikgewassen</span></div>' +
-  '<div style="background: #b5bfb5"><span style="color: black;">Steppe, heide of tundra</span></div>' +
-  '<div style="background: #deddbe"><span style="color: black;">Grasland of Savannah</span></div>' +
-  '<div style="background: #D1A354"><span>Gecultiveerd land</span></div>' +
-  '<div style="background: #804f2e"><span>Bergflora</span></div>' +
-  '<div style="background: #63a286"><span>Moeraslanden</span></div>' +
-  '<div style="background: #f7f6f1"><span style="color: black;">Woestijn</span></div>' +
-  '<div style="background: #ffffff"><span style="color: black;">Ijsvlakten</span></div>';
+  '<div class="legend-entry-01"><span>Oerwoud</span></div>' +
+  '<div class="legend-entry-02"><span>Bossen en struikgewassen</span></div>' +
+  '<div class="legend-entry-03"><span>Steppe, heide of tundra</span></div>' +
+  '<div class="legend-entry-04"><span>Grasland of Savannah</span></div>' +
+  '<div class="legend-entry-05"><span>Gecultiveerd land</span></div>' +
+  '<div class="legend-entry-06"><span>Bergflora</span></div>' +
+  '<div class="legend-entry-07"><span>Moeraslanden</span></div>' +
+  '<div class="legend-entry-08"><span>Woestijn</span></div>' +
+  '<div class="legend-entry-09"><span>Ijsvlakten</span></div>';
 
 function onAdd(map: L.Map): HTMLElement {
   //var legend = new L.Control({ position: "bottomleft" });

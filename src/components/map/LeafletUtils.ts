@@ -4,12 +4,9 @@ import Landmark from "@/models/Landmark";
 function createIcon(iconUrl: string) {
   return L.icon({
     iconUrl: iconUrl,
-    shadowUrl: "/static/img/marker-shadow.png",
-    iconSize: [30, 50],
-    shadowSize: [50, 50],
-    iconAnchor: [15, 50],
-    shadowAnchor: [15, 50],
-    popupAnchor: [0, -50],
+    iconSize: [32, 37],
+    iconAnchor: [16, 37],
+    popupAnchor: [0, -37],
   });
 }
 
@@ -20,10 +17,10 @@ export function createLocationMarker(landmark: Landmark): L.Marker {
   let icon: L.Icon;
   if (landmark.wiki == "") {
     markerHtml = `<b>${landmark.name}</b>`;
-    icon = createIcon("/static/img/marker-icon-grey.png");
+    icon = createIcon(`/static/img/${landmark.type}.png`);
   } else {
     markerHtml = `<a href="${landmark.wiki}"><b>${landmark.name}</b></a>`;
-    icon = createIcon("/static/img/marker-icon-blue.png");
+    icon = createIcon(`/static/img/${landmark.type}.png`);
   }
 
   const marker = L.marker(latLng, { icon: icon });

@@ -100,7 +100,7 @@ export default class Leaflet extends Vue {
     }
   }
 
-  drawSingleWaypoint(waypoint: L.LatLng, label: number) {
+  drawSingleWaypoint(waypoint: L.LatLng, label: number): void {
     const marker = createWaypointMarker(waypoint, label);
     this.waypointLayer.push(marker);
     marker.addTo(this._map);
@@ -109,6 +109,10 @@ export default class Leaflet extends Vue {
   createMarkers(data: Landmark[], map: L.Map): void {
     let cities: L.Marker[] = [];
     let landmarks: L.Marker[] = [];
+    let lakes: L.Marker[] = [];
+    let forests: L.Marker[] = [];
+    let mountains: L.Marker[] = [];
+    let waypoints: L.Marker[] = [];
 
     data.forEach((landmark: Landmark) => {
       let marker = createLocationMarker(landmark);
@@ -120,17 +124,30 @@ export default class Leaflet extends Vue {
         case "landmark":
           landmarks.push(marker);
           break;
+        case "lake":
+          lakes.push(marker);
+          break;
+        case "forest":
+          forests.push(marker);
+          break;
+        case "mountains":
+          mountains.push(marker);
+          break;
+        case "waypoint":
+          waypoints.push(marker);
+          break;
         default:
           break;
       }
     });
 
-    let cityMarkersGroup = L.layerGroup(cities);
-    let landmarkMarkerGroup = L.layerGroup(landmarks);
-
     let overlays = {
-      Steden: cityMarkersGroup,
-      "Markante Sites": landmarkMarkerGroup,
+      Steden: L.layerGroup(cities),
+      "Markante Sites": L.layerGroup(landmarks),
+      Meren: L.layerGroup(lakes),
+      Bossen: L.layerGroup(forests),
+      Bergen: L.layerGroup(mountains),
+      Regios: L.layerGroup(waypoints),
     };
 
     L.control
@@ -295,5 +312,18 @@ export default class Leaflet extends Vue {
     display: block;
     @include leaflet-control-button();
   }
+}
+.leaflet-control-legend {
+  .legend-entry-01 {
+    background: #697d4f;
+  }
+  .legend-entry-02 { background: #b2c29d; color: black; }
+  .legend-entry-03 { background: #b5bfb5; color: black; }
+  .legend-entry-04 { background: #deddbe; color: black; }
+  .legend-entry-05 { background: #D1A354; }
+  .legend-entry-06 { background: #804f2e; }
+  .legend-entry-07 { background: #63a286; }
+  .legend-entry-08 { background: #f7f6f1; color: black; }
+  .legend-entry-09 { background: #ffffff; color: black; }
 }
 </style>
