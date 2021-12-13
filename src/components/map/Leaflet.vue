@@ -50,7 +50,8 @@ export default class Leaflet extends Vue {
     this.dimensionInMeters / 2,
     this.dimensionInMeters / 2
   );
-  private readonly url = "/static/img/tiles/base/{z}/{x}_{y}.png";
+  private readonly url = "/static/img/tiles/base/{z}/{x}_{y}.jpg";
+  private readonly urlBorders = "/static/img/tiles/borders/{z}/{x}_{y}.jpg";
   private readonly attribution =
     "&copy; <a href='https://waldhabets.eu'>Wald Habets</a>";
 
@@ -106,7 +107,11 @@ export default class Leaflet extends Vue {
     marker.addTo(this._map);
   }
 
-  createMarkers(data: Landmark[], map: L.Map): void {
+  createMarkers(
+    data: Landmark[],
+    map: L.Map,
+    layerControl: L.Control.Layers
+  ): void {
     let cities: L.Marker[] = [];
     let landmarks: L.Marker[] = [];
     let lakes: L.Marker[] = [];
@@ -141,20 +146,12 @@ export default class Leaflet extends Vue {
       }
     });
 
-    let overlays = {
-      Steden: L.layerGroup(cities),
-      "Markante Sites": L.layerGroup(landmarks),
-      Meren: L.layerGroup(lakes),
-      Bossen: L.layerGroup(forests),
-      Bergen: L.layerGroup(mountains),
-      Regios: L.layerGroup(waypoints),
-    };
-
-    L.control
-      .layers(undefined, overlays, {
-        position: "topleft",
-      })
-      .addTo(map);
+    layerControl.addOverlay(L.layerGroup(cities), "Steden");
+    layerControl.addOverlay(L.layerGroup(landmarks), "Markante Sites");
+    layerControl.addOverlay(L.layerGroup(lakes), "Meren & Rivieren");
+    layerControl.addOverlay(L.layerGroup(forests), "Bossen");
+    layerControl.addOverlay(L.layerGroup(mountains), "Bergen");
+    layerControl.addOverlay(L.layerGroup(waypoints), "Regios");
   }
 
   mounted(): void {
@@ -170,14 +167,30 @@ export default class Leaflet extends Vue {
     map.fitBounds(mapBounds);
     map.setMaxBounds(mapBounds);
 
-    L.tileLayer(this.url, {
+    let layerControl = L.control
+      .layers(undefined, undefined, {
+        position: "topleft",
+      })
+      .addTo(map);
+
+    let baseLayer = L.tileLayer(this.url, {
       minZoom: 0,
       maxZoom: 8,
-      //bounds: bounds,
       attribution: this.attribution,
       tileSize: 500,
       noWrap: true,
-    }).addTo(map);
+    });
+    layerControl.addBaseLayer(baseLayer, "Basis");
+    baseLayer.addTo(map);
+
+    let borderLayer = L.tileLayer(this.urlBorders, {
+      minZoom: 0,
+      maxZoom: 5,
+      attribution: this.attribution,
+      tileSize: 500,
+      noWrap: true,
+    });
+    layerControl.addBaseLayer(borderLayer, "Grenzen");
 
     L.control
       .scale({
@@ -200,7 +213,7 @@ export default class Leaflet extends Vue {
     axios
       .get(`/static/json/map/landmarks.json`)
       .then((response) => {
-        this.createMarkers(response.data, map);
+        this.createMarkers(response.data, map, layerControl);
       })
       .catch((error) => {
         console.error("Error!", error.message);
