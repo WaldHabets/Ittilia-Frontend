@@ -1,5 +1,6 @@
 ---
 name: Allûn Krin
+type: Woestijn
 authors: Wald Habets
 ---
 

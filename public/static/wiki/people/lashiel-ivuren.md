@@ -1,5 +1,8 @@
 ---
 name: Lashiel Ivûren
+species: Mens
+sex: ♀
+age: ~200
 authors: Wald Habets
 ---
 

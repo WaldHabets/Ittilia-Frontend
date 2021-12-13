@@ -1,5 +1,6 @@
 ---
 name: Tohlikípû
+type: Vulkaan
 authors: Wald Habets
 ---
 

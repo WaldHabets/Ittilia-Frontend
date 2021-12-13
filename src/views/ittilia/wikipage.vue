@@ -9,8 +9,16 @@
       <article v-if="wikiContent !== ''">
         <template v-if="wikiMeta != null">
           <city-header v-if="category === 'cities'" :metadata="wikiMeta" />
+          <geography-header
+            v-if="category === 'geography'"
+            :metadata="wikiMeta"
+          />
           <geopolitics-header
             v-if="category === 'geopolitics'"
+            :metadata="wikiMeta"
+          />
+          <people-header
+            v-if="category === 'people'"
             :metadata="wikiMeta"
           />
         </template>
@@ -38,6 +46,8 @@ import DOMpurify from "dompurify";
 
 import CityHeader from "@/components/wiki/CityHeader.vue";
 import GeopoliticsHeader from "@/components/wiki/GeopoliticsHeader.vue";
+import GeographyHeader from "@/components/wiki/GeographyHeader.vue";
+import PeopleHeader from "@/components/wiki/PeopleHeader.vue";
 
 type Map = {
   [key: string]: string | undefined;
@@ -45,6 +55,8 @@ type Map = {
 
 @Component({
   components: {
+    PeopleHeader,
+    GeographyHeader,
     ViewHeader,
     ViewRoot,
     CityHeader,

@@ -9,9 +9,9 @@
           >Steden</router-link
         >
       </option>
-      <option value="cities">
-        <router-link class="wiki-nav-link" to="/wiki/geology"
-        >Geologie</router-link
+      <option value="geography">
+        <router-link class="wiki-nav-link" to="/wiki/geography"
+        >Geografie</router-link
         >
       </option>
       <option value="geopolitics">

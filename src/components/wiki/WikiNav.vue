@@ -5,8 +5,8 @@
     >
     <div>
       <router-link class="wiki-nav-link" to="/wiki/cities">Steden</router-link>
-      <router-link class="wiki-nav-link" to="/wiki/geology"
-        >Geologie</router-link
+      <router-link class="wiki-nav-link" to="/wiki/geography"
+        >Geografie</router-link
       >
       <router-link class="wiki-nav-link" to="/wiki/geopolitics"
         >Geopolitiek</router-link

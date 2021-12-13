@@ -1,5 +1,8 @@
 ---
 name: Khzarathan
+species: Mens
+sex: ♂
+age: ~200
 authors: Wald Habets
 ---
 

@@ -1,5 +1,8 @@
 ---
 name: Hemera Alderwitch
+species: Elf
+sex: ♀
+age: ???
 authors: Wald Habets
 ---
 
