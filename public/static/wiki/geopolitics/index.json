@@ -72,8 +72,8 @@
             "title": "Regio's",
             "entries": [
                 {
-                    "name": "De Zwarte Duinen",
-                    "href": "zwarte-duinen"
+                    "name": "Allûn Krin",
+                    "href": "allun-krin"
                 },
                 {
                     "name": "Stenen Dodenland",
@@ -82,6 +82,10 @@
                 {
                     "name": "De Stormvalij Woestenij",
                     "href": "stormvalij-woestenij"
+                },
+                {
+                    "name": "De Zwarte Duinen",
+                    "href": "zwarte-duinen"
                 }
             ]
         }
