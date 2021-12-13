@@ -77,7 +77,6 @@ export default class WikiPage extends Vue {
     axios
       .get(`/static/wiki/${routeParams.category}/index.json`)
       .then((response) => {
-        console.log(response.data);
         this.index = response.data;
       })
       .catch((error) => {
