@@ -26,4 +26,4 @@ import Leaflet from "@/components/map/Leaflet.vue";
 export default class Portal extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style src="../../assets/scss/leaflet.css"></style>
