@@ -1,7 +1,5 @@
 ---
 name: Allûn Krin
-population: 
-banner: 
 authors: Wald Habets
 ---
 

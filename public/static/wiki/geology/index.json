@@ -1,0 +1,64 @@
+{
+  "title": "Geopolitiek",
+  "groups": [
+    {
+      "title": "Continenten",
+      "entries": [
+        {
+          "name": "De Avondlanden",
+          "href": "avondlanden"
+        },
+        {
+          "name": "De Centrale Hartlanden",
+          "href": "centrale-hartlanden"
+        },
+        {
+          "name": "Het Hoge Noorden",
+          "href": "hoge-noorden"
+        },
+        {
+          "name": "Ijsvlakte van Thoreon",
+          "href": "ijsvlakte-van-thoreon"
+        },
+        {
+          "name": "De Wilderlanden",
+          "href": "wilderlanden"
+        },
+        {
+          "name": "Zalamasj",
+          "href": "zalamasj"
+        }
+      ]
+    },
+    {
+      "title": "Regio's",
+      "entries": [
+        {
+          "name": "Allûn Krin",
+          "href": "allun-krin"
+        },
+        {
+          "name": "Stenen Dodenland",
+          "href": "stenen-dodenland"
+        },
+        {
+          "name": "De Stormvalij Woestenij",
+          "href": "stormvalij-woestenij"
+        },
+        {
+          "name": "De Zwarte Duinen",
+          "href": "zwarte-duinen"
+        }
+      ]
+    },
+    {
+      "title": "Bergen en Vulkanen",
+      "entries": [
+        {
+          "name": "Tohlikípû",
+          "href": "tohlikipu"
+        }
+      ]
+    }
+  ]
+}
