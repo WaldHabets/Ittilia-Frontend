@@ -6,11 +6,11 @@
 
     <template v-slot:content>
       <wiki-article-nav :backTarget="`/wiki/${category}`" />
-      <article v-if="wikiContent != ''">
+      <article v-if="wikiContent !== ''">
         <template v-if="wikiMeta != null">
-          <city-header v-if="category == 'cities'" :metadata="wikiMeta" />
+          <city-header v-if="category === 'cities'" :metadata="wikiMeta" />
           <geopolitics-header
-            v-if="category == 'geopolitics'"
+            v-if="category === 'geopolitics'"
             :metadata="wikiMeta"
           />
         </template>
@@ -161,6 +161,39 @@ article::v-deep {
 
     img {
       width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        border: 1px solid $view-nav-background;
+        tr {
+          background-color: $view-nav-background;
+          color: white;
+
+          th {
+            padding: 4px;
+          }
+        }
+      }
+
+      tbody {
+        border-left: 1px solid $border;
+        border-right: 1px solid $border;
+        border-bottom: 1px solid $border;
+        tr {
+          &:nth-child(even) {
+            background-color: #ededed;
+          }
+        }
+      }
+
+      td,
+      th {
+        padding: 4px 8px;
+      }
     }
   }
   footer {
