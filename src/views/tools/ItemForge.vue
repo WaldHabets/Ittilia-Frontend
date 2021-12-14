@@ -209,8 +209,7 @@ export default class ItemForge extends Vue {
           style: {
             transform: "scale(" + scale + ")",
             transformOrigin: "top left",
-            // width: node.offsetWidth + 'px',
-            // height: node.offsetHeight + 'px'
+            margin: 0,
           },
         })
         .then(function (dataurl) {
