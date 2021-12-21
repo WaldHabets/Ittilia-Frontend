@@ -217,11 +217,19 @@ export default class MonGen extends Vue {
     this.result.wis = this.wis.minimum + DiceHelper.roll(4);
     this.result.cha = this.cha.minimum + DiceHelper.roll(4);
 
-    const logOfCr = Math.log(this.result.cr) / Math.log(4);
-    const baseDice = logOfCr <= 0 ? 0 : Math.floor(logOfCr * 10);
+    console.log("<===== Test Begin =====>");
+    console.log(this.result.cr);
+    const logOfCr = Math.log(this.result.cr) / Math.log(3);
+    console.log(logOfCr);
+    const baseDice =
+      logOfCr <= 0
+        ? Math.round((logOfCr + 2) * 2)
+        : Math.floor(logOfCr * 10);
+    console.log(baseDice);
     const numHitDice: number =
       Math.floor(baseDice + DiceHelper.roll(this.result.pb)) +
       this.bonusHitDice;
+    console.log(numHitDice);
     let hpBonus: number = numHitDice * this.result.conMod;
 
     this.result.hpAvg = (numHitDice * (this.size.hitDice + 1)) / 2 + hpBonus;
@@ -246,8 +254,6 @@ export default class MonGen extends Vue {
     this.result.saves.refl += this.refl ? this.result.pb : 0;
     this.result.saves.will = Math.max(this.result.wisMod, this.result.chaMod);
     this.result.saves.will += this.will ? this.result.pb : 0;
-
-    console.log(this.result);
   }
 }
 </script>
