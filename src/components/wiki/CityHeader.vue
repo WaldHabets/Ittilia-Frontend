@@ -1,11 +1,13 @@
 <template>
   <header>
-    <h1>{{ metadata.name }}</h1>
-    <p>
-      Land: <span>{{ metadata.country }}</span> ● Inwoners:
-      <span>{{ metadata.population }}</span> ● Aeréankristal:
-      <span>{{ metadata.cristal }}</span>
-    </p>
+    <div id="header-content">
+      <h1>{{ metadata.name }}</h1>
+      <p>
+        Land: <span>{{ metadata.country }}</span> ● Inwoners:
+        <span>{{ metadata.population }}</span> ● Aeréankristal:
+        <span>{{ metadata.cristal }}</span>
+      </p>
+    </div>
   </header>
 </template>
 

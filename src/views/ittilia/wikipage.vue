@@ -26,7 +26,9 @@
         <main v-html="wikiContent"></main>
 
         <footer v-if="wikiMeta != null">
-          <span>{{ wikiMeta.authors }}</span>
+          <div id="footer-content">
+            <span>© {{ wikiMeta.authors }}</span>
+          </div>
         </footer>
       </article>
     </template>
@@ -133,15 +135,27 @@ export default class WikiPage extends Vue {
 <style lang="scss" scoped>
 @import "../../assets/scss/colours.scss";
 @import "../../assets/scss/dims.scss";
-article::v-deep {
-  box-sizing: border-box;
-  text-align: start;
+
+@mixin article-content-box() {
   max-width: $wiki-article-width;
   margin: auto;
   padding: $wiki-article-padding;
+}
+
+article::v-deep {
+  box-sizing: border-box;
+  text-align: start;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  //max-width: $wiki-article-width;
+  //margin: auto;
+  //padding: $wiki-article-padding;
 
   @media screen and (max-width: $wiki-article-width-threshold) {
     margin-bottom: $wiki-article-nav-height;
+    min-height: calc(100% - 40px);
   }
 
   h1,
@@ -163,6 +177,10 @@ article::v-deep {
   }
 
   main {
+    @include article-content-box();
+
+    flex: 1 0 auto;
+
     strong {
       color: #7b2a20;
     }
@@ -209,7 +227,11 @@ article::v-deep {
     }
   }
   footer {
-    border-top: 1px solid #2c3e50;
+    background: #eeeeee;
+    //border-top: 1px solid #2c3e50;
+    #footer-content {
+      @include article-content-box();
+    }
   }
 }
 </style>

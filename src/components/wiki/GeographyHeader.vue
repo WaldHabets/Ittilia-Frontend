@@ -1,9 +1,11 @@
 <template>
   <header>
-    <h1>{{ metadata.name }}</h1>
-    <p>
-      Type: <span>{{ metadata.type }}</span>
-    </p>
+    <div id="header-content">
+      <h1>{{ metadata.name }}</h1>
+      <p>
+        Type: <span>{{ metadata.type }}</span>
+      </p>
+    </div>
   </header>
 </template>
 

@@ -1,11 +1,13 @@
 <template>
   <header>
-    <h1>{{ metadata.name }}</h1>
-    <p>
-      Soort: <span>{{ metadata.species }}</span> ● Sex:
-      <span>{{ metadata.sex }}</span> ● Leeftijd:
-      <span>{{ metadata.age }}</span>
-    </p>
+    <div id="header-content">
+      <h1>{{ metadata.name }}</h1>
+      <p>
+        Soort: <span>{{ metadata.species }}</span> ● Sex:
+        <span>{{ metadata.sex }}</span> ● Leeftijd:
+        <span>{{ metadata.age }}</span>
+      </p>
+    </div>
   </header>
 </template>
 

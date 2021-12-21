@@ -1,20 +1,30 @@
+@import "../../assets/scss/dims.scss";
+
 @mixin header() {
-    h1 {
-        font-size: 32px;
-        margin: 0px;
-        word-wrap: break-word;
-    }
 
-    p {
-        color: rgb(117, 117, 117);
-        font-size: 14px;
-        margin: 0px 0px 8px 0px;
+    #header-content {
+        max-width: $wiki-article-width;
+        margin: auto;
+        padding: $wiki-article-padding;
 
-        span {
-            color: #38933b;
-            font-weight: 600;
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        p {
+            color: rgb(117, 117, 117);
+            font-size: 14px;
+            margin: 0 0 8px 0;
+
+            span {
+                color: #38933b;
+                font-weight: 600;
+            }
         }
     }
 
-    border-bottom: 1px solid #2c3e50;
+    width: 100%;
+    background: #eeeeee;
 }

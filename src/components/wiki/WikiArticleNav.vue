@@ -49,7 +49,7 @@ export default class WikiArticleNav extends Vue {
 @import "../../assets/scss/colours.scss";
 @import "../../assets/scss/dims.scss";
 #wiki-article-nav {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -72,8 +72,9 @@ export default class WikiArticleNav extends Vue {
   }
   @media screen and (max-width: $wiki-article-width-threshold) {
     & {
+      display: flex;
       position: fixed;
-      bottom: 0px;
+      bottom: 0;
       background: white;
       border-top: 1px solid $border;
     }
