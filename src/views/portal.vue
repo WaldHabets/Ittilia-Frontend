@@ -7,18 +7,6 @@
     <template v-slot:content>
       <portal-root id="nav-section">
         <portal-card
-          text="Ontdek Ittilia"
-          href="/ittilia"
-          background="/static/img/placeholder.png"
-        />
-        <portal-card
-          text="Tools"
-          href="/tools"
-          background="/static/img/placeholder.png"
-        />
-      </portal-root>
-      <portal-root id="ittilia-portal">
-        <portal-card
           :text="$store.getters.text('page-wiki')"
           href="/wiki"
           background="/static/img/placeholder.png"
@@ -33,8 +21,6 @@
           href="/classes"
           background="/static/img/placeholder.png"
         />
-      </portal-root>
-      <portal-root id="tools-portal">
         <portal-card
           text="Item Forge"
           href="/tools/item-forge"
