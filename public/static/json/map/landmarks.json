@@ -253,5 +253,11 @@
         "latlng": [2798419.281432186, -5634865.526344737],
         "type": "lake",
         "wiki": ""
+    },
+    {
+        "name": "De Slijkputten",
+        "latlng": [2889941.803706963, -5498870.792542075],
+        "type": "waypoint",
+        "wiki": "/wiki/geography/slijkputten"
     }
 ]
