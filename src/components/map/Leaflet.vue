@@ -14,15 +14,18 @@ import { createLocationMarker, createWaypointMarker } from "./LeafletUtils";
 import createLegend from "./LeafletLegend";
 import createDistanceTool from "./LeafletDistanceTool";
 
-let factorx = 0.000036364;
-let factory = 0.000036364;
+let factorx = 0.000037237;
+let factory = 0.000037237;
 
 let customCRS = L.extend({}, L.CRS.Simple, {
   projection: L.Projection.LonLat,
   // 1 px on a 7424x7424 map = 1,85208331km
-  // 1 px on a 500x500 map   = 27,499732987km (1.85.. x 7424/500)
+  // 1 px on a 500x500 map   = 27,499732987km = (1.85.. x 7424/500)
+  // 1 px on a 512x512 map   = 26,855207995km = (1.85... x 7424/512)
   // 500px = 13749.8664935km ()
+  // 512px = 13749,8664935km
   // scale == 500 / 13749.86... = 0.036363989
+  // scale == 512 / 13749.86... = 0,037236725
   transformation: new L.Transformation(-factorx, 0, factory, 0),
   // Scale, zoom and distance are entirely unchanged from CRS.Simple
   scale: function (zoom: number) {
@@ -177,7 +180,7 @@ export default class Leaflet extends Vue {
       minZoom: 0,
       maxZoom: 8,
       attribution: this.attribution,
-      tileSize: 500,
+      tileSize: 512,
       noWrap: true,
     });
     layerControl.addBaseLayer(baseLayer, "Basis");
@@ -187,7 +190,7 @@ export default class Leaflet extends Vue {
       minZoom: 0,
       maxZoom: 5,
       attribution: this.attribution,
-      tileSize: 500,
+      tileSize: 512,
       noWrap: true,
     });
     layerControl.addBaseLayer(borderLayer, "Grenzen");
@@ -206,7 +209,7 @@ export default class Leaflet extends Vue {
         this.waypoints.push(e.latlng);
         this.redrawWaypoints();
       } else {
-        console.log(e.latlng);
+        console.log([e.latlng.lat, e.latlng.lng]);
       }
     });
 
