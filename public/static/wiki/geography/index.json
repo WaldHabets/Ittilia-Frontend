@@ -63,6 +63,27 @@
           "href": "tohlikipu"
         }
       ]
+    },
+    {
+      "title": "Rivieren",
+      "entries": [
+
+      ]
+    },
+    {
+      "title": "Meren",
+      "entries": [
+        {
+          "name": "De Inlandse Zee",
+          "href": "inlandse-zee"
+        }
+      ]
+    },
+    {
+      "title": "Zeeën en Oceanen",
+      "entries": [
+
+      ]
     }
   ]
 }
