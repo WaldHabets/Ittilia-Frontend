@@ -5,9 +5,51 @@
     </template>
 
     <template v-slot:content>
-      <wiki-nav></wiki-nav>
-
-      {{ $text("explore-ittilia") }}
+      <div id="wiki-topic-wrapper">
+        <router-link id="topic-1" class="wiki-topic" to="/wiki/general/">
+          <h1>Algemeen</h1>
+          <p>...</p>
+        </router-link>
+        <router-link id="topic-2" class="wiki-topic" to="/wiki/cosmos/">
+          <h1>Cosmos</h1>
+          <p>
+            Alles over Ae, de Yxon, de Spiegelwereld en de vele andere lagen van
+            de cosmos.
+          </p>
+        </router-link>
+        <router-link id="topic-3" class="wiki-topic" to="/wiki/geography/">
+          <h1>Geografie</h1>
+          <p>
+            Verken de geografie van Ittilia; haar wildernis en al haar
+            wonderlijke locaties.
+          </p>
+        </router-link>
+        <router-link id="topic-4" class="wiki-topic" to="/wiki/geopolitics/">
+          <h1>Geopolitiek</h1>
+          <p>
+            Leer alles over de politiek: de rijken en organisaties die heersen
+            over het dagdagelijkse leven van de Ittilische burger.
+          </p>
+        </router-link>
+        <router-link id="topic-5" class="wiki-topic" to="/wiki/cities/">
+          <h1>Steden</h1>
+          <p>
+            Zoom in op één van de vele steden of andere markante sites in de
+            landen van Ittilia.
+          </p>
+        </router-link>
+        <router-link id="topic-6" class="wiki-topic" to="/wiki/people/">
+          <h1>Personen</h1>
+          <p>...</p>
+        </router-link>
+        <router-link id="topic-7" class="wiki-topic" to="/wiki/creatures/">
+          <h1>Wezens</h1>
+          <p>
+            Wat verschuilt er zich in de hoge bergen of donkere bossen van
+            Ittilia.
+          </p>
+        </router-link>
+      </div>
     </template>
   </view-root>
 </template>
@@ -76,20 +118,6 @@ export default class Wiki extends Vue {
 @import "../../assets/scss/details.scss";
 @import "../../assets/scss/dims.scss";
 
-h1 {
-  width: calc(100% - 32px);
-  max-width: 700px;
-
-  padding: $medium;
-  margin: auto;
-
-  font-size: $font-size-h1;
-  text-align: start;
-  color: $view-nav-background;
-
-  border-bottom: 1px solid #ababab;
-}
-
 #wiki-portal {
   width: calc(100% - 32px);
   max-width: 700px;
@@ -104,6 +132,32 @@ h1 {
       padding: $tiny $small;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
+#wiki-topic-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  .wiki-topic {
+    text-align: left;
+    text-decoration: none;
+    padding: 16px;
+    color: $view-nav-background-dark;
+    display: block;
+
+    * {
+      margin: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+    &:hover {
+      h1 {
+        color: $accent;
+      }
+      background-color: $accent-20;
     }
   }
 }
