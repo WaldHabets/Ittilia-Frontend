@@ -7,43 +7,43 @@
     <template v-slot:content>
       <div id="wiki-topic-wrapper">
         <router-link id="topic-1" class="wiki-topic" to="/wiki/general/">
-          <h1>Algemeen</h1>
+          <h1>Algemeen<span class="badge">4 artikels</span></h1>
           <p>...</p>
         </router-link>
         <router-link id="topic-2" class="wiki-topic" to="/wiki/cosmos/">
-          <h1>Cosmos</h1>
+          <h1>Cosmos<span class="badge">0 artikels</span></h1>
           <p>
             Alles over Ae, de Yxon, de Spiegelwereld en de vele andere lagen van
             de cosmos.
           </p>
         </router-link>
         <router-link id="topic-3" class="wiki-topic" to="/wiki/geography/">
-          <h1>Geografie</h1>
+          <h1>Geografie<span class="badge">5 artikels</span></h1>
           <p>
             Verken de geografie van Ittilia; haar wildernis en al haar
             wonderlijke locaties.
           </p>
         </router-link>
         <router-link id="topic-4" class="wiki-topic" to="/wiki/geopolitics/">
-          <h1>Geopolitiek</h1>
+          <h1>Geopolitiek<span class="badge">7 artikels</span></h1>
           <p>
             Leer alles over de politiek: de rijken en organisaties die heersen
             over het dagdagelijkse leven van de Ittilische burger.
           </p>
         </router-link>
         <router-link id="topic-5" class="wiki-topic" to="/wiki/cities/">
-          <h1>Steden</h1>
+          <h1>Steden<span class="badge">9 artikels</span></h1>
           <p>
             Zoom in op één van de vele steden of andere markante sites in de
             landen van Ittilia.
           </p>
         </router-link>
         <router-link id="topic-6" class="wiki-topic" to="/wiki/people/">
-          <h1>Personen</h1>
+          <h1>Personen<span class="badge">3 artikels</span></h1>
           <p>...</p>
         </router-link>
         <router-link id="topic-7" class="wiki-topic" to="/wiki/creatures/">
-          <h1>Wezens</h1>
+          <h1>Wezens<span class="badge">0 artikels</span></h1>
           <p>
             Wat verschuilt er zich in de hoge bergen of donkere bossen van
             Ittilia.
@@ -145,6 +145,21 @@ export default class Wiki extends Vue {
     padding: 16px;
     color: $view-nav-background-dark;
     display: block;
+
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      color: white;
+      background-color: $accent;
+      border-radius: 8px;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
 
     * {
       margin: 0;
