@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import PlayerWrapper from "@/models/PlayerWrapper";
-import Strings from "../helpers/Strings";
 import Translations from "@/models/Translations";
 
 Vue.use(Vuex);
