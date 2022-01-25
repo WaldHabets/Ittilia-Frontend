@@ -13,7 +13,11 @@
             :placeholder="strings.get('item-name')"
           />
           <div id="dropdown-wrapper" class="form-wrapper">
-            <select id="item-type" v-model="itemtype" @change="onItemTypeUpdate">
+            <select
+              id="item-type"
+              v-model="itemtype"
+              @change="onItemTypeUpdate"
+            >
               <option
                 v-bind:key="key"
                 v-for="(entry, key) in options"

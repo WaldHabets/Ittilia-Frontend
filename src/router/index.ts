@@ -21,8 +21,8 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/wiki/:category",
-    name: "Wiki",
-    component: () => import("@/views/ittilia/wiki.vue"),
+    name: "Wiki Topic",
+    component: () => import("@/views/ittilia/wikitopic.vue"),
   },
   {
     path: "/wiki/:category/:topic",

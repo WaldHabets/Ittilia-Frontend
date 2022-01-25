@@ -1,0 +1,205 @@
+{
+  "accessory": {
+    "en": "Accessory",
+    "nl": "Accessoire"
+  },
+  "clothing": {
+    "en": "Clothing",
+    "nl": "Kleding"
+  },
+  "armor": {
+    "en": "Armor",
+    "nl": "Bescherming"
+  },
+  "book": {
+    "en": "Book",
+    "nl": "Boek"
+  },
+  "potion": {
+    "en": "Potion",
+    "nl": "Brouwsel"
+  },
+  "rod": {
+    "en": "Rod",
+    "nl": "Scepter"
+  },
+  "scroll": {
+    "en": "Scroll",
+    "nl": "Boekrol"
+  },
+  "staff": {
+    "en": "Staf",
+    "nl": "Staff"
+  },
+  "wand": {
+    "en": "Wand",
+    "nl": "Toverstok"
+  },
+  "weapon": {
+    "en": "Weapon",
+    "nl": "Wapen"
+  },
+  "wondrous": {
+    "en": "Wondrous",
+    "nl": "Merkwaardigheid"
+  },
+  "bracelet": {
+    "en": "Bracelet",
+    "nl": "Armband"
+  },
+  "earring": {
+    "en": "Earring",
+    "nl": "Oorbel"
+  },
+  "necklace": {
+    "en": "Necklace",
+    "nl": "Ketting"
+  },
+  "ring": {
+    "en": "Ring",
+    "nl": "Ring"
+  },
+  "robe": {
+    "en": "Robe",
+    "nl": "Gewaad"
+  },
+  "cloak": {
+    "en": "Cloak",
+    "nl": "Mantel"
+  },
+  "outfit": {
+    "en": "Outfit",
+    "nl": "Outfit"
+  },
+  "light-armor": {
+    "en": "Light Armor",
+    "nl": "Lichte Bepantsering"
+  },
+  "padded": {
+    "en": "Padded",
+    "nl": "Wambuis"
+  },
+  "leather": {
+    "en": "Leather",
+    "nl": "Leer"
+  },
+  "studded-leather": {
+    "en": "Studded Leather",
+    "nl": "Bezaaid Leer"
+  },
+  "medium-armor": {
+    "en": "Medium Armor",
+    "nl": "Gemiddelde Bepantsering"
+  },
+  "hide": {
+    "en": "Hide",
+    "nl": "Huiden"
+  },
+  "chain-shirt": {
+    "en": "Chain Shirt",
+    "nl": "Kettinghemd"
+  },
+  "scale-mail": {
+    "en": "Scale Mail",
+    "nl": "Schubbenpanster"
+  },
+  "breastplate": {
+    "en": "Breastplate",
+    "nl": "Borstplaat"
+  },
+  "half-plate": {
+    "en": "Half Plate",
+    "nl": "Kuras"
+  },
+  "heavy-armor": {
+    "en": "Heavy Armor",
+    "nl": "Zware Bepantsering"
+  },
+  "ring-mail": {
+    "en": "Ring Mail",
+    "nl": "Ringkolder"
+  },
+  "chain-mail": {
+    "en": "Chain Mail",
+    "nl": "Maliënkolder"
+  },
+  "splint": {
+    "en": "Splint",
+    "nl": "Segmentharnas"
+  },
+  "plate": {
+    "en": "Plate",
+    "nl": "Plaatharnas"
+  },
+  "shields": {
+    "en": "Shields",
+    "nl": "Schilden"
+  },
+  "shield": {
+    "en": "Shield",
+    "nl": "Schild"
+  },
+  "vial": {
+    "en": "Vial",
+    "nl": "Ampul"
+  },
+  "bottle": {
+    "en": "Bottle",
+    "nl": "Flesje"
+  },
+  "simple-melee-weapons": {
+    "en": "Simple Melee Weapons",
+    "nl": "Eenvoudige Melee Wapens"
+  },
+  "club": {
+    "en": "Club",
+    "nl": "Knuppel"
+  },
+  "dagger": {
+    "en": "Dagger",
+    "nl": "Dolk"
+  },
+  "greatclub": {
+    "en": "Greatclub",
+    "nl": "Knots"
+  },
+  "handaxe": {
+    "en": "Handaxe",
+    "nl": "Handbijl"
+  },
+  "javelin": {
+    "en": "Javelin",
+    "nl": "Werpspeer"
+  },
+  "light-hammer": {
+    "en": "Light Hammer",
+    "nl": "Hamer"
+  },
+  "mace": {
+    "en": "Mace",
+    "nl": "Knots"
+  },
+  "quarterstaff": {
+    "en": "Quarterstaff",
+    "nl": "Stokwapen"
+  },
+  "sickle": {
+    "en": "Sickle",
+    "nl": "Zeis"
+  },
+  "spear": {
+    "en": "Spear",
+    "nl": "Speer"
+  },
+  "simple-ranged-weapons": {
+    "en": "Simple Ranged Weapons",
+    "nl": "Eenvoudige Afstandswapens"
+  },
+  "light-crossbow": {
+    "en": "Light Crossbow",
+    "nl": "Kruisboog"
+  },
+  "dart": {
+    "en": "Dart"
+  }
+}

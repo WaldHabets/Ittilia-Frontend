@@ -7,7 +7,22 @@
     <template v-slot:content>
       <wiki-nav></wiki-nav>
 
-      {{ $text("explore-ittilia") }}
+      <template v-if="index !== null && index !== undefined">
+        <h1>{{ index.title }}</h1>
+
+        <nav id="wiki-portal">
+          <details v-for="(group, i) in index.groups" :key="`group-${i}`" open>
+            <summary>{{ group.title }}</summary>
+            <ul>
+              <li v-for="(entry, j) in group.entries" :key="`entry-${j}`">
+                <router-link :to="`/wiki/${category}/${entry.href}`">{{
+                  entry.name
+                }}</router-link>
+              </li>
+            </ul>
+          </details>
+        </nav>
+      </template>
     </template>
   </view-root>
 </template>
@@ -31,7 +46,7 @@ import WikiNav from "@/components/wiki/WikiNav.vue";
     WikiNav,
   },
 })
-export default class Wiki extends Vue {
+export default class WikiTopic extends Vue {
   private index: WikiIndex | null = null;
   private category = "";
 
