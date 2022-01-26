@@ -8,31 +8,25 @@
       <option :value="11">Zeer moeilijk</option>
     </select>
     <button @click="generate" class="button">Create</button>
-    <span class="cg-result-combination">{{ combination }}</span>
-    <span class="cg-result-dc">{{ dc }}</span>
+    <template v-if="combination">
+      <span class="cg-result-combination">{{ combination.combination }}</span>
+      <span class="cg-result-dc">{{ combination.dc }}</span>
+    </template>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import DiceHelper from "@/helpers/DiceHelper.ts";
+import { Combination, generateCombination } from "@/helpers/Combination";
 
 @Component
 export default class CombinationGenerator extends Vue {
   private difficulty = 3;
-  private combination = "";
-  private dc = 10;
 
-  private readonly options: string[] = ["T", "D", "K"];
+  private combination: Combination | null = null;
 
-  generate() {
-    this.combination = "";
-    let steps: string[] = [];
-    for (let i = 0; i < this.difficulty; ++i) {
-      steps.push(this.options[DiceHelper.roll(3) - 1]);
-    }
-    this.combination = steps.join("∙");
-    this.dc = 10 + 2 * this.difficulty;
+  generate(): void {
+    this.combination = generateCombination(this.difficulty);
   }
 }
 </script>

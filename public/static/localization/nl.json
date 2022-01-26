@@ -41,5 +41,13 @@
   "ability-con": "Vitaliteit",
   "ability-int": "Intelligentie",
   "ability-wis": "Wijsheid",
-  "ability-cha": "Charisma"
+  "ability-cha": "Charisma",
+  "door-reinforced": "Verstevigd",
+  "door-wood": "Houten Deur",
+  "door-iron": "IJzeren Deur",
+  "door-stone": "Stenen Deur",
+  "door-portcullis": "Valhek",
+  "door-locked": "Gesloten",
+  "door-stuck": "Klem",
+  "door-secret": "Geheim"
 }

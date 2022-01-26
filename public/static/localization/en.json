@@ -41,5 +41,13 @@
   "ability-con": "Constitution",
   "ability-int": "Intelligence",
   "ability-wis": "Wisdom",
-  "ability-cha": "Charisma"
+  "ability-cha": "Charisma",
+  "door-reinforced": "Reinforced",
+  "door-wood": "Wooden Door",
+  "door-iron": "Iron Door",
+  "door-stone": "Stone Door",
+  "door-portcullis": "Portcullis",
+  "door-locked": "Locked",
+  "door-stuck": "Stuck",
+  "door-secret": "Secret"
 }
