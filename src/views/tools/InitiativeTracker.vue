@@ -25,9 +25,13 @@
       <main>
         <header>
           <div id="controls" class="card">
-            <button class="flat-button" :title="$text('action-clear')" @click="clear">
+            <button
+              class="flat-button"
+              :title="$text('action-clear')"
+              @click="clear"
+            >
               <svg viewBox="0 0 24 24">
-                <path :d="mdiDeleteOutline"/>
+                <path :d="mdiDeleteOutline" />
               </svg>
             </button>
             <button class="button" title="Sorteer" @click="sort">
@@ -92,7 +96,11 @@
               </div>
             </div>
           </div>
-          <progress id="hp-balance" :max="totalEntriesHP" :value="friendlyEntriesHP"></progress>
+          <progress
+            id="hp-balance"
+            :max="totalEntriesHP"
+            :value="friendlyEntriesHP"
+          ></progress>
         </header>
         <div id="initiative-view">
           <div id="initiative-card-wrapper">
@@ -136,7 +144,7 @@ import {
   mdiSortDescending,
   mdiContentSave,
   mdiAlert,
-  mdiDeleteOutline
+  mdiDeleteOutline,
 } from "@mdi/js";
 
 import InitiativeCard from "@/components/combat-tracker/InitiativeCard.vue";
@@ -188,8 +196,11 @@ export default class InitiativeTracker extends Vue {
   private totalEntriesHP = 0;
   private friendlyEntriesHP = 0;
 
-  @Watch("model.entries", {immediate: true, deep: true})
-  recalculateEntriesHP(newEntries: CombatEntry[], oldEntries: CombatEntry[]): void {
+  @Watch("model.entries", { immediate: true, deep: true })
+  recalculateEntriesHP(
+    newEntries: CombatEntry[],
+    oldEntries: CombatEntry[]
+  ): void {
     let sumTotal = 0;
     let sumFriendly = 0;
     this.model.entries.forEach((entry: CombatEntry) => {
@@ -198,8 +209,6 @@ export default class InitiativeTracker extends Vue {
     });
     this.totalEntriesHP = sumTotal;
     this.friendlyEntriesHP = sumFriendly;
-    console.log(sumTotal);
-    console.log(sumFriendly);
   }
 
   get monsterxp(): number {
