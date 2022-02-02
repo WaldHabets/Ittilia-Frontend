@@ -2,6 +2,7 @@
   "explore-ittilia": "Ontdek Ittilia",
   "page-wiki": "Wiki",
   "page-map": "Kaart",
+  "page-lineage": "Bloedlijn",
   "page-classes": "Rollen",
   "name": "Naam",
   "initiative": "Initiatief",
@@ -50,5 +51,16 @@
   "door-portcullis": "Valhek",
   "door-locked": "Gesloten",
   "door-stuck": "Klem",
-  "door-secret": "Geheim"
+  "door-secret": "Geheim",
+  "lineage-label": "Bloedlijnen",
+  "lineage-urr": "Urr",
+  "lineage-urr-brief": "...",
+  "lineage-urr-dranan": "Urr'Dranan",
+  "lineage-urr-dranan-brief": "...",
+  "lineage-elves": "Elven",
+  "lineage-elves-brief": "...",
+  "lineage-ghimach": "Ghímach",
+  "lineage-ghimach-brief": "...",
+  "lineage-curse": "Beestenvloek",
+  "lineage-curse-brief": "..."
 }

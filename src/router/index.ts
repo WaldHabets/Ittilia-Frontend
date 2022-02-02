@@ -35,6 +35,11 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/map/map.vue"),
   },
   {
+    path: "/lineage",
+    name: "Lineage",
+    component: () => import("@/views/ittilia/lineage.vue"),
+  },
+  {
     path: "/classes",
     name: "Classes",
     component: () => import("@/views/portal.ittilia.classes.vue"),

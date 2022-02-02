@@ -13,22 +13,27 @@
         <svg viewBox="0 0 24 24">
           <path :d="iconExplore" />
         </svg>
-        {{ $store.getters.text("explore-ittilia") }}
+        {{ $text("explore-ittilia") }}
       </router-link>
       <ul>
         <li>
           <router-link class="nav-link sub-link" to="/wiki">
-            {{ $store.getters.text("page-wiki") }}</router-link
+            {{ $text("page-wiki") }}</router-link
           >
         </li>
         <li>
           <router-link class="nav-link sub-link" to="/map">{{
-            $store.getters.text("page-map")
+            $text("page-map")
           }}</router-link>
         </li>
         <li>
+          <router-link class="nav-link sub-link" to="/lineage">
+            {{ $text("page-lineage") }}
+          </router-link>
+        </li>
+        <li>
           <router-link class="nav-link sub-link" to="/classes">{{
-            $store.getters.text("page-classes")
+            $text("page-classes")
           }}</router-link>
         </li>
       </ul>

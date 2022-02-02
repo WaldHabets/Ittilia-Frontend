@@ -2,6 +2,7 @@
   "explore-ittilia": "Explore Ittilia",
   "page-wiki": "Wiki",
   "page-map": "Map",
+  "page-lineage": "Lineage",
   "page-classes": "Classes",
   "name": "Name",
   "initiative": "Initiative",
@@ -50,5 +51,16 @@
   "door-portcullis": "Portcullis",
   "door-locked": "Locked",
   "door-stuck": "Stuck",
-  "door-secret": "Secret"
+  "door-secret": "Secret",
+  "lineage-label": "Lineages",
+  "lineage-urr": "Urr",
+  "lineage-urr-brief": "...",
+  "lineage-urr-dranan": "Urr'Dranan",
+  "lineage-urr-dranan-brief": "...",
+  "lineage-elves": "Elves",
+  "lineage-elves-brief": "...",
+  "lineage-ghimach": "Ghímach",
+  "lineage-ghimach-brief": "...",
+  "lineage-curse": "Beastcurse",
+  "lineage-curse-brief": "..."
 }
