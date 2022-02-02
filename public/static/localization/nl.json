@@ -62,5 +62,10 @@
   "lineage-ghimach": "Ghímach",
   "lineage-ghimach-brief": "...",
   "lineage-curse": "Beestenvloek",
-  "lineage-curse-brief": "..."
+  "lineage-curse-brief": "...",
+  "sex": "Geslacht",
+  "age": "Leeftijd",
+  "lineage": "Bloedlijn",
+  "country": "Land",
+  "inhabitants": "Inwoners"
 }

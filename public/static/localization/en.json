@@ -62,5 +62,10 @@
   "lineage-ghimach": "Ghímach",
   "lineage-ghimach-brief": "...",
   "lineage-curse": "Beastcurse",
-  "lineage-curse-brief": "..."
+  "lineage-curse-brief": "...",
+  "sex": "Sex",
+  "age": "Age",
+  "lineage": "Lineage",
+  "country": "Country",
+  "inhabitants": "Inhabitants"
 }

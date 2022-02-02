@@ -3,8 +3,8 @@
     <div id="header-content">
       <h1>{{ metadata.name }}</h1>
       <p>
-        Soort: <span>{{ metadata.species }}</span> ● Sex:
-        <span>{{ metadata.sex }}</span> ● Leeftijd:
+        {{ $text("lineage") }}: <span>{{ metadata.species }}</span> ● {{ $text("sex") }}:
+        <span>{{ metadata.sex }}</span> ● {{ $text("age") }}:
         <span>{{ metadata.age }}</span>
       </p>
     </div>

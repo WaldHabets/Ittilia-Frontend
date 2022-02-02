@@ -3,7 +3,7 @@
     <div id="header-content">
       <h1>{{ metadata.name }}</h1>
       <p>
-        Land: <span>{{ metadata.country }}</span> ● Inwoners:
+        {{ $text("country") }}: <span>{{ metadata.country }}</span> ● {{ $text("inhabitants") }}:
         <span>{{ metadata.population }}</span> ● Aeréankristal:
         <span>{{ metadata.cristal }}</span>
       </p>
