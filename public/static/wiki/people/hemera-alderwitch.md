@@ -1,6 +1,6 @@
 ---
 name: Hemera Alderwitch
-species: Elf
+species: Elf (Hisan)
 sex: ♀
 age: ???
 authors: Wald Habets

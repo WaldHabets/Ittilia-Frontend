@@ -2,6 +2,15 @@
     "title": "Personen",
     "groups": [
         {
+            "title": "B",
+            "entries": [
+                {
+                    "name": "Brachus Tír",
+                    "href": "brachus-tir"
+                }
+            ]
+        },
+        {
             "title": "H",
             "entries": [
                 {

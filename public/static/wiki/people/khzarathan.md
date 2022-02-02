@@ -1,6 +1,6 @@
 ---
 name: Khzarathan
-species: Mens
+species: Urr (Mens)
 sex: ♂
 age: ~200
 authors: Wald Habets
