@@ -286,5 +286,11 @@
         "latlng":[ 2684242.151623385, -5673855.137363375 ],
         "type":"mountains",
         "wiki":""
+    },
+    {
+        "name": "Pultan",
+        "latlng": [2322119.128823482, -5216690.556435803],
+        "type": "city",
+        "wiki": "/wiki/cities/pultan"
     }
 ]
