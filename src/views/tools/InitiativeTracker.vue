@@ -191,10 +191,10 @@ export default class InitiativeTracker extends Vue {
   @Watch("model.entries", {immediate: true, deep: true})
   recalculateEntriesHP(newEntries: CombatEntry[], oldEntries: CombatEntry[]): void {
     let sumTotal = 0;
-    let sumFriendly = 0
+    let sumFriendly = 0;
     this.model.entries.forEach((entry: CombatEntry) => {
       sumTotal += entry.curent_hp;
-      sumFriendly += (entry.allegiance == "enemy") ? 0 : entry.curent_hp;
+      sumFriendly += entry.allegiance == "enemy" ? 0 : entry.curent_hp;
     });
     this.totalEntriesHP = sumTotal;
     this.friendlyEntriesHP = sumFriendly;
@@ -209,7 +209,7 @@ export default class InitiativeTracker extends Vue {
       if (entry.allegiance == "enemy") {
         enemies++;
 
-        totalxp += typeof entry.xp === "string" ? parseInt(entry.xp) : entry.xp;
+        totalxp += entry.xp;
       }
     });
 
@@ -229,8 +229,8 @@ export default class InitiativeTracker extends Vue {
   }
 
   get difficulty(): number {
-    var thres = this.calcThresholds();
-    var xp = this.monsterxp;
+    let thres = this.calcThresholds();
+    const xp = this.monsterxp;
 
     const closest = thres.reduce((a, b) => {
       return Math.abs(b - xp) < Math.abs(a - xp) ? b : a;
@@ -298,7 +298,7 @@ export default class InitiativeTracker extends Vue {
     this.model.entries.push(entry);
   }
 
-  addPlayers(players: CombatEntry[]) {
+  addPlayers(players: CombatEntry[]): void {
     this.model.entries.push(...players);
   }
 
@@ -363,7 +363,7 @@ main {
   header {
     margin: auto;
     max-width: 700px;
-    box-shadow: 0px 12px 16px -16px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 16px -16px rgba(0, 0, 0, 0.7);
     #controls {
       display: flex;
       justify-content: space-around;
@@ -375,7 +375,7 @@ main {
       button {
         height: 48px;
         width: 48px;
-        margin: 0px 8px;
+        margin: 0 8px;
         font-weight: 700;
         vertical-align: middle;
 
@@ -388,7 +388,7 @@ main {
         flex-direction: column;
         height: 48px;
         width: 48px;
-        margin: 0px 8px;
+        margin: 0 8px;
         text-align: center;
         justify-content: center;
         text-transform: uppercase;
@@ -414,7 +414,7 @@ main {
       width: 100%;
       height: 10px;
       border: none;
-      margin: 0px;
+      margin: 0;
       &[value]::-webkit-progress-bar {
         background-color: green;
       }
