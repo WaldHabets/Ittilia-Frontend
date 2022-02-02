@@ -26,7 +26,7 @@
         <header>
           <div id="controls" class="card">
             <button
-              class="flat-button"
+              class="button-red"
               :title="$text('action-clear')"
               @click="clear"
             >
