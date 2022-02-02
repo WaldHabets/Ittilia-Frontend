@@ -15,6 +15,7 @@
   "enemy": "Enemy",
   "ally": "Ally",
   "player": "Player",
+  "action-clear": "Clear",
   "action-add": "Add",
   "action-import": "Import",
   "action-save": "Save",

@@ -25,6 +25,11 @@
       <main>
         <header>
           <div id="controls" class="card">
+            <button class="flat-button" :title="$text('action-clear')" @click="clear">
+              <svg viewBox="0 0 24 24">
+                <path :d="mdiDeleteOutline"/>
+              </svg>
+            </button>
             <button class="button" title="Sorteer" @click="sort">
               <svg viewBox="0 0 24 24">
                 <path :d="mdiSortDescending" />
@@ -45,11 +50,11 @@
               </svg>
             </button>
             <div class="control-indicator">
-              <div class="control-indicator-label">{{ s.get("round") }}</div>
+              <div class="control-indicator-label">{{ $text("round") }}</div>
               <div class="control-indicator-value">{{ model.round }}</div>
             </div>
             <div class="control-indicator">
-              <div class="control-indicator-label">{{ s.get("turn") }}</div>
+              <div class="control-indicator-label">{{ $text("turn") }}</div>
               <div class="control-indicator-value">{{ model.turn }}</div>
             </div>
             <button class="button" title="Volgende Beurt" @click="nextTurn">
@@ -59,30 +64,30 @@
             </button>
             <div id="meta" class="card">
               <div id="meta-xp">
-                <span>{{ s.get("monster-xp") }}: </span
+                <span>{{ $text("monster-xp") }}: </span
                 ><span>{{ monsterxp }}</span>
               </div>
               <div id="meta-difficulty">
-                <span>{{ s.get("difficulty") }}: </span>
+                <span>{{ $text("difficulty") }}: </span>
                 <span
                   v-if="difficulty === 0"
                   style="font-weight: 600; color: #5a9216"
-                  >{{ s.get("easy") }}</span
+                  >{{ $text("easy") }}</span
                 >
                 <span
                   v-if="difficulty === 1"
                   style="font-weight: 600; color: #45baef"
-                  >{{ s.get("medium") }}</span
+                  >{{ $text("medium") }}</span
                 >
                 <span
                   v-if="difficulty === 2"
                   style="font-weight: 600; color: #f9a825"
-                  >{{ s.get("hard") }}</span
+                  >{{ $text("hard") }}</span
                 >
                 <span
                   v-if="difficulty === 3"
                   style="font-weight: 600; color: #760000"
-                  >{{ s.get("deadly") }}</span
+                  >{{ $text("deadly") }}</span
                 >
               </div>
             </div>
@@ -131,6 +136,7 @@ import {
   mdiSortDescending,
   mdiContentSave,
   mdiAlert,
+  mdiDeleteOutline
 } from "@mdi/js";
 
 import InitiativeCard from "@/components/combat-tracker/InitiativeCard.vue";
@@ -174,6 +180,7 @@ export default class InitiativeTracker extends Vue {
   private readonly mdiArrowNext: string = mdiArrowRightBold;
   private readonly mdiSortDescending: string = mdiSortDescending;
   private readonly mdiContentSave: string = mdiContentSave;
+  private readonly mdiDeleteOutline: string = mdiDeleteOutline;
 
   private model: Model = new Model();
   private thresholds = require("@/assets/data/thresholds.json");
@@ -256,6 +263,13 @@ export default class InitiativeTracker extends Vue {
     a.download = this.model.name + ".json";
     a.href = URL.createObjectURL(blob);
     a.click();
+  }
+
+  clear(): void {
+    this.model.entries.length = 0;
+    this.model.entries = [];
+    this.model.round = 0;
+    this.model.turn = 0;
   }
 
   calcThresholds(): number[] {

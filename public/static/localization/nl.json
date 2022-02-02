@@ -15,6 +15,7 @@
   "enemy": "Vijand",
   "ally": "Bondgenoot",
   "player": "Speler",
+  "action-clear": "Verwijderen",
   "action-add": "Voeg Toe",
   "action-import": "Importeren",
   "action-save": "Opslaan",
