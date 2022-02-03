@@ -1,7 +1,12 @@
 <template>
   <div id="view-root">
     <div id="view-nav-head">
-      <button id="view-nav-toggle" @click="toggleHide" aria-controls="view-nav-body" :title="viewNavToggleTitle">
+      <button
+        id="view-nav-toggle"
+        @click="toggleHide"
+        aria-controls="view-nav-body"
+        :title="viewNavToggleTitle"
+      >
         <svg v-if="isHidden" viewBox="0 0 24 24">
           <path :d="mdiMenu" />
         </svg>
@@ -10,7 +15,12 @@
         </svg>
       </button>
     </div>
-    <nav id="view-nav-body" :class="{ hide: isHidden }" aria-label="website" :aria-expanded="!isHidden">
+    <nav
+      id="view-nav-body"
+      :class="{ hide: isHidden }"
+      aria-label="website"
+      :aria-expanded="!isHidden"
+    >
       <nav-list />
     </nav>
     <div id="view-content-head">
@@ -23,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import NavList from "@/components/view/NavList.vue";
 import { mdiMenu, mdiClose } from "@mdi/js";
 
@@ -37,7 +47,7 @@ export default class ViewRoot extends Vue {
   private mdiClose: string = mdiClose;
   private isHidden = true;
 
-  get viewNavToggleTitle() : string {
+  get viewNavToggleTitle(): string {
     if (this.isHidden) {
       return this.$store.getters.text("action-show-menu");
     } else {

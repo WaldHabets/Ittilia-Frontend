@@ -1,7 +1,7 @@
 <template>
   <div>
     <combination-generator />
-    <door-generator/>
+    <door-generator />
     <mon-gen />
   </div>
 </template>

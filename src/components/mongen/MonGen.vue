@@ -140,7 +140,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 import AttributeSelect from "./AttributeSelect.vue";
 
@@ -222,9 +222,7 @@ export default class MonGen extends Vue {
     const logOfCr = Math.log(this.result.cr) / Math.log(3);
     console.log(logOfCr);
     const baseDice =
-      logOfCr <= 0
-        ? Math.round((logOfCr + 2) * 2)
-        : Math.floor(logOfCr * 10);
+      logOfCr <= 0 ? Math.round((logOfCr + 2) * 2) : Math.floor(logOfCr * 10);
     console.log(baseDice);
     const numHitDice: number =
       Math.floor(baseDice + DiceHelper.roll(this.result.pb)) +

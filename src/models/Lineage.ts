@@ -10,4 +10,4 @@ interface Lineage {
   lineages: SubLineage[];
 }
 
-export { Lineage, SubLineage }
+export { Lineage, SubLineage };

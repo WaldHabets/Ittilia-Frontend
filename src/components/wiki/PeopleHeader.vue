@@ -3,8 +3,9 @@
     <div id="header-content">
       <h1>{{ metadata.name }}</h1>
       <p>
-        {{ $text("lineage") }}: <span>{{ metadata.species }}</span> ● {{ $text("sex") }}:
-        <span>{{ metadata.sex }}</span> ● {{ $text("age") }}:
+        {{ $text("lineage") }}: <span>{{ metadata.species }}</span> ●
+        {{ $text("sex") }}: <span>{{ metadata.sex }}</span> ●
+        {{ $text("age") }}:
         <span>{{ metadata.age }}</span>
       </p>
     </div>

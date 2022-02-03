@@ -36,7 +36,7 @@ export default new Vuex.Store({
         })
         .then((dict: Translations) => {
           commit("setDictionary", dict);
-          commit("setLanguage", lang)
+          commit("setLanguage", lang);
         })
         .catch((error) => {
           console.log(error);

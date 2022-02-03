@@ -70,4 +70,4 @@ function generateDoor(): Door {
   };
 }
 
-export { Door, generateDoor }
+export { Door, generateDoor };

@@ -21,4 +21,4 @@ function generateCombination(difficulty: number): Combination {
   };
 }
 
-export { Combination, generateCombination }
+export { Combination, generateCombination };

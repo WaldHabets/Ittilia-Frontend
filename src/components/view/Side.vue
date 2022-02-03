@@ -1,6 +1,15 @@
 <template>
-  <div id="side-view" v-bind:class="{ hidden: isHidden }" :aria-expanded="!isHidden">
-    <button id="side-view-button" @click="hide" aria-controls="side-view" :title="sideViewButtonTitle">
+  <div
+    id="side-view"
+    v-bind:class="{ hidden: isHidden }"
+    :aria-expanded="!isHidden"
+  >
+    <button
+      id="side-view-button"
+      @click="hide"
+      aria-controls="side-view"
+      :title="sideViewButtonTitle"
+    >
       <svg v-if="isHidden" viewBox="0 0 24 24">
         <path :d="iconArrowExpandLeft" />
       </svg>
@@ -24,7 +33,7 @@ export default class Side extends Vue {
   private iconArrowExpandLeft = mdiArrowExpandLeft;
   private iconClose = mdiClose;
 
-  get sideViewButtonTitle() : string {
+  get sideViewButtonTitle(): string {
     if (this.isHidden) {
       return this.$store.getters.text("action-show-menu");
     } else {

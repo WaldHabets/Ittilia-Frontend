@@ -17,10 +17,7 @@
             v-if="category === 'geopolitics'"
             :metadata="wikiMeta"
           />
-          <people-header
-            v-if="category === 'people'"
-            :metadata="wikiMeta"
-          />
+          <people-header v-if="category === 'people'" :metadata="wikiMeta" />
         </template>
 
         <main v-html="wikiContent"></main>
@@ -55,6 +52,11 @@ type Map = {
   [key: string]: string | undefined;
 };
 
+type ParseResult = {
+  metadata: Map;
+  content: string;
+} | null;
+
 @Component({
   components: {
     PeopleHeader,
@@ -80,12 +82,12 @@ export default class WikiPage extends Vue {
     this.__load(this.$route.params);
   }
 
-  __load(routeParams: any) {
+  __load(routeParams: any): void {
     this.category = routeParams.category;
     this.fetchContent(routeParams);
   }
 
-  __parse(markdown: string) {
+  __parse(markdown: string): ParseResult {
     const match = /---\r?\n([\s\S]+?)\r?\n---/.exec(markdown);
 
     if (match == null) return null;

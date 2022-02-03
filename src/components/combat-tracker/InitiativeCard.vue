@@ -86,7 +86,7 @@ export default class InitiativeCard extends Vue {
     this.$emit("delete");
   }
 
-  toggleDead() {
+  toggleDead(): void {
     this.model.dead = !this.model.dead;
     if (this.model.dead) {
       this.model.curent_hp = 0;

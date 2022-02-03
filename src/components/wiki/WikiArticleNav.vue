@@ -11,7 +11,7 @@
       </option>
       <option value="geography">
         <router-link class="wiki-nav-link" to="/wiki/geography"
-        >Geografie</router-link
+          >Geografie</router-link
         >
       </option>
       <option value="geopolitics">

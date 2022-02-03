@@ -9,8 +9,7 @@
           <div class="header-content">
             <h1>{{ lineageData.name }}</h1>
             <div v-if="sublineages.length > 0" class="tab-bar">
-              <span :class="{ selected: selected === -1 }"
-                    @click="select(-1)"
+              <span :class="{ selected: selected === -1 }" @click="select(-1)"
                 >Base</span
               >
               <span

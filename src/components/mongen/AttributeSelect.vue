@@ -29,11 +29,11 @@ export default class AttributeSelect extends Vue {
   }
 
   @Watch("attribute")
-  onAttributeChange() {
-    return this.$emit("change", this.attribute);
+  onAttributeChange(): void {
+    this.$emit("change", this.attribute);
   }
 
-  mounted() {
+  mounted(): void {
     this.$emit("change", this.attribute);
   }
 }
