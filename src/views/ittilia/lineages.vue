@@ -6,28 +6,28 @@
 
     <template v-slot:content>
       <div id="wiki-topic-wrapper">
-        <router-link id="topic-1" class="wiki-topic" to="/wiki/general/">
+        <router-link id="topic-1" class="wiki-topic" to="/lineages/urr">
           <h1>
             {{ $text("lineage-urr")
             }}<span class="badge">3 {{ $text("lineage-label") }}</span>
           </h1>
           <p>{{ $text("lineage-urr-brief") }}</p>
         </router-link>
-        <router-link id="topic-2" class="wiki-topic" to="/wiki/cosmos/">
+        <router-link id="topic-2" class="wiki-topic" to="/lineages/urr-dranan">
           <h1>
             {{ $text("lineage-urr-dranan")
             }}<span class="badge">1 {{ $text("page-lineage") }}</span>
           </h1>
           <p>{{ $text("lineage-urr-dranan-brief") }}</p>
         </router-link>
-        <router-link id="topic-3" class="wiki-topic" to="/wiki/geography/">
+        <router-link id="topic-3" class="wiki-topic" to="/lineages/elves/">
           <h1>
             {{ $text("lineage-elves")
             }}<span class="badge">2 {{ $text("lineage-label") }}</span>
           </h1>
           <p>{{ $text("lineage-elves-brief") }}</p>
         </router-link>
-        <router-link id="topic-4" class="wiki-topic" to="/wiki/geopolitics/">
+        <router-link id="topic-4" class="wiki-topic" to="/lineages/ghimach/">
           <h1>
             {{ $text("lineage-ghimach")
             }}<span class="badge">1 {{ $text("page-lineage") }}</span>
@@ -57,7 +57,7 @@ import ViewRoot from "@/components/view/ViewRoot.vue";
     ViewRoot,
   },
 })
-export default class Wiki extends Vue {}
+export default class LineagePortal extends Vue {}
 </script>
 
 <style lang="scss" scoped>

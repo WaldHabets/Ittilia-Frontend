@@ -27,7 +27,7 @@
           }}</router-link>
         </li>
         <li>
-          <router-link class="nav-link sub-link" to="/lineage">
+          <router-link class="nav-link sub-link" to="/lineages">
             {{ $text("page-lineage") }}
           </router-link>
         </li>
