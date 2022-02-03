@@ -79,7 +79,7 @@ export default class NavList extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../assets/scss/buttons.css";
 @import "../../assets/scss/colours.scss";
 
@@ -89,15 +89,15 @@ ul {
 
 ul,
 li {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 #root-list {
   $element-height: 32px;
   $icon-size: 24px;
 
-  padding: 0px;
+  padding: 0;
 
   svg {
     width: $icon-size;
@@ -111,7 +111,7 @@ li {
     color: inherit;
 
     padding: 8px;
-    margin: 0px;
+    margin: 0;
 
     height: $element-height;
     line-height: $element-height;
