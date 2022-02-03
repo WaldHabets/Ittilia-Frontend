@@ -1,6 +1,6 @@
 {
   "name": "Ghímach",
-  "description": "",
+  "description": "***Drijvende Energie.*** Kies één schadetype, dit is je drijvende energie: vuur (stoom), bliksem of radiatie\n\n***Attribuut.*** Verhoog één van de volgende attributen met 1 punt: Kracht, Finesse of Vitaliteit.\n\n***Snelheid.*** 7.5m (25ft)\n\n***Draagcapaciteit.*** Small of Medium\n\n***Gewichtsklasse.*** Small of Medium\n\n***Aangeboren Talent.*** Je hebt resistentie tegen je gekozen type van drijvende energie. Je mag één van de volgende integraties kiezen:\n\n- Je hebt extra bepantsering en krijgt standaard een +2 bonus op je pantserklasse\n- Je hebt één wapen of type gereedschap geïntegreerd in je lichaam. Je bent vaardig met dit wapen of gereedschap.\n- Je bent gefocust op mobiliteit, je snelheid verhoogd met 3m (10ft) en je kiest tussen een zwem- of klimsnelheid gelijk aan je wandelsnelheid.\n\n***Aangeboren Talent.*** Wanneer je een aanval doet, kan je er voor kiezen om je aanval te overladen met je eigen levens energie. Je offert één levenssteen en deelt 1d8 extra schade uit van hetzelfde type als je drijvende energie. Je aanval verandert ook in een magische aanval. Je mag kiezen om dit te doen nadat je je aanval hebt geworpen, maar voordat je schade werpt.\n\n***Cultureel Talent.*** Je mag één generiek talent kiezen.",
   "author": "Wald Habets",
   "lineages": []
 }

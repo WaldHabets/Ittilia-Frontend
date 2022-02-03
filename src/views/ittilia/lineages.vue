@@ -34,12 +34,12 @@
           </h1>
           <p>{{ $text("lineage-ghimach-brief") }}</p>
         </router-link>
-        <router-link id="topic-5" class="wiki-topic" to="/wiki/cities/">
+        <router-link id="topic-5" class="wiki-topic" to="/lineages/halfmen/">
           <h1>
-            {{ $text("lineage-curse")
+            {{ $text("lineage-halfmen")
             }}<span class="badge">1 {{ $text("page-lineage") }}</span>
           </h1>
-          <p>{{ $text("lineage-curse-brief") }}</p>
+          <p>{{ $text("lineage-halfmen-brief") }}</p>
         </router-link>
       </div>
     </template>

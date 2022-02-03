@@ -5,15 +5,15 @@
   "lineages": [
     {
       "name": "Aardling",
-      "description": ""
+      "description": "***Attribuut.*** Verhoog één van de volgende attributen met 1 punt: Kracht, Vitaliteit of Intelligentie.\n\n***Snelheid.*** 25ft, 5ft burrow\n\n***Draagcapaciteit.*** Medium\n\n***Gewichtsklasse.*** Medium\n\n***Aangeboren Talen.*** Je hebt _duisterzicht_. Je voor 18m (60ft) in schemerlicht zien alsof het helder licht is, en voor 18m (60ft) in duisternis alsof het schemerlicht is.\n\n***Aangeboren Talent.*** Je hebt de natuurlijke vaardigheid om met je klauwen door zelfs het hardste gesteente te graven. Voor elk half uur dat je graaft, gooi een d20 en tel je mod(Kracht) hierbij op. Als je hoger gooit dat de pantserklasse van het gesteente, dan heb je 1.5m voortgang gemaakt. Je maakt de volledige voortgang, of geen, niets tussenliggend. Het graven maakt geluid dat mogelijks hoorbaar is voor nabije wezens.\n\n***Cultureel.*** Je mag één generiek talent kiezen."
     },
     {
       "name": "Goliat",
-      "description": ""
+      "description": "***Attribuut.*** Verhoog één van de volgende attributen met 1 punt: Kracht, Vitaliteit of Charisma.\n\n***Snelheid.*** 25ft\n\n***Draagcapaciteit.*** Large\n\n***Gewichtsklasse.*** Medium\n\n***Minor.***\n\n***Actief.***\n\n***Cultureel.*** Je mag één generiek talent kiezen."
     },
     {
       "name": "Mens",
-      "description": ""
+      "description": "***Attribuut.*** Verhoog één van de volgende attributen met 1 punt: Vitaliteit, Intelligentie of Charisma.\n\n***Snelheid.*** 30ft\n\n***Draagcapaciteit.*** Medium\n\n***Gewichtsklasse.*** Medium\n\n***Minor.***\n\n***Actief.*** Telkens wanneer je faalt op een vaardigheidsworp, ontvang je één punt van Motivatie, tot een maximum van 5. Je kan ervoor kiezen om deze punten in te zetten om een bonussteen toe te voegen aan een vaardigheidsworp. De bonussteen hangt af van je aantal punten Motivatie: 1. d4, 2. d6, 3. d8, 4. d10 en 5. d12. Je mag er voor kiezen om dit toe te passen na je initiële worp, maar voor het resultaat ervan bekend is.\n\n***Cultureel.***"
     }
   ]
 }

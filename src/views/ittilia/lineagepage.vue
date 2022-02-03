@@ -24,7 +24,14 @@
           </div>
         </header>
 
-        <main v-html="parse(lineageData.description)"></main>
+        <main
+          v-if="sublineages.length <= 0 || selected === -1"
+          v-html="parse(lineageData.description)"
+        ></main>
+        <main
+          v-else
+          v-html="parse(lineageData.lineages[selected].description)"
+        ></main>
 
         <footer>
           <div id="footer-content">
