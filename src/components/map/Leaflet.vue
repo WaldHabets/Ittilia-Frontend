@@ -127,6 +127,9 @@ export default class Leaflet extends Vue {
 
       switch (landmark.type) {
         case "city":
+        case "city-1":
+        case "city-2":
+        case "city-3":
           cities.push(marker);
           break;
         case "landmark":

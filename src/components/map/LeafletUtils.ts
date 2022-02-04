@@ -10,6 +10,15 @@ function createIcon(iconUrl: string) {
   });
 }
 
+function createNewIcon(iconUrl: string) {
+  return L.icon({
+    iconUrl: iconUrl,
+    iconSize: [40, 52],
+    iconAnchor: [20, 52],
+    popupAnchor: [0, -52],
+  });
+}
+
 export function createLocationMarker(landmark: Landmark): L.Marker {
   const latLng = L.latLng(landmark.latlng[0], landmark.latlng[1]);
 
@@ -17,10 +26,10 @@ export function createLocationMarker(landmark: Landmark): L.Marker {
   let icon: L.Icon;
   if (landmark.wiki == "") {
     markerHtml = `<b>${landmark.name}</b>`;
-    icon = createIcon(`/static/img/${landmark.type}.png`);
+    icon = createNewIcon(`/static/img/${landmark.type}.png`);
   } else {
     markerHtml = `<a href="${landmark.wiki}"><b>${landmark.name}</b></a>`;
-    icon = createIcon(`/static/img/${landmark.type}.png`);
+    icon = createNewIcon(`/static/img/${landmark.type}.png`);
   }
 
   const marker = L.marker(latLng, { icon: icon });

@@ -2,13 +2,13 @@
     {
         "name": "Dûne",
         "latlng":[ 2862051.689180116, -5509158.397561565 ],
-        "type": "city",
+        "type": "city-3",
         "wiki": "/wiki/cities/dune"
     },
     {
         "name": "Brisnaque",
         "latlng":[ 3187563.7806482795, -5748650.535757445 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":"/wiki/cities/brisnaque"
     },
     {
@@ -26,73 +26,73 @@
     {
         "name":"Onderheide",
         "latlng":[ 3210747.2070789803, -5771833.962188146 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Dalwater",
         "latlng":[ 2147141.9555818136, -5533076.140666541 ],
-        "type": "city",
+        "type": "city-3",
         "wiki":"/wiki/cities/dalwater"
     },
     {
         "name":"Veerpoort",
         "latlng":[ 2877577.241721943, -5515872.150012084 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":"/wiki/cities/veerpoort"
     },
     {
         "name":"Skulft",
         "latlng":[ 2876108.608373392, -5487968.116389612 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Steenwacht",
         "latlng":[ 2714034.428122566, -5703857.218626634 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Demaril",
         "latlng":[ 2298201.385718506, -4834740.983430458 ],
-        "type": "city",
+        "type": "city-3",
         "wiki":""
     },
     {
         "name":"Kapelstede",
         "latlng":[ 3183682.392512823, -5886492.265757177 ],
-        "type": "city",
+        "type": "city-3",
         "wiki":"/wiki/cities/kapelstede"
     },
     {
         "name":"Nûhldale",
         "latlng":[ 3276311.1958535863, -5770889.840749792 ],
-        "type": "city",
+        "type": "city-2",
         "wiki":"/wiki/cities/nuhldale"
     },
     {
         "name":"Amorn",
         "latlng":[ 3315125.077208153, -5591401.86508043 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Lareaux",
         "latlng":[ 3248407.1622311138, -5600528.372317855 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Dommeldijk",
         "latlng":[ 3336839.870290302, -5455867.987485565 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
         "name":"Kobaque",
         "latlng":[ 3218195.276203776, -5509368.202325643 ],
-        "type": "city",
+        "type": "city-1",
         "wiki":""
     },
     {
@@ -104,13 +104,13 @@
     {
         "name":"Neerdhur",
         "latlng":[ 3158191.1136772563, -5407088.379837258 ],
-        "type":"city",
+        "type":"city-2",
         "wiki":""
     },
     {
         "name":"Lambeau",
         "latlng":[ 3121055.6704353197, -5601997.005666407 ],
-        "type":"city",
+        "type":"city-1",
         "wiki":""
     },
     {
@@ -122,25 +122,25 @@
     {
         "name":"Kerst",
         "latlng":[ 1969856.9299352793, -6528180.136692 ],
-        "type":"city",
+        "type":"city-1",
         "wiki":"/wiki/cities/kerst"
     },
     {
         "name":"Kûmasj",
         "latlng":[ 2459541.249295056, -4808725.192684695 ],
-        "type":"city",
+        "type":"city-3",
         "wiki":""
     },
     {
         "name":"Khíandra",
         "latlng":[ 2718125.6210221015, -4769911.311330128 ],
-        "type":"city",
+        "type":"city-1",
         "wiki":""
     },
     {
         "name": "Quintra",
         "latlng":[ 2049268.033139082, -6087380.327362569 ],
-        "type": "city",
+        "type": "city-3",
         "wiki": ""
     },
     {
@@ -188,49 +188,49 @@
     {
         "name": "Lûndal",
         "latlng":[ 2715083.45194296, -5667560.994441013 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Lierendal",
         "latlng":[ 3006397.3668662887, -5192353.203802669 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Dazûm",
         "latlng":[ 2785892.559819534, -5211130.730187716 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Westfront",
         "latlng":[ 2608502.63179096, -5393555.97255418 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Infohli",
         "latlng":[ 2683822.5420952276, -5513983.907135376 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Helstrad",
         "latlng":[ 2770996.421569944, -5383065.734350243 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Belgrond",
         "latlng":[ 2970206.0450627063, -5533705.5549587775 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
         "name": "Joltir",
         "latlng":[ 2967163.8759835646, -5408347.20842173 ],
-        "type": "city",
+        "type": "city-2",
         "wiki": ""
     },
     {
@@ -272,7 +272,7 @@
     {
         "name":"Volst",
         "latlng":[ 2870338.9773612265, -6086960.717834411 ],
-        "type":"city",
+        "type":"city-1",
         "wiki":""
     },
     {
@@ -290,7 +290,7 @@
     {
         "name": "Pultan",
         "latlng": [2322119.128823482, -5216690.556435803],
-        "type": "city",
+        "type": "city-1",
         "wiki": "/wiki/cities/pultan"
     }
 ]
