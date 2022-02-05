@@ -5,7 +5,6 @@
     </template>
 
     <template v-slot:content>
-      <wiki-article-nav :backTarget="`/wiki/${category}`" />
       <article v-if="wikiContent !== ''">
         <template v-if="wikiMeta != null">
           <city-header v-if="category === 'cities'" :metadata="wikiMeta" />
@@ -38,7 +37,6 @@ import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
 import axios from "axios";
 import WikiMetadata from "@/models/WikiMetadata.ts";
-import WikiArticleNav from "@/components/wiki/WikiArticleNav.vue";
 
 import marked from "marked";
 import DOMpurify from "dompurify";
@@ -65,7 +63,6 @@ type ParseResult = {
     ViewRoot,
     CityHeader,
     GeopoliticsHeader,
-    WikiArticleNav,
   },
 })
 export default class WikiPage extends Vue {
@@ -135,105 +132,9 @@ export default class WikiPage extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/colours.scss";
-@import "../../assets/scss/dims.scss";
-
-@mixin article-content-box() {
-  max-width: $wiki-article-width;
-  margin: auto;
-  padding: $wiki-article-padding;
-}
+@import "../../assets/scss/article.scss";
 
 article::v-deep {
-  box-sizing: border-box;
-  text-align: start;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  //max-width: $wiki-article-width;
-  //margin: auto;
-  //padding: $wiki-article-padding;
-
-  @media screen and (max-width: $wiki-article-width-threshold) {
-    margin-bottom: $wiki-article-nav-height;
-    min-height: calc(100% - 40px);
-  }
-
-  h1,
-  h2,
-  h3 {
-    color: #080016;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  main {
-    @include article-content-box();
-
-    flex: 1 0 auto;
-
-    strong {
-      color: #7b2a20;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-
-      thead {
-        border: 1px solid $view-nav-background;
-        tr {
-          background-color: $view-nav-background;
-          color: white;
-
-          th {
-            padding: 4px;
-          }
-        }
-      }
-
-      tbody {
-        border-left: 1px solid $border;
-        border-right: 1px solid $border;
-        border-bottom: 1px solid $border;
-        tr {
-          &:nth-child(even) {
-            background-color: #ededed;
-          }
-        }
-      }
-
-      td,
-      th {
-        padding: 4px 8px;
-      }
-    }
-  }
-  footer {
-    background: #eeeeee;
-    //border-top: 1px solid #2c3e50;
-    #footer-content {
-      @include article-content-box();
-    }
-  }
+  @include article();
 }
 </style>

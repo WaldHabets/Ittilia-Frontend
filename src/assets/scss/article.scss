@@ -16,7 +16,6 @@
   min-height: 100%;
 
   @media screen and (max-width: $wiki-article-width-threshold) {
-    margin-bottom: $wiki-article-nav-height;
     min-height: calc(100% - 40px);
   }
 
