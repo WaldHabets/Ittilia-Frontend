@@ -68,11 +68,11 @@
   "lineage": "Lineage",
   "country": "Country",
   "inhabitants": "Inhabitants",
-  "wiki-general": "Algemeen",
-  "wiki-cosmos": "Comology",
-  "wiki-geography": "Geografie",
-  "wiki-geopolitics": "Geopolitiek",
-  "wiki-cities": "Steden & Plaatsen",
-  "wiki-people": "Personen",
-  "wiki-creatures": "Wezens"
+  "wiki-general": "General",
+  "wiki-cosmos": "Cosmology",
+  "wiki-geography": "Geography",
+  "wiki-geopolitics": "Geopolitics",
+  "wiki-cities": "Cities & Locations",
+  "wiki-people": "People",
+  "wiki-creatures": "Creatures"
 }

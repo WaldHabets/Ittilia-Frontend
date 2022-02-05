@@ -8,8 +8,6 @@
     </template>
 
     <template v-slot:content>
-      <wiki-nav></wiki-nav>
-
       <template v-if="index !== null && index !== undefined">
         <h1>{{ index.title }}</h1>
 

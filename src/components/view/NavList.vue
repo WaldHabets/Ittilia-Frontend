@@ -1,7 +1,7 @@
 <template>
   <ul id="root-list">
     <li>
-      <router-link class="nav-link" to="/">
+      <router-link class="nav-link section-link" to="/">
         <svg viewBox="0 0 24 24">
           <path :d="iconHome" />
         </svg>
@@ -80,56 +80,5 @@ export default class NavList extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/buttons.css";
-@import "../../assets/scss/colours.scss";
-
-ul {
-  list-style-type: none;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-#root-list {
-  $element-height: 32px;
-  $icon-size: 24px;
-
-  padding: 0;
-
-  svg {
-    width: $icon-size;
-    height: $icon-size;
-    padding: 4px;
-    fill: currentColor;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    color: inherit;
-
-    padding: 8px;
-    margin: 0;
-
-    height: $element-height;
-    line-height: $element-height;
-
-    display: flex;
-    text-align: start;
-    align-items: center;
-
-    &.sub-link {
-      padding-left: 40px;
-    }
-
-    &.router-link-exact-active,
-    &:hover {
-      font-weight: bold;
-      background-color: white;
-      color: $view-nav-background;
-    }
-  }
-}
+@import "../../assets/scss/navlist.scss";
 </style>

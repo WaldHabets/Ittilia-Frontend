@@ -3,6 +3,9 @@
     <template v-slot:header>
       <view-header></view-header>
     </template>
+    <template #subnav>
+      <nav-list-lineages></nav-list-lineages>
+    </template>
     <template v-slot:content>
       <article v-if="lineageData">
         <header>
@@ -52,9 +55,11 @@ import axios from "axios";
 import Markdown from "@/components/Markdown.vue";
 import marked from "marked";
 import DOMpurify from "dompurify";
+import NavListLineages from "@/components/view/NavListLineages.vue";
 
 @Component({
   components: {
+    NavListLineages,
     Markdown,
     ViewHeader,
     ViewRoot,

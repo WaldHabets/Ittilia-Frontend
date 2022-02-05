@@ -10,6 +10,9 @@
         </template>
       </view-header>
     </template>
+    <template #subnav>
+      <nav-list-classes></nav-list-classes>
+    </template>
 
     <template v-slot:content>
       <select id="subclass-switcher" v-if="classData" v-model="subclass">
@@ -72,9 +75,11 @@ import ClassTable from "@/components/class/ClassTable.vue";
 import axios from "axios";
 
 import { CFeature, CEnhancement } from "@/models/ClassData.ts";
+import NavListClasses from "@/components/view/NavListClasses.vue";
 
 @Component({
   components: {
+    NavListClasses,
     ViewHeader,
     ViewRoot,
     ClassSwitcher,

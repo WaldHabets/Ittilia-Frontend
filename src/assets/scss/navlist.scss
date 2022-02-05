@@ -1,0 +1,52 @@
+@import "./colours.scss";
+
+#root-list {
+  $element-height: 32px;
+  $icon-size: 24px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  padding: 0;
+
+  svg {
+    width: $icon-size;
+    height: $icon-size;
+    padding: 4px;
+    fill: currentColor;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+
+    padding: 8px;
+    margin: 0;
+
+    height: $element-height;
+    line-height: $element-height;
+
+    display: flex;
+    text-align: start;
+    align-items: center;
+
+    &.sub-link {
+      padding-left: 40px;
+    }
+
+    &.router-link-active:not(.section-link),
+    &.router-link-exact-active,
+    &:hover {
+      font-weight: bold;
+      background-color: white;
+      color: $view-nav-background;
+    }
+  }
+}

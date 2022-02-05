@@ -3,6 +3,9 @@
     <template v-slot:header>
       <view-header> </view-header>
     </template>
+    <template #subnav>
+      <nav-list-wiki></nav-list-wiki>
+    </template>
 
     <template v-slot:content>
       <article v-if="wikiContent !== ''">
@@ -46,6 +49,7 @@ import GeopoliticsHeader from "@/components/wiki/GeopoliticsHeader.vue";
 import GeographyHeader from "@/components/wiki/GeographyHeader.vue";
 import PeopleHeader from "@/components/wiki/PeopleHeader.vue";
 import { Dictionary } from "vue-router/types/router";
+import NavListWiki from "@/components/view/NavListWiki.vue";
 
 type Map = {
   [key: string]: string | undefined;
@@ -58,6 +62,7 @@ type ParseResult = {
 
 @Component({
   components: {
+    NavListWiki,
     PeopleHeader,
     GeographyHeader,
     ViewHeader,

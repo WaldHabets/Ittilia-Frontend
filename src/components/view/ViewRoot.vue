@@ -22,14 +22,22 @@
       :aria-expanded="!isNavHidden"
     >
       <template v-if="showDefaultNav || !hasSubNav">
-        <button v-if="hasSubNav" class="button" @click="toggleNavDisplay">
-          Naar Subnav
+        <button
+          v-if="hasSubNav"
+          class="button nav-list-button"
+          @click="toggleNavDisplay"
+        >
+          Subnav &#129122;
         </button>
         <nav-list />
       </template>
       <template v-else>
-        <button v-if="hasSubNav" class="button" @click="toggleNavDisplay">
-          Naar Globale Navigatie
+        <button
+          v-if="hasSubNav"
+          class="button nav-list-button"
+          @click="toggleNavDisplay"
+        >
+          &#129120; Globale Navigatie
         </button>
         <slot name="subnav"></slot>
       </template>
@@ -82,6 +90,7 @@ export default class ViewRoot extends Vue {
 </script>
 
 <style lang="scss">
+@import "../../assets/scss/buttons.css";
 #view-root {
   $head-height: 64px;
   $nav-width: 256px;
@@ -160,6 +169,11 @@ export default class ViewRoot extends Vue {
     padding: 16px 0;
 
     box-sizing: border-box;
+
+    .nav-list-button {
+      margin: 0 8px 4px 8px;
+      width: calc(100% - 16px);
+    }
 
     @media screen and (max-width: $threshold) {
       transition: height 1s;

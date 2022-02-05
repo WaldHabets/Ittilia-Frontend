@@ -50,9 +50,11 @@
 import { Component, Vue } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
+import NavListLineages from "@/components/view/NavListLineages.vue";
 
 @Component({
   components: {
+    NavListLineages,
     ViewHeader,
     ViewRoot,
   },
