@@ -66,6 +66,7 @@ export default class ViewRoot extends Vue {
   $head-height: 64px;
   $nav-width: 256px;
   $threshold: 1052px;
+  $toggle-button-dim: 48px;
 
   height: 100%;
 
@@ -82,7 +83,7 @@ export default class ViewRoot extends Vue {
       //"view-nav-body view-nav-body"
       "main main";
     grid-template-rows: $head-height auto;
-    grid-template-columns: $head-height auto;
+    grid-template-columns: $toggle-button-dim auto;
   }
 
   #view-content-head {
@@ -103,8 +104,8 @@ export default class ViewRoot extends Vue {
 
     #view-nav-toggle {
       box-sizing: border-box;
-      width: 48px;
-      height: 48px;
+      width: $toggle-button-dim;
+      height: $toggle-button-dim;
 
       padding: 4px;
 
@@ -136,7 +137,7 @@ export default class ViewRoot extends Vue {
 
     color: white;
 
-    padding: 16px 0px;
+    padding: 16px 0;
 
     box-sizing: border-box;
 
@@ -150,9 +151,9 @@ export default class ViewRoot extends Vue {
       overflow-y: scroll;
 
       &.hide {
-        height: 0px;
+        height: 0;
         overflow: hidden;
-        padding: 0px;
+        padding: 0;
         display: none;
       }
     }
