@@ -3,6 +3,9 @@
     <template v-slot:header>
       <view-header> </view-header>
     </template>
+    <template v-slot:subnav>
+      <nav-list-wiki></nav-list-wiki>
+    </template>
 
     <template v-slot:content>
       <wiki-nav></wiki-nav>
@@ -36,14 +39,14 @@ import axios from "axios";
 import PortalClassCard from "@/components/portal/PortalClassCard.vue";
 
 import WikiIndex from "@/models/WikiIndex.ts";
-import WikiNav from "@/components/wiki/WikiNav.vue";
+import NavListWiki from "@/components/view/NavListWiki.vue";
 
 @Component({
   components: {
+    NavListWiki,
     ViewHeader,
     ViewRoot,
     PortalClassCard,
-    WikiNav,
   },
 })
 export default class WikiTopic extends Vue {

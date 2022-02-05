@@ -118,7 +118,7 @@ li {
 
     display: flex;
     text-align: start;
-    align-items: middle;
+    align-items: center;
 
     &.sub-link {
       padding-left: 40px;

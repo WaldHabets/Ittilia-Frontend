@@ -67,5 +67,12 @@
   "age": "Age",
   "lineage": "Lineage",
   "country": "Country",
-  "inhabitants": "Inhabitants"
+  "inhabitants": "Inhabitants",
+  "wiki-general": "Algemeen",
+  "wiki-cosmos": "Comology",
+  "wiki-geography": "Geografie",
+  "wiki-geopolitics": "Geopolitiek",
+  "wiki-cities": "Steden & Plaatsen",
+  "wiki-people": "Personen",
+  "wiki-creatures": "Wezens"
 }

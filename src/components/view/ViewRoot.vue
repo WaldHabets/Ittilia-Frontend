@@ -7,7 +7,7 @@
         aria-controls="view-nav-body"
         :title="viewNavToggleTitle"
       >
-        <svg v-if="isHidden" viewBox="0 0 24 24">
+        <svg v-if="isNavHidden" viewBox="0 0 24 24">
           <path :d="mdiMenu" />
         </svg>
         <svg v-else viewBox="0 0 24 24">
@@ -17,11 +17,22 @@
     </div>
     <nav
       id="view-nav-body"
-      :class="{ hide: isHidden }"
+      :class="{ hide: isNavHidden }"
       aria-label="website"
-      :aria-expanded="!isHidden"
+      :aria-expanded="!isNavHidden"
     >
-      <nav-list />
+      <template v-if="showDefaultNav || !hasSubNav">
+        <button v-if="hasSubNav" class="button" @click="toggleNavDisplay">
+          Naar Subnav
+        </button>
+        <nav-list />
+      </template>
+      <template v-else>
+        <button v-if="hasSubNav" class="button" @click="toggleNavDisplay">
+          Naar Globale Navigatie
+        </button>
+        <slot name="subnav"></slot>
+      </template>
     </nav>
     <div id="view-content-head">
       <slot name="header"></slot>
@@ -45,18 +56,27 @@ import { mdiMenu, mdiClose } from "@mdi/js";
 export default class ViewRoot extends Vue {
   private mdiMenu: string = mdiMenu;
   private mdiClose: string = mdiClose;
-  private isHidden = true;
+  private isNavHidden = true;
+  private showDefaultNav = false;
+
+  get hasSubNav(): boolean {
+    return !!this.$slots.subnav;
+  }
 
   get viewNavToggleTitle(): string {
-    if (this.isHidden) {
+    if (this.isNavHidden) {
       return this.$store.getters.text("action-show-menu");
     } else {
       return this.$store.getters.text("action-hide-menu");
     }
   }
 
+  toggleNavDisplay(): void {
+    this.showDefaultNav = !this.showDefaultNav;
+  }
+
   toggleHide(): void {
-    this.isHidden = !this.isHidden;
+    this.isNavHidden = !this.isNavHidden;
   }
 }
 </script>
