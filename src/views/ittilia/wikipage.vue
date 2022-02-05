@@ -45,6 +45,7 @@ import CityHeader from "@/components/wiki/CityHeader.vue";
 import GeopoliticsHeader from "@/components/wiki/GeopoliticsHeader.vue";
 import GeographyHeader from "@/components/wiki/GeographyHeader.vue";
 import PeopleHeader from "@/components/wiki/PeopleHeader.vue";
+import { Dictionary } from "vue-router/types/router";
 
 type Map = {
   [key: string]: string | undefined;
@@ -71,7 +72,7 @@ export default class WikiPage extends Vue {
   private wikiContent = "";
 
   @Watch("$route.params", { deep: true })
-  onClassChanged(routeParams: any): void {
+  onClassChanged(routeParams: Dictionary<string>): void {
     this.__load(this.$route.params);
   }
 
@@ -79,9 +80,9 @@ export default class WikiPage extends Vue {
     this.__load(this.$route.params);
   }
 
-  __load(routeParams: any): void {
+  __load(routeParams: Dictionary<string>): void {
     this.category = routeParams.category;
-    this.fetchContent(routeParams);
+    this.fetchArticle(routeParams);
   }
 
   __parse(markdown: string): ParseResult {
@@ -104,7 +105,7 @@ export default class WikiPage extends Vue {
     return { metadata, content };
   }
 
-  fetchContent(routeParams: any): void {
+  fetchArticle(routeParams: Dictionary<string>): void {
     /**
      * Fetches the class data for className from the server
      */
