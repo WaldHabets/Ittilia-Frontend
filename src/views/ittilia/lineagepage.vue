@@ -95,7 +95,10 @@ export default class LineagePage extends Vue {
   fetchLineage(lineage: string): void {
     axios
       .get(`/static/json/lineages/${lineage}.json`)
-      .then((response) => (this.lineageData = response.data))
+      .then((response) => {
+        this.selected = -1;
+        this.lineageData = response.data;
+      })
       .catch((error) => {
         console.error("Error!", error.message);
         this.lineageData = null;
