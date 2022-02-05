@@ -53,13 +53,13 @@ export default class Side extends Vue {
   box-sizing: border-box;
   max-width: 400px;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
 
   height: 100%;
   max-height: 100%;
 
-  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.7);
 
   transition: right 0.5s;
 
@@ -92,13 +92,13 @@ export default class Side extends Vue {
     left: -$button-dim;
     top: 16px;
 
-    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.7);
     background: white;
     border: none;
     border-radius: 50% 0 0 50%;
     z-index: 0;
 
-    margin: 0px 0px;
+    margin: 0 0;
     padding: 8px;
     font-weight: 700;
     vertical-align: middle;
