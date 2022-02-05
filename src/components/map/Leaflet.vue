@@ -120,32 +120,35 @@ export default class Leaflet extends Vue {
     let lakes: L.Marker[] = [];
     let forests: L.Marker[] = [];
     let mountains: L.Marker[] = [];
-    let waypoints: L.Marker[] = [];
 
     data.forEach((landmark: Landmark) => {
       let marker = createLocationMarker(landmark);
 
       switch (landmark.type) {
-        case "city":
         case "city-1":
         case "city-2":
         case "city-3":
           cities.push(marker);
           break;
         case "landmark":
+        case "dungeon":
+        case "waypoint":
           landmarks.push(marker);
           break;
+        case "river":
         case "lake":
+        case "ocean":
           lakes.push(marker);
           break;
+        case "region":
         case "forest":
+        case "desert":
           forests.push(marker);
           break;
+        case "hills":
+        case "peak":
         case "mountains":
           mountains.push(marker);
-          break;
-        case "waypoint":
-          waypoints.push(marker);
           break;
         default:
           break;
@@ -155,9 +158,8 @@ export default class Leaflet extends Vue {
     layerControl.addOverlay(L.layerGroup(cities), "Steden");
     layerControl.addOverlay(L.layerGroup(landmarks), "Markante Sites");
     layerControl.addOverlay(L.layerGroup(lakes), "Meren & Rivieren");
-    layerControl.addOverlay(L.layerGroup(forests), "Bossen");
-    layerControl.addOverlay(L.layerGroup(mountains), "Bergen");
-    layerControl.addOverlay(L.layerGroup(waypoints), "Regios");
+    layerControl.addOverlay(L.layerGroup(forests), "Natuurlijke Regio's");
+    layerControl.addOverlay(L.layerGroup(mountains), "Bergen & Heuvels");
   }
 
   mounted(): void {

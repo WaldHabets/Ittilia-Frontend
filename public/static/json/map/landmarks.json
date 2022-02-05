@@ -1,7 +1,7 @@
 [
     {
         "name": "Dûne",
-        "latlng":[ 2862051.689180116, -5509158.397561565 ],
+        "latlng":[ 2865723.272551494, -5510207.421381959 ],
         "type": "city-3",
         "wiki": "/wiki/cities/dune"
     },
@@ -37,13 +37,13 @@
     },
     {
         "name":"Veerpoort",
-        "latlng":[ 2877577.241721943, -5515872.150012084 ],
+        "latlng":[ 2877052.729811746, -5514718.223809651 ],
         "type": "city-1",
         "wiki":"/wiki/cities/veerpoort"
     },
     {
         "name":"Skulft",
-        "latlng":[ 2876108.608373392, -5487968.116389612 ],
+        "latlng":[ 2875269.3893170767, -5487128.897333297 ],
         "type": "city-1",
         "wiki":""
     },
@@ -97,7 +97,7 @@
     },
     {
         "name":"Otar Hillion",
-        "latlng":[ 2684137.2492413456, -5673645.332599296 ],
+        "latlng":[ 2684661.7611515424, -5675218.868329886 ],
         "type":"landmark",
         "wiki":""
     },
@@ -116,7 +116,7 @@
     {
         "name":"Poort van Gorgon",
         "latlng":[ 2883976.2870263443, -5488073.018771651 ],
-        "type":"landmark",
+        "type":"dungeon",
         "wiki":""
     },
     {
@@ -146,7 +146,7 @@
     {
         "name": "Paleis der Doods",
         "latlng":[ 3452337.392915648, -7773686.118645432 ],
-        "type": "landmark",
+        "type": "dungeon",
         "wiki": "/wiki/cities/paleis-der-doods"
     },
     {
@@ -176,7 +176,7 @@
     {
         "name": "De Stormvalij Woestenij",
         "latlng":[ 2198334.318017026, -6558182.217955259 ],
-        "type": "waypoint",
+        "type": "region",
         "wiki": ""
     },
     {
@@ -236,37 +236,37 @@
     {
         "name": "Lieren",
         "latlng":[ 3020454.286059564, -5150182.446222843 ],
-        "type": "lake",
+        "type": "river",
         "wiki": ""
     },
     {
         "name": "Dhur",
         "latlng":[ 3069338.7960899104, -5471603.34479147 ],
-        "type": "lake",
+        "type": "river",
         "wiki": ""
     },
     {
         "name": "Lûne",
         "latlng":[ 2809495.595778392, -5615529.412949486 ],
-        "type": "lake",
+        "type": "river",
         "wiki": ""
     },
     {
         "name": "De Slijkputten",
         "latlng":[ 2888906.698982195, -5502969.157021242 ],
-        "type": "waypoint",
+        "type": "region",
         "wiki": "/wiki/geography/slijkputten"
     },
     {
         "name": "De Zwarte Duinen",
         "latlng":[ 2863520.3225286673, -6113081.410962215 ],
-        "type":"waypoint",
+        "type":"hills",
         "wiki":"/wiki/geography/zwarte-duinen"
     },
     {
         "name":"Tohlikípû (3762m)",
         "latlng":[ 2872332.1226199744, -6082974.427316915 ],
-        "type":"mountains",
+        "type":"peak",
         "wiki":"/wiki/geography/tohlikipu"
     },
     {
@@ -283,8 +283,8 @@
     },
     {
         "name":"Ellaron (5871m)",
-        "latlng":[ 2684242.151623385, -5673855.137363375 ],
-        "type":"mountains",
+        "latlng":[ 2684137.2492413456, -5673225.723071138 ],
+        "type":"peak",
         "wiki":""
     },
     {
@@ -292,5 +292,47 @@
         "latlng": [2322119.128823482, -5216690.556435803],
         "type": "city-1",
         "wiki": "/wiki/cities/pultan"
+    },
+    {
+        "name": "Allûn Krin",
+        "latlng": [2683822.5420952276, -6294142.922362166],
+        "type": "desert",
+        "wiki": "/wiki/geopgraphy/allun-krin"
+    },
+    {
+        "name": "Galgenvelden",
+        "latlng": [ 2362191.838762521, -5074338.024008378 ],
+        "type": "waypoint",
+        "wiki": ""
+    },
+    {
+        "name": "Kasteel Rozenborst",
+        "latlng": [2359044.7673013397, -5070037.026344764],
+        "type": "dungeon",
+        "wiki": ""
+    },
+    {
+        "name": "Het Stenen Dodenland",
+        "latlng": [2814321.1053522034, -6725501.517308054],
+        "type": "waypoint",
+        "wiki": ""
+    },
+    {
+        "name": "Hooghei",
+        "latlng": [ 2812852.4720036522, -5418103.129951392 ],
+        "type": "region",
+        "wiki": ""
+    },
+    {
+        "name": "Tosten Hoogland Woestijn",
+        "latlng": [2711516.7709536212, -5435621.827751967],
+        "type": "desert",
+        "wiki": ""
+    },
+    {
+        "name": "Thoreon's Piek",
+        "latlng": [2018951.2447297042, -6094408.786959207],
+        "type": "landmark",
+        "wiki": ""
     }
 ]
