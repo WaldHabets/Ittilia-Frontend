@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import NavList from "@/components/view/NavList.vue";
 import { mdiMenu, mdiClose } from "@mdi/js";
 
@@ -77,6 +77,11 @@ export default class ViewRoot extends Vue {
     } else {
       return this.$store.getters.text("action-hide-menu");
     }
+  }
+
+  @Watch("$route.params")
+  autoCloseMenu(): void {
+    this.isNavHidden = true;
   }
 
   toggleNavDisplay(): void {
