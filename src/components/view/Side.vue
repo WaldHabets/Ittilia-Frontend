@@ -52,9 +52,11 @@ export default class Side extends Vue {
   display: block;
   box-sizing: border-box;
   max-width: 400px;
+  width: 400px;
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 1001;
 
   height: 100%;
   max-height: 100%;
@@ -65,6 +67,14 @@ export default class Side extends Vue {
 
   &.hidden {
     right: -400px;
+  }
+
+  @media screen and (max-width: 448px) {
+    width: calc(100% - 48px);
+
+    &.hidden {
+      right: calc(-100% + 48px);
+    }
   }
 
   #side-view-content {
