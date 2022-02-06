@@ -106,5 +106,6 @@
   "legend-water": "",
   "legend-road": "",
   "legend-train": "",
-  "legend-ship": ""
+  "legend-ship": "",
+  "label-articles": "articles"
 }

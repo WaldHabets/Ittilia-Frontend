@@ -106,5 +106,6 @@
   "legend-water": "Water",
   "legend-road": "Wegen en primaire handelsroutes",
   "legend-train": "Treinsporen",
-  "legend-ship": "Ferry en scheepsroutes"
+  "legend-ship": "Ferry en scheepsroutes",
+  "label-articles": "artikels"
 }

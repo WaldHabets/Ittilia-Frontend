@@ -13,7 +13,12 @@
 
         <nav id="wiki-portal">
           <details v-for="(group, i) in index.groups" :key="`group-${i}`" open>
-            <summary>{{ group.title }}</summary>
+            <summary>
+              {{ group.title }}
+              <span class="badge"
+                >{{ group.entries.length }} {{ $text("label-articles") }}</span
+              >
+            </summary>
             <ul>
               <li v-for="(entry, j) in group.entries" :key="`entry-${j}`">
                 <router-link :to="`/wiki/${category}/${entry.href}`">{{
@@ -90,6 +95,7 @@ export default class WikiTopic extends Vue {
 <style lang="scss" scoped>
 @import "../../assets/scss/colours.scss";
 @import "../../assets/scss/details.scss";
+@import "../../assets/scss/badge.scss";
 @import "../../assets/scss/dims.scss";
 
 h1 {
@@ -116,10 +122,16 @@ h1 {
   details {
     @include details-base();
 
+    summary {
+      display: flex;
+      justify-content: space-between;
+    }
+
     ul {
       padding: $tiny $small;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      list-style: none;
     }
   }
 }
