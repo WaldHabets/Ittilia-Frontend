@@ -227,8 +227,6 @@ export default class Leaflet extends Vue {
         console.error("Error!", error.message);
       });
 
-    createLegend().addTo(map);
-
     createDistanceTool(
       (e: Event, a: HTMLAnchorElement) => {
         this.trackWaypoints = !this.trackWaypoints;
@@ -332,40 +330,6 @@ export default class Leaflet extends Vue {
   .leaflet-control-ruler-clear {
     display: block;
     @include leaflet-control-button();
-  }
-}
-.leaflet-control-legend {
-  .legend-entry-01 {
-    background: #697d4f;
-  }
-  .legend-entry-02 {
-    background: #b2c29d;
-    color: black;
-  }
-  .legend-entry-03 {
-    background: #b5bfb5;
-    color: black;
-  }
-  .legend-entry-04 {
-    background: #deddbe;
-    color: black;
-  }
-  .legend-entry-05 {
-    background: #d1a354;
-  }
-  .legend-entry-06 {
-    background: #804f2e;
-  }
-  .legend-entry-07 {
-    background: #63a286;
-  }
-  .legend-entry-08 {
-    background: #f7f6f1;
-    color: black;
-  }
-  .legend-entry-09 {
-    background: #ffffff;
-    color: black;
   }
 }
 </style>
