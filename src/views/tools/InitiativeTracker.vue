@@ -2,18 +2,14 @@
   <view-root>
     <template v-slot:header>
       <view-header>
-        <template v-slot:start>
-          <import-button @change="open" />
-        </template>
         <template v-slot:end>
-          <input
-            id="meta-groupname"
-            type="text"
-            v-model="model.name"
-            :placeholder="s.get('groupname')"
-            class="text-input"
-          />
-          <button id="meta-save" class="button" title="Opslaan" @click="save">
+          <import-button @change="open" />
+          <button
+            id="meta-save"
+            class="button"
+            :title="$text('action-save')"
+            @click="openSaveDialog"
+          >
             <svg viewBox="0 0 24 24" fill="white">
               <path :d="mdiContentSave" />
             </svg>
@@ -22,6 +18,7 @@
       </view-header>
     </template>
     <template v-slot:content>
+      <safe-file-as-dialog ref="saveDialog" @save="save"></safe-file-as-dialog>
       <main>
         <header>
           <div id="controls" class="card">
@@ -156,6 +153,9 @@ import Strings from "@/helpers/Strings.ts";
 import DiceHelper from "@/helpers/DiceHelper.ts";
 
 import ImportButton from "@/components/controls/ImportButton.vue";
+import Dialogcontainer from "@/components/dialogs/DialogContainer.vue";
+import SafeFileAsDialog from "@/components/dialogs/SafeFileAsDialog.vue";
+import SaveFileAsDialog from "@/components/dialogs/SafeFileAsDialog.vue";
 
 class Model {
   name = "";
@@ -172,6 +172,8 @@ function checkMorale(entry: CombatEntry): boolean {
 
 @Component({
   components: {
+    SafeFileAsDialog,
+    Dialogcontainer,
     ViewRoot,
     ViewHeader,
     InitiativeCard,
@@ -265,11 +267,18 @@ export default class InitiativeTracker extends Vue {
     };
   }
 
-  save(): void {
+  openSaveDialog(): void {
+    if (this.$refs.saveDialog != undefined) {
+      const dialog = this.$refs.saveDialog as SaveFileAsDialog;
+      dialog.show();
+    }
+  }
+
+  save(filename: string): void {
     var saveJson = JSON.stringify(this.model, null, 4);
     const blob = new Blob([saveJson], { type: "text/plain" });
     const a = document.createElement("a");
-    a.download = this.model.name + ".json";
+    a.download = filename + ".json";
     a.href = URL.createObjectURL(blob);
     a.click();
   }
