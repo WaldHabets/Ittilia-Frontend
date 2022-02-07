@@ -154,7 +154,6 @@ import { Component, Vue } from "vue-property-decorator";
 import ViewHeader from "@/components/view/ViewHeader.vue";
 import ViewRoot from "@/components/view/ViewRoot.vue";
 import Leaflet from "@/components/map/Leaflet.vue";
-import DialogBase from "@/components/dialogs/dialogbase.vue";
 import Side from "@/components/view/Side.vue";
 
 @Component({
@@ -163,14 +162,10 @@ import Side from "@/components/view/Side.vue";
     ViewHeader,
     ViewRoot,
     Leaflet,
-    DialogBase,
   },
 })
 export default class Portal extends Vue {
-  showLegend(): void {
-    console.log(this.$refs.legendDialog);
-    this.$refs.legendDialog.show();
-  }
+
 }
 </script>
 
