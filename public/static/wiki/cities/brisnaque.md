@@ -6,7 +6,9 @@ cristal: Nee
 authors: Wald Habets
 ---
 
-![Kaart van Brisnaque](/static/img/wiki/brisnaque.png)
+|![Kaart van Brisnaque](/static/img/wiki/brisnaque.png)|
+|---|
+|Stadskaart van Brisnaque, Wald Habets|
 
 **Brisnaque** is een kleine stad gelegen op de kruising tussen de Oostenweg en de Noordelijke route, langs de oever van het **Schervenmeer**. De stad staat voornamelijk bekend als een laatste rustpunt voor reizigers, voor ze aan de lange **Bellemothpas** beginnen. Niet ongepast vindt men hier vaak handelaars die de laatste van hun goederen proberen te verpatsen, of die voorraden aan de reizigers verkopen.
 

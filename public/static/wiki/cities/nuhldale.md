@@ -8,5 +8,7 @@ authors: Wald Habets
 
 ⚒ Hier wordt nog aan gewerkt ⚒
 
-![Kaart van Nûhldale](/static/img/wiki/nuhldale.png)
+|![Kaart van Nûhldale](/static/img/wiki/nuhldale.png)|
+|---|
+|Stadskaart van Nûhldale, Wald Habets|
 
