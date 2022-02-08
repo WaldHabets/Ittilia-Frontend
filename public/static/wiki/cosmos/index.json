@@ -1,6 +1,34 @@
 {
   "title": "Kosmologie",
   "groups": [
-
+    {
+      "title": "Yxon",
+      "entries": [
+        {
+          "name": "De Yxon",
+          "href": "yxon"
+        },
+        {
+          "name": "Ae",
+          "href": "ae"
+        },
+        {
+          "name": "Hénu",
+          "href": "henu"
+        },
+        {
+          "name": "De Magmagordel",
+          "href": "magmagordel"
+        },
+        {
+          "name": "Hédroril",
+          "href": "hedroril"
+        },
+        {
+          "name": "De Spiegelwereld",
+          "href": "spiegelwereld"
+        }
+      ]
+    }
   ]
 }
