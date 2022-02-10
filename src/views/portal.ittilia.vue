@@ -17,6 +17,11 @@
           background="/static/img/placeholder.png"
         />
         <portal-card
+          :text="$store.getters.text('page-lineage')"
+          href="/lineages"
+          background="/static/img/placeholder.png"
+        />
+        <portal-card
           :text="$store.getters.text('page-classes')"
           href="/classes"
           background="/static/img/placeholder.png"

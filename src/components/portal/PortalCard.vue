@@ -75,7 +75,12 @@ $box-width: 340px;
 
     height: math.div($box-height, 3);
     //background-color: #3685b5;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
     color: white;
     line-height: math.div($box-height, 3);
   }
