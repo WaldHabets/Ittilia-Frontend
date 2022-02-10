@@ -1,5 +1,5 @@
 <template>
-  <view-root>
+  <view-root :page-area="$text('page-classes')">
     <template v-slot:header>
       <view-header>
         <template v-slot:start>

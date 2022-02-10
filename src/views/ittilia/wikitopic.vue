@@ -1,5 +1,5 @@
 <template>
-  <view-root>
+  <view-root :page-area="$text('page-wiki')">
     <template v-slot:header>
       <view-header> </view-header>
     </template>

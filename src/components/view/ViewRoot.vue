@@ -27,7 +27,7 @@
           class="button nav-list-button"
           @click="toggleNavDisplay"
         >
-          Subnav &#129122;
+          {{ pageArea }} &#129122;
         </button>
         <nav-list />
       </template>
@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue, Watch, Prop } from "vue-property-decorator";
 import NavList from "@/components/view/NavList.vue";
 import { mdiMenu, mdiClose } from "@mdi/js";
 
@@ -66,6 +66,8 @@ export default class ViewRoot extends Vue {
   private mdiClose: string = mdiClose;
   private isNavHidden = true;
   private showDefaultNav = false;
+
+  @Prop({ default: "" }) private readonly pageArea!: string;
 
   get hasSubNav(): boolean {
     return !!this.$slots.subnav;
