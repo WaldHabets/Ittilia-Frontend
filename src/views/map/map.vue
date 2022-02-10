@@ -1,11 +1,7 @@
 <template>
   <view-root>
     <template v-slot:header>
-      <view-header>
-        <template #end>
-          <button @click="showLegend">Legende</button>
-        </template>
-      </view-header>
+      <view-header></view-header>
     </template>
 
     <template v-slot:content>
