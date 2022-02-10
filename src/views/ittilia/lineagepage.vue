@@ -1,5 +1,5 @@
 <template>
-  <view-root :page-area="$test('page-lineage')">
+  <view-root :page-area="$text('page-lineage')">
     <template v-slot:header>
       <view-header></view-header>
     </template>
