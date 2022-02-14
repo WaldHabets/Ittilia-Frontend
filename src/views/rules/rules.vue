@@ -5,25 +5,23 @@
     </template>
 
     <template v-slot:content>
-      <div id="wiki-topic-wrapper">
+      <nav id="rules-index">
         <section class="rules-chapter">
           <header class="rules-chapter-header">
             <h1>{{ $text("rules-chapter-character") }}</h1>
           </header>
-          <ul class="rules-chapter-index">
-            <li>
-              <router-link to="/rules/character-creation">
-                {{ $text("rules-section-create") }}
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/rules/talents">
+          <ol class="rules-chapter-index">
+            <router-link class="rules-section" to="/rules/character-creation">
+              <li>{{ $text("rules-section-create") }}</li>
+            </router-link>
+            <router-link class="rules-section" to="/rules/talents">
+              <li>
                 {{ $text("rules-section-talents") }}
-              </router-link>
-            </li>
-          </ul>
+              </li>
+            </router-link>
+          </ol>
         </section>
-      </div>
+      </nav>
     </template>
   </view-root>
 </template>
@@ -49,61 +47,38 @@ export default class Rules extends Vue {}
 @import "../../assets/scss/details.scss";
 @import "../../assets/scss/dims.scss";
 
-#wiki-portal {
-  width: calc(100% - 32px);
-  max-width: 700px;
-
-  padding: $medium;
-  margin: auto;
-
-  details {
-    @include details-base();
-
-    ul {
-      padding: $tiny $small;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-  }
-}
-#wiki-topic-wrapper {
+#rules-index {
   width: 100%;
   max-width: 700px;
   margin: auto;
-  .wiki-topic {
+  .rules-chapter {
+    margin: 0 16px;
     text-align: left;
-    text-decoration: none;
-    padding: 16px;
-    color: $view-nav-background-dark;
-    display: block;
-
     h1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-size: $font-size-h1;
     }
+    ol {
+      font-size: $font-size-h2;
+      .rules-section {
+        display: block;
+        color: $view-nav-background-dark;
+        text-decoration: none;
 
-    .badge {
-      display: inline-block;
-      color: white;
-      background-color: $accent;
-      border-radius: 8px;
-      font-size: 12px;
-      padding: 4px 8px;
-    }
+        li {
+          padding: 16px;
+        }
 
-    * {
-      margin: 0;
-    }
+        &:not(:last-child) {
+          border-bottom: 1px solid $border;
+        }
+        &:hover {
+          li {
+            background-color: $accent-20;
+          }
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $border;
-    }
-    &:hover {
-      h1 {
-        color: $accent;
+          color: $accent;
+        }
       }
-      background-color: $accent-20;
     }
   }
 }
