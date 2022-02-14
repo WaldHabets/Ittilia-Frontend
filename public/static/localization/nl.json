@@ -1,6 +1,7 @@
 {
   "explore-ittilia": "Ontdek Ittilia",
   "page-wiki": "Wiki",
+  "page-rules": "Spelregels",
   "page-map": "Kaart",
   "page-lineage": "Bloedlijnen",
   "page-classes": "Rollen",
@@ -108,5 +109,8 @@
   "legend-road": "Wegen en primaire handelsroutes",
   "legend-train": "Treinsporen",
   "legend-ship": "Ferry en scheepsroutes",
-  "label-articles": "artikels"
+  "label-articles": "artikels",
+  "rules-chapter-character": "Jouw Personage",
+  "rules-section-create": "Je personage creëren",
+  "rules-section-talents": "Generieke talenten"
 }

@@ -10,6 +10,16 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/portal.vue"),
   },
   {
+    path: "/rules",
+    name: "Rules",
+    component: () => import("@/views/rules/rules.vue"),
+  },
+  {
+    path: "/rules/:topic",
+    name: "Rules Topic",
+    component: () => import("@/views/rules/rulespage.vue"),
+  },
+  {
     path: "/ittilia",
     name: "Ittilia",
     component: () => import("@/views/portal.ittilia.vue"),

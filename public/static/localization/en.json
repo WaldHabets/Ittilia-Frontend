@@ -1,6 +1,7 @@
 {
   "explore-ittilia": "Explore Ittilia",
   "page-wiki": "Wiki",
+  "page-rules": "Game rules",
   "page-map": "Map",
   "page-lineage": "Lineages",
   "page-classes": "Classes",
@@ -108,5 +109,8 @@
   "legend-road": "",
   "legend-train": "",
   "legend-ship": "",
-  "label-articles": "articles"
+  "label-articles": "articles",
+  "rules-chapter-character": "Your Character",
+  "rules-section-create": "Creating your character",
+  "rules-section-talents": "Generic talents"
 }

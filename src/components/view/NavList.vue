@@ -9,6 +9,14 @@
       </router-link>
     </li>
     <li>
+      <router-link class="nav-link section-link" to="/rules">
+        <svg viewBox="0 0 24 24">
+          <path :d="iconRules" />
+        </svg>
+        {{ $text("page-rules") }}
+      </router-link>
+    </li>
+    <li>
       <router-link class="nav-link section-link" to="/ittilia">
         <svg viewBox="0 0 24 24">
           <path :d="iconExplore" />
@@ -68,14 +76,14 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { mdiAnvil, mdiCastle, mdiCompassRose, mdiFeather } from "@mdi/js";
+import { mdiAnvil, mdiCastle, mdiCompassRose, mdiScaleBalance } from "@mdi/js";
 
 @Component
 export default class NavList extends Vue {
   private iconHome: string = mdiCastle;
   private iconExplore: string = mdiCompassRose;
   private iconTools: string = mdiAnvil;
-  private iconFeather: string = mdiFeather;
+  private iconRules: string = mdiScaleBalance;
 }
 </script>
 

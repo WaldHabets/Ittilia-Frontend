@@ -1,0 +1,116 @@
+@mixin keyword($before) {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  font-weight: bold;
+  &::before {
+    content: $before;
+  }
+}
+
+// Attributes
+// ==============================================
+
+.kw-attr {
+  @include keyword("🧬");
+}
+
+// Dice
+// ==============================================
+
+@mixin kw-dice {
+  @include keyword("🎲");
+  color: #5fcde4;
+}
+
+.kw-d4 {
+  @include kw-dice();
+}
+.kw-d6 {
+  @include kw-dice();
+}
+.kw-d8 {
+  @include kw-dice();
+}
+.kw-d10 {
+  @include kw-dice();
+}
+.kw-d12 {
+  @include kw-dice();
+}
+.kw-d20 {
+  @include kw-dice();
+}
+.kw-steen {
+  @include kw-dice();
+}
+
+// Proficiencies
+// ==============================================
+
+@mixin kw-proficiency($before) {
+  @include keyword($before);
+}
+
+.kw-skill {
+  @include kw-proficiency("💡");
+}
+.kw-tool {
+  @include kw-proficiency("🛠️");
+}
+.kw-language {
+  @include kw-proficiency("📚");
+}
+
+.kw-instrument {
+  @include kw-proficiency("📯");
+}
+
+.kw-vehicle {
+  @include kw-proficiency("🏇");
+}
+
+.kw-game {
+  @include kw-proficiency("");
+}
+
+// Attacks
+// ==============================================
+
+@mixin kw-attack($before) {
+  @include keyword($before)
+}
+
+.kw-magic {
+  @include kw-attack("🪄");
+}
+
+.kw-melee {
+  @include kw-attack("🥊");
+}
+
+.kw-ranged {
+  @include kw-attack("🎯");
+}
+
+.kw-melee-weapon {
+  @include kw-attack("🔪");
+}
+
+.kw-ranged-weapon {
+  @include kw-attack("🏹");
+}
+
+// Other
+// ==============================================
+
+.kw-range {
+  @include keyword("📏");
+}
+
+.kw-time {
+  @include keyword("⏳");
+}
+
+.kw-dc {
+  @include keyword("🎯");
+}
